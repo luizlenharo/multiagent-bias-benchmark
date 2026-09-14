@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, tmargin=3cm, lmargin=2.5cm, rmargin=2.5cm, bmargin=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{hyperref}
 
 \usepackage[brazilian]{babel} % Remover linha em caso de escrita em inglês
@@ -55,7 +57,7 @@
     }
     \vspace{5cm}
     Luiz Felipe Lenharo - 237896 \\
-    Felipe Rocha Verol - $<$RA Aluno(b)$>$
+    Felipe Rocha Verol - 248552 
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -79,16 +81,20 @@
 \label{sec:contexto}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%isso deve ser removido
-\textit{$<$Apresente o domínio ou a área em que o estudo se insere (ex.: IA aplicada à educação, sistemas distribuídos, interação humano-computador, redes de computadores, engenharia de software). Descreva o ambiente ou a situação em que o problema ocorre (ex.: instituições, usuários, sistemas, dados, processos, fluxos de trabalho). Descreva o estado atual do tema, indicando as linhas de trabalho e os desafios registrados na área.$>$}
+Este trabalho se insere na área de IA aplicada à justiça social e equidade algorítmica, especificamente na auditoria de viés em sistemas multiagentes baseados em Modelos de Linguagem (LLMs). O tema se conecta diretamente ao ODS 10 (Redução das Desigualdades), com aplicação em dois domínios que instanciam outros dois ODS: avaliação de candidatos a vagas de emprego (ODS 8 -- Trabalho Decente e Crescimento Econômico) e apoio à decisão em veredictos de júri penal (ODS 16 -- Paz, Justiça e Instituições Eficazes).
+
+O ambiente em que o problema ocorre é o de organizações -- empresas de recrutamento, plataformas de triagem de currículos, ferramentas de apoio a decisões jurídicas -- que vêm delegando etapas de pré-análise de casos sensíveis a sistemas baseados em LLM. Diferente de uma única chamada a um modelo, esses sistemas são cada vez mais construídos como arquiteturas multiagentes, em que múltiplos agentes (por exemplo, extrator de perfil, avaliador, crítico/revisor, agregador de opiniões) cooperam ou competem para produzir uma decisão final. Frameworks como AutoGen e MetaGPT popularizaram esse tipo de orquestração, e há evidências de que a topologia de orquestração (pipeline, hierárquica, debate, ensemble, etc.) afeta métricas como custo, robustez e taxa de falha da tarefa \textbf{[FALTA: referência específica -- ex. artigo "The Harness Effect" da lista Awesome Agentic Systems discute custo/token economics, mas precisa confirmar se é aplicável aqui]}.
+
+Paralelamente, existe uma linha de pesquisa consolidada demonstrando que LLMs isolados replicam vieses socioeconômicos, raciais e de gênero quando avaliam currículos ou casos jurídicos \textbf{[FALTA: citações específicas -- ex. estudos de viés em triagem de currículos por LLM e estudos de viés racial/socioeconômico em sistemas de apoio a decisão penal (tipo COMPA/COMPAS na literatura de ML tradicional). Não inventei essas referências porque não tenho certeza dos títulos/autores/anos exatos -- precisa localizar e confirmar antes de citar]}. O que ainda não está bem estabelecido na literatura é como esse viés se comporta quando o mesmo modelo-base é inserido em diferentes arquiteturas multiagentes: se a orquestração atenua, amplifica ou não altera o viés observado em avaliações de agente único.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Motivação para o Tema}
 \label{sec:motivacao}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%isso deve ser removido
-\textit{$<$Indique os critérios que levaram à escolha do tema e a sua relevância científica, tecnológica ou social. Descreva o impacto esperado da pesquisa, identificando quem é beneficiado e por qual mecanismo.$>$}
+A escolha do tema é motivada por três fatores. Primeiro, um fator social: a desigualdade socioeconômica é um problema crescente e mensurável, e decisões automatizadas em contratação e justiça penal afetam diretamente o acesso de grupos vulneráveis a oportunidades econômicas e a tratamento justo perante a lei -- conexão direta com o ODS 10. Segundo, um fator científico/tecnológico: há preocupação documentada de que LLMs reproduzam vieses presentes nos dados de treinamento e no comportamento de usuários \textbf{[FALTA: referência]}, mas a maior parte da auditoria de viés em LLM foca em modelo único; falta entender se arquiteturas multiagentes (cada vez mais adotadas em produtos reais de HR-tech e legal-tech) mudam esse comportamento. Terceiro, um fator prático: entender esse comportamento é pré-requisito para responder, com rigor, se sistemas multiagentes são de fato adequados para pré-análise de casos sensíveis -- hoje isso é uma pergunta em aberto, não um pressuposto do projeto.
+
+O impacto esperado tem dois grupos de beneficiários e mecanismos distintos: (i) candidatos a emprego e réus/acusados, que seriam protegidos indiretamente caso o benchmark leve à identificação e ao desencorajamento de arquiteturas que amplificam viés discriminatório; e (ii) equipes de engenharia e reguladores que precisam escolher ou auditar uma topologia de orquestração antes de colocá-la em produção, para os quais o benchmark funcionaria como uma metodologia de comparação replicável entre arquiteturas.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,16 +102,31 @@
 \label{sec:problema}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%isso deve ser removido
-\textit{$<$Descreva o problema a ser investigado: o que permanece sem solução ou sem explicação. Apresente as evidências que sustentam a existência dessa lacuna, na forma de referências, dados ou observações. Descreva as consequências práticas e científicas da ausência de solução. Delimite o escopo do problema, indicando o que é abordado no projeto e o que fica fora. Não descreva a solução nesta seção.$>$}
+O problema investigado é: não se sabe se, e em que grau, o viés socioeconômico observado em avaliações feitas por um único agente LLM é atenuado, preservado ou amplificado quando o mesmo modelo-base é organizado em diferentes topologias de sistemas multiagentes, nas tarefas de triagem de candidatos a emprego e de recomendação em veredictos de júri penal.
+
+A lacuna se sustenta em duas frentes de evidência que, isoladamente, não respondem à pergunta: de um lado, há estudos que documentam viés em avaliações de agente único por LLM \textbf{[FALTA: referências específicas de viés em triagem de currículo e/ou decisão penal por LLM]}; de outro, há estudos que mostram que a topologia de orquestração multiagente altera métricas de desempenho, custo e robustez da tarefa (ex.: AutoGen, MetaGPT, e trabalhos sobre economia de tokens em diferentes arquiteturas de orquestração \textbf{[FALTA: confirmar quais desses artigos foram efetivamente lidos]}), mas nenhum desses trabalhos mede viés socioeconômico como variável de interesse. A interseção entre as duas linhas -- efeito da topologia sobre o viés, especificamente -- \textbf{[FALTA: confirmar se essa lacuna é explicitamente apontada em algum survey/related work, ou se a alegação de ineditismo se sustenta apenas por ausência de resultado nas buscas realizadas]}.
+
+As consequências de não resolver essa lacuna são práticas e científicas: praticamente, produtos de HR-tech e legal-tech que adotam múltiplos agentes podem estar transmitindo uma falsa sensação de segurança (``mais agentes deliberando = decisão mais justa'') sem evidência que sustente essa suposição; cientificamente, falta uma metodologia comparável para avaliar como escolhas de design de orquestração interagem com equidade algorítmica.
+
+Escopo -- dentro do projeto: (i) avaliação controlada via comparação pareada contrafactual, variando uma única característica correlacionada a status socioeconômico por vez e mantendo as demais constantes; (ii) duas tarefas de decisão (triagem de candidatos, recomendação de veredicto penal); (iii) um conjunto definido de arquiteturas multiagentes, incluindo uma linha de base de agente único como referência de comparação. Fora do escopo: (i) implantação ou teste com usuários reais; (ii) fine-tuning ou alteração dos modelos de linguagem subjacentes; (iii) explicação causal do mecanismo interno pelo qual a topologia influencia o viés (o projeto mede \textit{se} e \textit{quanto}, não necessariamente \textit{por quê}); (iv) eixos de viés não relacionados a status socioeconômico, exceto quando necessários para caracterizar interseccionalidade -- \textbf{[FALTA: decisão do grupo sobre incluir ou não raça/gênero como eixos adicionais]}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proposta de Solução Conceitual}
 \label{sec:solucao}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%isso deve ser removido
-\textit{$<$Apresente uma proposta de solução para o problema caracterizado na Seção \ref{sec:problema}. Descreva quais técnicas e agentes baseados em modelos de linguagem são empregados e qual a contribuição de cada um para a solução, sem detalhes de implementação.$>$}
+A proposta é um benchmark de auditoria de viés por comparação pareada contrafactual, aplicado a um conjunto de arquiteturas multiagentes candidatas. Para cada tarefa (triagem de emprego e veredito penal), o benchmark gera pares de casos idênticos exceto por uma única característica correlacionada a status socioeconômico (ex.: bairro/CEP como proxy de renda, nome do candidato, prestígio da instituição de ensino, histórico penal contextualizado). Cada arquitetura avalia todos os casos e atribui uma pontuação ou decisão; o benchmark compara, par a par, a diferença de pontuação atribuída a casos que só diferem naquela característica.
+
+As arquiteturas candidatas -- cada uma contribuindo para isolar um mecanismo diferente pelo qual o viés poderia se propagar -- são \textbf{[FALTA: definição final do grupo]}, mas incluem candidatas como:
+\begin{itemize}
+    \item \textbf{Agente único} (linha de base): um único agente LLM realiza a avaliação completa, servindo como referência para medir o efeito líquido de introduzir múltiplos agentes.
+    \item \textbf{Pipeline sequencial}: agentes especializados (ex.: extração de perfil, avaliação, síntese) atuam em série, testando se a decomposição em etapas concentra ou dilui viés presente em uma etapa específica.
+    \item \textbf{Debate/adversarial}: dois agentes argumentam posições opostas e um terceiro agente julga, testando se o confronto de perspectivas expõe ou neutraliza um viés individual.
+    \item \textbf{Revisão hierárquica}: um agente avaliador é supervisionado por um agente revisor com poder de veto/ajuste, testando se a supervisão corrige ou herda o viés do avaliador.
+    \item \textbf{Ensemble/votação}: múltiplos agentes avaliam independentemente e o resultado é agregado (média ou voto), testando se a agregação estatística atenua vieses individuais.
+\end{itemize}
+
+A contribuição de cada arquitetura para a solução é, portanto, permitir isolar um mecanismo estrutural específico (especialização em série, confronto adversarial, supervisão hierárquica, agregação estatística) e compará-lo contra a linha de base de agente único, sem a qual não é possível atribuir uma diferença observada à topologia em si. A métrica de viés usada para comparar os pares -- \textbf{[FALTA: definição formal, ex.: diferença média de pontuação, razão de impacto adverso, teste de significância estatística considerando múltiplas execuções por caso dada a estocasticidade do LLM]} -- é aplicada de forma idêntica a todas as arquiteturas, permitindo comparação direta entre elas.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,8 +134,18 @@
 \label{sec:estado_da_arte}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%isso deve ser removido
-\textit{$<$Relacione a proposta aos artigos lidos. A lista de artigos de base está em \href{https://juliodosreis.com/awesome-agenticsystems/}{Awesome Agentic Systems}. A seleção é parcial: use os artigos aplicáveis ao projeto e acrescente outros fora da lista quando necessário. Para cada artigo selecionado, indique o critério de seleção, o que foi extraído dele e quais adaptações o método exige para tratar o problema descrito na Seção \ref{sec:problema}.$>$}
+\textbf{[SEÇÃO INCOMPLETA -- NÃO PREENCHER COM CITAÇÕES INVENTADAS. Ver lista de pendências enviada junto com este rascunho.]}
+
+Da lista \href{https://juliodosreis.com/awesome-agenticsystems/}{Awesome Agentic Systems}, nenhum artigo trata de viés/equidade -- a lista é focada em arquitetura, memória, ferramentas e avaliação de agentes. Os candidatos mais próximos do projeto, por tratarem de topologia de orquestração multiagente (relevantes à Seção~\ref{sec:solucao}, não à questão de viés em si), são:
+\begin{itemize}
+    \item \textbf{AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation} (Wu et al., 2023) -- modela a aplicação como conversa entre agentes configuráveis; candidato a referência para justificar a arquitetura de debate/pipeline.
+    \item \textbf{MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework} (Hong et al., 2023) -- codifica papéis de agente conectados por artefatos estruturados; candidato para justificar a arquitetura de pipeline/hierárquica.
+    \item \textbf{The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI} (Sayed Ali et al., 2026) -- mostra que trocar a camada de orquestração, mantendo o modelo fixo, muda custo/robustez; evidência indireta de que topologia importa, mas não trata de viés.
+\end{itemize}
+
+\textbf{[FALTA: confirmar quais desses três (ou outros da lista) foram de fato lidos pelo grupo -- o template exige citar apenas artigos lidos.]} Para cada artigo efetivamente selecionado, falta ainda preencher, por artigo: (i) critério de seleção; (ii) o que foi extraído; (iii) que adaptação o método exige para tratar o problema da Seção~\ref{sec:problema}.
+
+Além disso, nenhum artigo da lista trata de viés algorítmico, equidade em triagem de currículos ou justiça penal computacional -- essas referências precisam vir de fora da lista (conforme permitido pelo enunciado) e ainda não foram levantadas neste rascunho.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Apêndice}
