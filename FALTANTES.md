@@ -3,10 +3,11 @@
 ## Bloqueadores de conteúdo
 
 1. **RA do Felipe** — **feito**.
-2. **Citação de viés racial/socioeconômico em decisão penal por LLM** — ainda em aberto.
-   - Dois candidatos levantados, **nenhum pronto pra citar**:
-     - Ganguli et al. 2022, arXiv:2202.07785 ("Predictability and Surprise in Large Generative Models") — abstract **não menciona** COMPAS/reincidência. Real, mas a alegação de que testa isso não é sustentada pelo abstract; precisa ler o corpo do PDF antes de usar.
-     - ICE-Guard, arXiv:2603.18530 — confirma validação contra dados COMPAS reais, mas abstract só nomeia "finanças" e "justiça criminal" como domínios; não confirma "contratação" como um dos 10 domínios. Ler PDF completo antes de decidir se cobre os dois cenários do projeto.
+2. **Citação de viés racial/socioeconômico em decisão penal por LLM** — **feito**.
+   - `hu2025judicial` (LLMs on Trial: Evaluating Judicial Fairness for Large Language Models, arXiv:2507.10852) — LLM atuando como juiz, dataset JudiFair (177.100 casos reais), viés significativo em etnia e riqueza (`defendant_wealth`) do réu em 10/13 modelos. Inserido no `references.bib` e citado na linha 88 do `template-fase1.tex`, substituindo o FALTA.
+   - Candidatos anteriores descartados: Ganguli et al. 2022, arXiv:2202.07785 (abstract não menciona COMPAS/reincidência) e ICE-Guard, arXiv:2603.18530 (abstract não confirma o eixo penal do projeto). Nota residual sobre eles na linha 157 (seção Estado da Arte) removida do `.tex` — ficou obsoleta com `hu2025judicial` resolvendo o FALTA.
+   - Mesma citação reaproveitada na linha 109 (parte 1 do FALTA daquela linha: "referências específicas de viés em triagem de currículo e/ou decisão penal") junto com `wilson2024gender`/`gao2026hiring`.
+   - Parte 2 do FALTA da linha 109 (ineditismo do cruzamento topologia×viés) — **feito**: `li2026aligned` (Aligned Agents, Biased Swarm, arXiv:2604.08963) mostra que topologia amplifica viés demográfico (idade/gênero/raça) em cenários sintéticos genéricos, sem cobrir eixo socioeconômico nem domínio penal. Reformulamos a alegação de ineditismo do projeto: não é mais "topologia afeta viés" (já demonstrado), é "topologia afeta viés **socioeconômico** especificamente, comparado entre emprego e justiça penal sob o mesmo desenho de perturbação contrafactual" — isso continua sem cobertura na literatura.
 3. **Estado da Arte** (Seção 5) — parcialmente resolvida:
    - Lista Awesome Agentic Systems (32 artigos) não tem nenhum paper sobre viés/fairness — confirmado.
    - AutoGen, MetaGPT, e Sayed Ali et al. 2026 (Harness Effect) citados como candidatos de topologia — **falta confirmar se foram de fato lidos** pelo grupo (template exige só artigos lidos).
