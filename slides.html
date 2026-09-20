@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Does Topology Matter?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: #0f1115;
+        --panel: #171a21;
+        --ink: #eef0f4;
+        --muted: #9aa3b2;
+        --accent: #5b8cff;
+        --accent2: #ff8a5b;
+        --line: #2a2f3a;
+        --good: #4fd1a5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Georgia", "Iowan Old Style", "Palatino Linotype", serif;
+        overflow: hidden;
+      }
+
+      #deck {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6vh 9vw;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(30px);
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease;
+      }
+
+      .slide.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+
+      .kicker {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.75rem;
+        color: var(--accent);
+        margin-bottom: 1.1rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+        line-height: 1.15;
+        margin: 0 0 1rem 0;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        margin: 0 0 1.4rem 0;
+        font-weight: 600;
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 0.6rem;
+      }
+
+      p {
+        font-size: 1.15rem;
+        line-height: 1.55;
+        color: var(--ink);
+        margin: 0.5rem 0;
+      }
+
+      .lede {
+        color: var(--muted);
+        font-size: 1.25rem;
+        line-height: 1.5;
+        max-width: 46em;
+      }
+
+      ul {
+        margin: 0.4rem 0;
+        padding-left: 1.3rem;
+      }
+
+      li {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0.5rem 0;
+      }
+
+      li::marker {
+        color: var(--accent);
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1.2rem 1.4rem;
+      }
+
+      .card h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.05rem;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: var(--accent2);
+        font-weight: 700;
+      }
+
+      .card p {
+        font-size: 0.98rem;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .grid5 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .arch {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1rem 0.9rem;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .arch .n {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      .arch h4 {
+        font-size: 0.95rem;
+        margin: 0.4rem 0;
+        color: var(--ink);
+      }
+
+      .arch p {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .metric-row {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .metric {
+        flex: 1;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 1.4rem;
+      }
+
+      .metric .tag {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-weight: 700;
+        color: var(--good);
+        letter-spacing: 0.05em;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      .metric h3 {
+        margin: 0.4rem 0;
+        font-size: 1.4rem;
+      }
+
+      .metric p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .badge {
+        display: inline-block;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        background: rgba(91, 140, 255, 0.15);
+        color: var(--accent);
+        text-transform: uppercase;
+        margin-right: 0.4rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-size: 0.95rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 0.55rem 0.7rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      th {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: var(--accent2);
+        font-weight: 700;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      td {
+        color: var(--muted);
+      }
+
+      td.strong {
+        color: var(--ink);
+      }
+
+      .footer-meta {
+        position: absolute;
+        bottom: 1.4rem;
+        left: 9vw;
+        right: 9vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 0.72rem;
+        color: var(--muted);
+        letter-spacing: 0.03em;
+      }
+
+      .title-block {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .authors {
+        margin-top: 2.2rem;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .authors strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .center {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .scope-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        margin-top: 1rem;
+      }
+
+      .scope-cols h3 {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .in h3 {
+        color: var(--good);
+      }
+
+      .out h3 {
+        color: #ff6b6b;
+      }
+
+      #progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--accent);
+        z-index: 20;
+        transition: width 0.3s ease;
+      }
+
+      #nav {
+        position: fixed;
+        bottom: 1.4rem;
+        right: 9vw;
+        display: flex;
+        gap: 0.6rem;
+        z-index: 20;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+
+      #nav button {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        color: var(--ink);
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      #nav button:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      small.src {
+        display: block;
+        margin-top: 0.3rem;
+        color: #6b7280;
+        font-size: 0.75rem;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="progress"></div>
+    <div id="deck">
+      <!-- 1 -->
+      <section class="slide active center">
+        <div class="title-block">
+          <div class="kicker">
+            MO810A/MC959A &middot; Sistemas Multiagentes com Modelos de
+            Linguagem &middot; Fase 1 — Proposta
+          </div>
+          <h1 style="font-size: 2.9rem">Does Topology Matter?</h1>
+          <p class="lede" style="margin: 0 auto">
+            Auditing Socioeconomic Bias Across Multi-Agent LLM Architectures in
+            Hiring and Criminal Verdicts
+          </p>
+          <div class="authors">
+            <strong>Luiz Felipe Lenharo</strong> — 237896 &nbsp;&middot;&nbsp;
+            <strong>Felipe Rocha Verol</strong> — 248552<br />
+            Instituto de Computação &middot; UNICAMP &middot; Prof. Dr. Julio
+            Cesar dos Reis &middot; 2026
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="slide">
+        <div class="kicker">Cenário &amp; Contexto</div>
+        <h2>De uma chamada única à arquiteturas multiagentes</h2>
+        <p>
+          Empresas de recrutamento e ferramentas jurídicas delegam pré-análise
+          de casos sensíveis, cada vez mais, à
+          <strong>Sistemas Multi Agente (MAS)</strong> &mdash; via AutoGen,
+          MetaGPT, CrewAI.
+        </p>
+        <div class="two-col" style="margin-top: 1.2rem">
+          <div class="card">
+            <h3>Topologia importa (desempenho)</h3>
+            <p>
+              Trocar só a orquestração, modelo fixo: &minus;41% custo,
+              &minus;44% tempo, &minus;38% tokens, qualidade quase constante.
+            </p>
+            <small class="src">Sayed Ali et al., 2026</small>
+          </div>
+          <div class="card">
+            <h3>Viés existe (agente único)</h3>
+            <p>
+              Embeddings favorecem nomes de candidatos brancos em 85,1% dos
+              casos; juízes-LLM mostram viés socioeconômico em até 10/13
+              modelos.
+            </p>
+            <small class="src"
+              >Wilson &amp; Caliskan 2024 &middot; Hu et al. 2025</small
+            >
+          </div>
+        </div>
+        <p style="margin-top: 1.2rem">
+          ODS 10 (Desigualdades) &middot; ODS 8 (emprego) &middot; ODS 16
+          (justiça).
+        </p>
+      </section>
+
+      <!-- 3 -->
+      <section class="slide">
+        <div class="kicker">Motivação</div>
+        <h2>Três fatores para o tema</h2>
+        <ul>
+          <li>
+            <strong>Social</strong> — decisões automatizadas em contratação e
+            justiça penal afetam diretamente o acesso de grupos vulneráveis a
+            oportunidades e a tratamento justo.
+          </li>
+          <li>
+            <strong>Científico</strong> — a auditoria de viés existente foca no
+            agente único; falta entender como a <em>topologia</em> multiagente
+            atenua, amplifica ou preserva esse viés.
+          </li>
+          <li>
+            <strong>Tecnológico/prático</strong> — pipeline, debate e ensemble
+            já rodam em produtos reais de HR-tech e legal-tech sem metodologia
+            de auditoria replicável para comparar topologias antes da adoção.
+          </li>
+        </ul>
+        <p style="margin-top: 1rem; color: var(--muted)">
+          Beneficiários: candidatos/réus (indiretamente) e equipes de
+          engenharia/reguladores que precisam auditar uma topologia antes de
+          produção.
+        </p>
+      </section>
+
+      <!-- 4 -->
+      <section class="slide">
+        <div class="kicker">Caracterização do Problema</div>
+        <h2>A lacuna: o que a literatura ainda não sabe</h2>
+        <p class="lede">
+          O problema é a <strong>falta de explicação da variância</strong> do
+          viés socioeconômico observado em avaliações de agente único quando o
+          mesmo modelo-base é organizado em diferentes topologias multiagente.
+        </p>
+        <div class="two-col" style="margin-top: 1.3rem">
+          <div class="card">
+            <h3>Linha 1 — viés</h3>
+            <p>
+              Documentado em triagem de currículo e decisão penal, sempre com
+              agente único.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Linha 2 — topologia</h3>
+            <p>
+              Documentado que muda custo/robustez/desempenho, mas nenhum
+              trabalho mede viés socioeconômico.
+            </p>
+          </div>
+        </div>
+        <p style="margin-top: 1.1rem">
+          <span class="badge">Mais perto</span> Li et al. [2026] mostram
+          amplificação de viés demográfico por topologia — mas em domínios
+          sintéticos, com rótulos categóricos explícitos, sem eixo
+          socioeconômico e sem emprego+penal juntos.
+        </p>
+        <p style="color: var(--muted)">
+          Este projeto: comparação pareada contrafactual sobre um único
+          candidato, sem categorização demográfica explícita — mede
+          <em>deslocamento de pontuação</em>, não preferência entre grupos
+          rotulados.
+        </p>
+      </section>
+
+      <!-- 5 -->
+      <section class="slide">
+        <div class="kicker">Escopo</div>
+        <h2>Dentro e fora do projeto</h2>
+        <div class="scope-cols">
+          <div class="in">
+            <h3>✓ Dentro do escopo</h3>
+            <ul>
+              <li>
+                Uma característica socioeconômica por vez (bairro/CEP, nome,
+                instituição de ensino, histórico penal)
+              </li>
+              <li>Duas tarefas: triagem de emprego &amp; veredicto penal</li>
+              <li>
+                Conjunto definido de arquiteturas + linha de base de agente
+                único
+              </li>
+            </ul>
+          </div>
+          <div class="out">
+            <h3>✗ Fora do escopo</h3>
+            <ul>
+              <li>Implantação ou teste com usuários reais</li>
+              <li>Fine-tuning ou alteração dos LLMs</li>
+              <li>
+                Explicação causal do mecanismo interno (mede <em>se</em> e
+                <em>quanto</em>, não <em>por quê</em>)
+              </li>
+              <li>
+                Eixos de viés fora de status socioeconômico (exceto
+                interseccionalidade)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="slide">
+        <div class="kicker">Proposta de Solução Conceitual</div>
+        <h2>Benchmark de auditoria por comparação pareada contrafactual</h2>
+        <p class="lede">
+          Para cada tarefa, o benchmark gera
+          <strong>pares de casos idênticos</strong> exceto por uma
+          característica correlacionada a status socioeconômico. Cada
+          arquitetura avalia todos os casos; compara-se a diferença de pontuação
+          par a par.
+        </p>
+        <div class="grid5">
+          <div class="arch">
+            <div class="n">01</div>
+            <h4>Agente único</h4>
+            <p>
+              Linha de base — referência para o efeito líquido de multiagentes.
+            </p>
+          </div>
+          <div class="arch">
+            <div class="n">02</div>
+            <h4>Pipeline sequencial</h4>
+            <p>Extração → avaliação → síntese, em série.</p>
+          </div>
+          <div class="arch">
+            <div class="n">03</div>
+            <h4>Debate/adversarial</h4>
+            <p>Dois agentes argumentam, um terceiro julga.</p>
+          </div>
+          <div class="arch">
+            <div class="n">04</div>
+            <h4>Revisão hierárquica</h4>
+            <p>Avaliador supervisionado por revisor com veto.</p>
+          </div>
+          <div class="arch">
+            <div class="n">05</div>
+            <h4>Ensemble/votação</h4>
+            <p>Agentes independentes, resultado agregado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="slide">
+        <div class="kicker">Métricas</div>
+        <h2>CFR e MASD — complementares, não redundantes</h2>
+        <div class="metric-row">
+          <div class="metric">
+            <div class="tag">Métrica principal</div>
+            <h3>Counterfactual Flip Rate (CFR)</h3>
+            <p>
+              Frequência de reversão da decisão binária entre um par
+              contrafactual. Reflete o desfecho de interesse — a decisão — mas
+              satura quando a maioria dos pares não inverte.
+            </p>
+          </div>
+          <div class="metric">
+            <div class="tag">Métrica secundária</div>
+            <h3>Mean Absolute Score Difference (MASD)</h3>
+            <p>
+              Deslocamento médio da pontuação entre pares. Diagnostica viés
+              mesmo sem reversão — mais sensível a efeitos pequenos e
+              consistentes.
+            </p>
+          </div>
+        </div>
+        <p style="margin-top: 1.2rem; color: var(--muted)">
+          Definições operacionais de
+          <a style="color: var(--accent)">Mayilvaghanan et al. 2026</a> e
+          <a style="color: var(--accent)">Morla et al. 2026</a>, aplicadas de
+          forma idêntica a todas as arquiteturas.
+        </p>
+      </section>
+
+      <!-- 8 -->
+      <section class="slide">
+        <div class="kicker">Posicionamento &middot; Estado da Arte</div>
+        <h2>Trabalhos mais próximos e a adaptação exigida</h2>
+        <table>
+          <tr>
+            <th>Referência</th>
+            <th>Contribuição</th>
+            <th>Lacuna p/ este projeto</th>
+          </tr>
+          <tr>
+            <td class="strong">Wilson &amp; Caliskan 2024</td>
+            <td>85,1% viés pró-branco em retrieval de currículo</td>
+            <td>Modelo único de retrieval, não decisão multiagente</td>
+          </tr>
+          <tr>
+            <td class="strong">Gallegos et al. 2024</td>
+            <td>Survey — taxonomia de métricas e mitigação</td>
+            <td>Métricas nativas a LLM único, não a ações multiagente</td>
+          </tr>
+          <tr>
+            <td class="strong">Morla et al. 2026</td>
+            <td>CFR/MASD, agência crescente incl. multiagente</td>
+            <td>Contratação/crédito/saúde — sem domínio penal</td>
+          </tr>
+          <tr>
+            <td class="strong">Okawa 2026</td>
+            <td>Transição de fase → consenso enviesado em debate</td>
+            <td>Validado em investimento/LLM-judge, não emprego/penal</td>
+          </tr>
+          <tr>
+            <td class="strong">Madigan et al. 2025</td>
+            <td>Viés multiagente não é redutível ao individual</td>
+            <td>Domínio financeiro, não emprego/penal</td>
+          </tr>
+          <tr>
+            <td class="strong">Bonil et al. 2025</td>
+            <td>Viés racial/gênero em LLM generativo (PT-BR)</td>
+            <td>Análise discursiva/qualitativa, não decisão quantitativa</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 9 -->
+      <section class="slide center">
+        <div class="title-block">
+          <div class="kicker">Síntese</div>
+          <h1 style="font-size: 2.2rem">
+            A topologia de orquestração<br />atenua, amplifica ou preserva<br />o
+            viés socioeconômico observado<br />em agente único?
+          </h1>
+          <p class="lede" style="margin: 1.5rem auto 0">
+            Comparação pareada contrafactual &middot; 2 tarefas &middot; 5
+            arquiteturas &middot; CFR + MASD
+          </p>
+        </div>
+      </section>
+
+      <!-- 10 -->
+      <section class="slide center">
+        <div class="title-block">
+          <h1 style="font-size: 2.2rem">Obrigado.</h1>
+          <p class="lede" style="margin: 0 auto">Perguntas e discussão.</p>
+          <div class="authors">
+            Luiz Felipe Lenharo &middot; Felipe Rocha Verol &mdash; IC/UNICAMP,
+            2026
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="nav">
+      <button id="prev" aria-label="Anterior">&#8592;</button>
+      <button id="next" aria-label="Próximo">&#8594;</button>
+    </div>
+    <div class="footer-meta">
+      <span>Does Topology Matter? &middot; MO810A/MC959A</span>
+      <span id="counter">1 / 10</span>
+    </div>
+
+    <script>
+      (function () {
+        var slides = document.querySelectorAll(".slide");
+        var total = slides.length;
+        var idx = 0;
+        var progress = document.getElementById("progress");
+        var counter = document.getElementById("counter");
+
+        function show(n) {
+          if (n < 0 || n >= total) return;
+          slides[idx].classList.remove("active");
+          idx = n;
+          slides[idx].classList.add("active");
+          progress.style.width = ((idx + 1) / total) * 100 + "%";
+          counter.textContent = idx + 1 + " / " + total;
+        }
+
+        document.getElementById("next").addEventListener("click", function () {
+          show(idx + 1);
+        });
+        document.getElementById("prev").addEventListener("click", function () {
+          show(idx - 1);
+        });
+
+        window.addEventListener("keydown", function (e) {
+          if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(e.key)) {
+            show(idx + 1);
+            e.preventDefault();
+          }
+          if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) {
+            show(idx - 1);
+            e.preventDefault();
+          }
+          if (e.key === "Home") {
+            show(0);
+          }
+          if (e.key === "End") {
+            show(total - 1);
+          }
+        });
+
+        var touchStartX = null;
+        window.addEventListener("touchstart", function (e) {
+          touchStartX = e.touches[0].clientX;
+        });
+        window.addEventListener("touchend", function (e) {
+          if (touchStartX === null) return;
+          var dx = e.changedTouches[0].clientX - touchStartX;
+          if (dx < -40) show(idx + 1);
+          if (dx > 40) show(idx - 1);
+          touchStartX = null;
+        });
+
+        show(0);
+      })();
+    </script>
+  </body>
+</html>
