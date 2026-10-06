@@ -1,0 +1,879 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, tmargin=3cm, lmargin=2.5cm, rmargin=2.5cm, bmargin=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\usepackage[brazilian]{babel} % Remover linha em caso de escrita em inglês
+\usepackage[fixlanguage]{babelbib} % Remover linha em caso de escrita em inglês
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=black,
+}
+
+\usepackage{natbib} % to cite references by surname and year
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shadows}
+\usepackage{fancyhdr}
+\pagestyle{fancy} % Ativar o estilo fancy
+\fancyhf{} % Limpar cabeçalhos e rodapés
+\renewcommand{\headrulewidth}{0pt} % Remover a linha do cabeçalho
+\fancyfoot[C]{IC/UNICAMP \\ 2026 }
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\CFR}{\mathrm{CFR}}
+\newcommand{\MASD}{\mathrm{MASD}}
+\newcommand{\SD}{\mathrm{SD}}
+\newcommand{\ind}{\mathbb{1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONFIGURAÇÃO DA PRIMEIRA PÁGINA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\vspace{5mm}
+\hrule
+
+\vspace{3mm}
+
+\begin{center}
+    {\large\textbf{INSTITUTO DE COMPUTAÇÃO - UNICAMP}} \\
+    \vspace{3mm}
+    {\large\textbf{MO810A/MC959A - Sistemas Multiagentes com Modelos de Linguagem}} \\
+    \vspace{3mm}
+    {\large\textbf{Prof. Dr. Julio Cesar dos Reis}}
+\end{center}
+
+\vspace{3mm}
+\hrule
+
+\vspace{2.5cm}
+\begin{flushright}
+    \Large{\textbf{Fase 2 - Metodologia}} \\
+    \vspace{1cm}
+    \textit{
+        Does Topology Matter? Auditing Socioeconomic Bias Across Multi-Agent LLM Architectures in Hiring and Criminal Verdicts\footnote{Título mantido em inglês, seguindo prática comum em trabalhos científicos em português, para facilitar indexação e busca internacional; o corpo do texto segue em português.} \\
+    }
+    \vspace{5cm}
+    Luiz Felipe Lenharo - 237896 \\
+    Felipe Rocha Verol - 248552
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\pagestyle{fancy} % 2. Ativar o estilo fancy
+\fancyhf{} % 3. Limpar cabeçalhos e rodapés
+\renewcommand{\headrulewidth}{0pt} % Remover a linha do cabeçalho
+
+\fancyfoot[R]{\thepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       INÍCIO DAS SEÇÕES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Visão Geral da Metodologia}
+\label{sec:visao_geral}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Problema e ODS (retomada da Fase 1).} O projeto investiga se, mantido fixo o modelo de linguagem, a topologia de orquestração multiagente altera o viés socioeconômico observado na decisão final em duas tarefas de alto risco: triagem de candidatos a emprego (ODS 8) e recomendação de veredicto penal (ODS 16), ambas sob o eixo de redução de desigualdades (ODS 10). As cinco arquiteturas comparadas são as definidas na Fase 1: agente único (linha de base), \textit{pipeline} sequencial, debate adversarial, revisão hierárquica e \textit{ensemble} por votação. O desfecho principal continua sendo a decisão, resumida pela \textit{Counterfactual Flip Rate} (CFR), com a MASD como métrica secundária de pontuação \citep{mayilvaghanan2026counterfactual,morla2026agentfairbench}. O papel de cada estatística no teste confirmatório foi refinado (ajuste 4 abaixo). A metodologia responde a três questões de pesquisa:
+\begin{itemize}
+    \item \textbf{QP1}: com o mesmo modelo-base, alguma topologia desloca a probabilidade de decisão favorável entre os níveis baixo e alto do atributo socioeconômico de modo diferente do agente único?
+    \item \textbf{QP2}: a direção e a magnitude desse efeito se repetem entre os domínios de contratação e de veredicto penal e entre diferentes atributos socioeconômicos?
+    \item \textbf{QP3}: os mecanismos hipotetizados para cada topologia (Tabela~\ref{tab:hipoteses}) aparecem nas variáveis intermediárias registradas, como retenção do atributo, taxa de revisão e concordância entre agentes?
+\end{itemize}
+
+\paragraph{Ajustes de escopo em relação à Fase 1.} Ao operacionalizar o desenho, cinco decisões da Fase 1 foram refinadas. Cada mudança abaixo vem com sua justificativa:
+\begin{enumerate}
+    \item \textbf{O nome deixa de ser atributo perturbado.} No Brasil, como nos EUA, nomes carregam simultaneamente sinal de raça, gênero e classe, e nenhuma auditoria baseada em nome separa esses componentes \citep{morla2026agentfairbench}. Perturbar o nome violaria a delimitação ao eixo socioeconômico feita na Fase 1. Por isso, o nome é mantido constante dentro de cada par contrafactual.
+    \item \textbf{``Histórico penal contextualizado'' é substituído por atributos juridicamente irrelevantes ao mérito.} Antecedentes criminais são informação juridicamente relevante, e uma mudança de decisão induzida por eles não pode ser lida como viés. No domínio penal passam a ser perturbados apenas atributos que não deveriam afetar o juízo sobre autoria e materialidade: bairro de residência, ocupação do réu e tipo de defesa (Tabela~\ref{tab:perturbacoes}).
+    \item \textbf{O contexto passa a ser brasileiro, com casos e \textit{prompts} em português.} Os indicadores de status socioeconômico dependem da cultura (bairro, escola pública ou privada, Defensoria Pública). Além disso, o formato ``veredicto de júri'' corresponde ao Tribunal do Júri brasileiro, competente para crimes dolosos contra a vida. O custo dessa escolha, a menor comparabilidade direta com a literatura em inglês, é tratado na Seção~\ref{sec:ameacas}.
+    \item \textbf{A CFR é corrigida pelo piso de ruído, e o teste confirmatório passa a usar a diferença assinada de decisão.} Com amostragem estocástica, parte das inversões de decisão ocorre mesmo entre duas execuções da mesma entrada. Por isso, a CFR é reportada \emph{em excesso} ao piso medido em réplicas idênticas (Seção~\ref{sec:metricas}). Essa CFR em excesso, porém, é de segunda ordem no deslocamento da probabilidade de decisão. Uma simulação de poder (Seção~\ref{sec:analise}) mostra que, com o orçamento disponível, ela só detecta deslocamentos da ordem de 30 pontos percentuais. O teste confirmatório passa então a usar a diferença assinada de taxa de desfecho favorável ($\Delta\mathrm{TF}$). Ela continua sendo uma métrica de decisão, mas é de primeira ordem e preserva a direção do viés. A CFR em excesso segue como métrica principal de reporte e de detecção de efeitos heterogêneos.
+    \item \textbf{Os agentes auditados não usam ferramentas externas.} Ferramentas como busca e recuperação de documentos introduziriam uma fonte de variação distinta da topologia, o que é justificado na Seção~\ref{sec:orquestracao}.
+\end{enumerate}
+
+\paragraph{Fluxo completo.} A Figura~\ref{fig:fluxo} mostra o fluxo da entrada até a saída. Ele tem duas camadas que não se misturam.
+\begin{itemize}
+    \item \textbf{\textit{Harness} de auditoria.} É código determinístico, sem LLM no laço de decisão. Gera os casos, aplica as perturbações, despacha as chamadas, valida as saídas e calcula as métricas.
+    \item \textbf{Sistemas sob teste.} São as cinco topologias multiagentes, todas instanciadas com o mesmo modelo.
+\end{itemize}
+A entrada é um conjunto de especificações estruturadas: vagas e perfis de candidatos para contratação, fatos e provas para o domínio penal. Essas especificações são convertidas uma única vez em casos-base textuais, revisadas por humanos e congeladas com \textit{hash}. O perturbador insere, por substituição de \textit{template}, o nível baixo ou alto de um único atributo socioeconômico, produzindo pares que diferem apenas nesse trecho. Cada versão é submetida a cada topologia em $R$ réplicas independentes. As saídas estruturadas são validadas e registradas integralmente. A saída entregue tem três partes:
+\begin{itemize}
+    \item uma tabela de métricas de viés por topologia, domínio e atributo, com intervalos de confiança e testes corrigidos para comparações múltiplas;
+    \item as métricas de custo e latência;
+    \item os \textit{traces} completos para auditoria.
+\end{itemize}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\footnotesize,
+    box/.style={draw, rounded corners=2pt, align=center, text width=2.8cm, minimum height=1.3cm, inner sep=3pt},
+    harness/.style={box, fill=gray!12},
+    sut/.style={box, fill=blue!10, very thick},
+    human/.style={box, fill=green!10}]
+    \node[harness] (spec) at (0,0)    {Especificações estruturadas (vagas, perfis; fatos, provas)};
+    \node[human]   (gen)  at (4,0)    {Geração única dos casos-base + revisão humana (H1)};
+    \node[harness] (base) at (8,0)    {Casos-base congelados ($N{=}200$/domínio, SHA-256)};
+    \node[harness] (pert) at (12,0)   {Perturbador determinístico + \textit{diff} (H2)};
+    \node[sut]     (orq)  at (12,-2.8){Orquestrador: 5 topologias, mesmo LLM, $R{=}5$};
+    \node[harness] (val)  at (8,-2.8) {Validação de esquema + registro de \textit{traces}};
+    \node[harness] (met)  at (4,-2.8) {Métricas: $\Delta\mathrm{TF}$, $\Delta\CFR$, MASD, SD, custo};
+    \node[harness] (est)  at (0,-2.8) {Análise estatística (IC \textit{bootstrap}, Holm)};
+    \draw[->] (spec) -- (gen);
+    \draw[->] (gen) -- (base);
+    \draw[->] (base) -- (pert);
+    \draw[->] (pert) -- (orq);
+    \draw[->] (orq) -- (val);
+    \draw[->] (val) -- (met);
+    \draw[->] (met) -- (est);
+    \draw[->, dashed] (val.south) to[bend right=25] node[midway, below] {auditoria amostral (H3)} (orq.south);
+\end{tikzpicture}
+\caption{Fluxo da metodologia. Caixas cinza: \textit{harness} determinístico, em código, sem LLM na decisão. Caixa azul: sistemas sob teste, detalhados na Figura~\ref{fig:topologias}. Caixa verde: etapa com LLM gerador e revisão humana, executada \emph{uma única vez} antes do experimento. O perturbador entrega ao orquestrador os pares contrafactuais (níveis B e A de um atributo), cada um em $R$ réplicas idênticas. H1--H3: pontos de intervenção humana (Seção~\ref{sec:orquestracao}).}
+\label{fig:fluxo}
+\end{figure}
+
+\paragraph{Por que uma abordagem multiagente.} O sistema multiagente é o \emph{objeto} da auditoria. O projeto não parte da premissa de que múltiplos agentes decidem melhor. A abordagem se justifica por três razões:
+\begin{itemize}
+    \item Produtos de triagem e de apoio à decisão vêm sendo construídos como composições de agentes, e o viés de um sistema multiagente não é redutível ao viés de seus componentes \citep{madigan2025emergent}. Logo, a pergunta só pode ser respondida instanciando as topologias.
+    \item As topologias implementam mecanismos estruturais distintos, como especialização em série, confronto, supervisão e agregação. Cada mecanismo tem uma hipótese própria sobre o viés, que é testável apenas quando o sistema é executado de ponta a ponta \citep{okawa2026emergence,li2026aligned}.
+    \item Manter o modelo, o núcleo do \textit{prompt} e os parâmetros de decodificação constantes, variando apenas a orquestração, permite atribuir diferenças à topologia, o que uma comparação entre produtos heterogêneos não permitiria.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjunto de Dados para a Avaliação}
+\label{sec:dados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Por que dados sintéticos controlados.} O desenho contrafactual exige casos idênticos exceto por um trecho, o que bases reais não oferecem. Foram consideradas três alternativas, todas descartadas:
+\begin{itemize}
+    \item \textbf{Base pública de currículos do Kaggle} (\textit{Resume Dataset}). Tem cerca de 2.400 currículos raspados do LiveCareer, em inglês e com contexto norte-americano. A licença de uso não está clara e o texto pode conter dados pessoais. % TODO: verificar licença do Resume Dataset (Kaggle) caso seja usado como fonte de estilo.
+    \item \textbf{JudiFair} \citep{hu2025judicial}. Reúne 177.100 fatos de casos reais chineses, mas vem de um sistema jurídico sem júri e em outro idioma.
+    \item \textbf{Processos brasileiros reais.} Embora haja jurisprudência pública, os autos contêm dados pessoais sujeitos à LGPD. Além disso, já trazem atributos socioeconômicos entrelaçados com os fatos, o que impede isolar um único atributo.
+\end{itemize}
+Por isso, os dois conjuntos são sintéticos e construídos a partir de especificações estruturadas, seguindo a tradição dos estudos de auditoria com currículos fictícios \citep{bertrand2004emily,rivera2016class} e de suas adaptações para LLMs \citep{an2025resume,morla2026agentfairbench}. No domínio penal, o desenho segue os experimentos com casos hipotéticos de homicídio usados por \citet{hofmann2024dialect}.
+
+\subsection{Definição dos conjuntos}
+
+\paragraph{$\mathcal{D}_H$ -- Triagem de candidatos.}
+\begin{itemize}
+    \item \textbf{Vagas.} Cinco vagas de nível médio ou técnico/superior inicial, uma para cada família ocupacional: assistente administrativo, analista de dados júnior, técnico de enfermagem, vendedor e assistente de RH. Cada vaga tem uma descrição com requisitos obrigatórios e desejáveis, redigida pelos autores.
+    \item \textbf{Perfis de candidatos.} Cada perfil é uma especificação JSON com formação superior, experiências (cargo, duração, atividades), competências e idiomas.
+    \item \textbf{Nível de qualificação.} É controlado em três estratos em relação aos requisitos da vaga: abaixo, no limiar e acima. O estrato ``no limiar'' é sobrerrepresentado (50\% dos perfis), porque casos em que a decisão é óbvia produzem CFR nula em qualquer topologia, sem poder discriminativo.
+    \item \textbf{Saída pedida.} Decisão binária (avançar ou não avançar para entrevista) e pontuação de adequação entre 0 e 100.
+\end{itemize}
+
+\paragraph{$\mathcal{D}_C$ -- Veredicto penal.}
+\begin{itemize}
+    \item \textbf{Casos.} Vinhetas de crimes dolosos contra a vida, de competência do Tribunal do Júri: homicídio simples ou qualificado, consumado ou tentado.
+    \item \textbf{Estrutura de cada vinheta.} Um resumo dos fatos; as provas, que podem ser testemunhais, periciais ou de câmera; a tese da acusação; e a tese da defesa, que pode ser negativa de autoria, legítima defesa ou insuficiência de provas.
+    \item \textbf{Força da prova.} É controlada em três estratos (fraca, ambígua e forte), com o estrato ``ambígua'' sobrerrepresentado (50\%) pelo mesmo motivo do domínio de contratação.
+    \item \textbf{Saída pedida.} O agente atua como jurado e responde se condena ou absolve, com um grau de convicção na culpa entre 0 e 100.
+\end{itemize}
+% TODO: confirmar com a disciplina se cabe revisão das vinhetas por estudante/profissional de Direito (validade de conteúdo).
+
+\paragraph{Orientação dos desfechos.} Para que a direção do viés seja comparável entre domínios, o desfecho é codificado sempre do ponto de vista do indivíduo avaliado:
+\begin{itemize}
+    \item $Y=1$ é o desfecho favorável, ou seja, avançar no domínio de contratação e absolver no domínio penal.
+    \item $X\in[0,100]$ é a pontuação orientada no mesmo sentido. Em contratação, é a própria adequação; no domínio penal, é $100$ menos a convicção na culpa.
+\end{itemize}
+
+\subsection{Atributos socioeconômicos perturbados}
+
+A Tabela~\ref{tab:perturbacoes} lista os seis atributos, três por domínio. Cada atributo tem dois níveis, baixo (B) e alto (A).
+
+\paragraph{Variantes de superfície.} Cada nível tem cinco variantes, sorteadas por caso com semente fixa. Isso evita que o resultado dependa de uma única palavra; por exemplo, o efeito de ``Moema'' seria um artefato lexical e não um efeito de classe.
+
+\paragraph{Fontes dos léxicos.}
+\begin{itemize}
+    \item \textbf{Bairros.} São distritos do município de São Paulo do quintil superior e do inferior do ranking do Mapa da Desigualdade 2024 \citep{rnsp2024mapa}, que ordena os 96 distritos por 45 indicadores, entre eles trabalho e renda. % TODO: verificar no ranking 2024 a posição exata de cada distrito listado antes de congelar o léxico.
+    \item \textbf{Atividades extracurriculares.} Seguem o desenho de \citet{rivera2016class}, que sinalizaram classe social em currículos idênticos por meio de atividades de lazer associadas a classes alta e baixa.
+\end{itemize}
+
+\paragraph{Atributos juridicamente irrelevantes.} No domínio penal, os três atributos não alteram nenhum elemento probatório. A tese e os argumentos da defesa são textualmente idênticos entre os níveis do atributo ``tipo de defesa''; muda apenas quem a subscreve.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Atributos socioeconômicos perturbados (um por vez). As variantes completas e as respectivas fontes ficam no Apêndice~A.2.}
+\label{tab:perturbacoes}
+\begin{tabularx}{\textwidth}{@{}l l L L@{}}
+\toprule
+Domínio & Atributo & Nível baixo (B), exemplos & Nível alto (A), exemplos \\
+\midrule
+$\mathcal{D}_H$ & H1 Bairro de residência & Brasilândia, Capão Redondo, Cidade Tiradentes & Moema, Vila Mariana, Pinheiros \\
+$\mathcal{D}_H$ & H2 Ensino médio & Escola Estadual (rede pública) & Colégio particular tradicional \\
+$\mathcal{D}_H$ & H3 Atividades extracurriculares & Futebol de várzea, grupo de pagode do bairro & Vela, hipismo, tênis em clube \\
+\midrule
+$\mathcal{D}_C$ & C1 Bairro de residência do réu & idem H1 & idem H1 \\
+$\mathcal{D}_C$ & C2 Ocupação do réu & Ajudante de pedreiro, entregador por aplicativo & Engenheiro civil, empresário \\
+$\mathcal{D}_C$ & C3 Tipo de defesa & Defensoria Pública & Advogado constituído de escritório particular \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Captura e preparação}
+
+\paragraph{Etapa 1 -- Especificações.} Os autores redigem as cinco vagas e definem a gramática de perfis e de vinhetas, isto é, os campos e seus valores admissíveis. Um amostrador com semente fixa gera $300$ especificações candidatas por domínio, estratificadas por qualificação ou força de prova.
+
+\paragraph{Etapa 2 -- Textualização.} Um LLM gerador converte cada especificação em texto corrido em português, numa única execução.
+\begin{itemize}
+    \item \textbf{Modelo gerador.} É de família distinta dos modelos auditados, para não favorecer textos no estilo do próprio avaliador. % TODO: confirmar o modelo gerador (ex.: modelo comercial de família distinta de Llama/Qwen) e registrar versão e data.
+    \item \textbf{Instrução ao gerador.} Não incluir nenhuma pista socioeconômica.
+    \item \textbf{\textit{Slots}.} Cada atributo da Tabela~\ref{tab:perturbacoes} entra no texto como um marcador fixo, como \texttt{\{\{BAIRRO\}\}}, sempre na mesma posição.
+\end{itemize}
+
+\paragraph{Etapa 3 -- Neutralização e revisão humana (H1).}
+\begin{itemize}
+    \item \textbf{Filtro automático.} Um filtro léxico sinaliza termos socioeconômicos fora dos \textit{slots}, como nomes de escolas, bairros, profissões de familiares e marcas.
+    \item \textbf{Revisão.} Os dois autores revisam todos os casos e removem pistas residuais ou inconsistências factuais.
+    \item \textbf{Nomes.} Vêm de uma lista curta de prenomes e sobrenomes muito frequentes no Brasil. O nome é constante dentro de cada par, de modo que não confunde o contraste.
+    \item \textbf{Gênero.} É balanceado entre os casos e mantido constante dentro de cada par.
+\end{itemize}
+
+\paragraph{Etapa 4 -- Seleção piloto.} Cada caso candidato é renderizado em versão neutra, com os \textit{slots} omitidos, e avaliado pelo agente único com $10$ réplicas.
+\begin{itemize}
+    \item \textbf{Critério de retenção.} Ficam $N=200$ casos por domínio cuja taxa de desfecho favorável está em $[0{,}1;\,0{,}9]$, preservando a estratificação.
+    \item \textbf{Ausência de vazamento.} A seleção usa só a versão neutra. Nenhum dado das versões perturbadas entra no critério de seleção.
+    \item \textbf{Viés de seleção.} O efeito de selecionar com base no agente único é discutido na Seção~\ref{sec:ameacas}.
+\end{itemize}
+
+\paragraph{Etapa 5 -- Perturbação e congelamento.} O perturbador é uma função determinística $\mathrm{render}(s, p, \ell, v)$, onde $s$ é o caso, $p$ o atributo, $\ell$ o nível e $v$ a variante de superfície. Os demais \textit{slots} de $s$ ficam omitidos.
+\begin{itemize}
+    \item \textbf{Verificação por \textit{diff}.} Para cada par gerado, um \textit{diff} automático confirma que os dois textos diferem \emph{exclusivamente} no trecho do \textit{slot} (H2).
+    \item \textbf{Comprimento.} A diferença de comprimento entre as variantes B e A é registrada; os léxicos foram escolhidos para mantê-la abaixo de 5 \textit{tokens}.
+    \item \textbf{Congelamento.} Os casos-base, os léxicos e os pares são gravados em JSONL com \textit{hash} SHA-256 por registro. O \textit{hash} do conjunto completo é registrado antes da execução principal.
+\end{itemize}
+
+\paragraph{Contagens.} Por domínio, são $200$ casos-base. Cada caso gera $3$ atributos $\times$ $2$ níveis, isto é, $1.200$ entradas distintas e $600$ pares contrafactuais. Somados os dois domínios, são $2.400$ entradas e $1.200$ pares.
+
+\paragraph{Formato.} Cada registro JSONL contém:
+\begin{itemize}
+    \item \texttt{case\_id}, \texttt{domain}, \texttt{stratum}, \texttt{attribute}, \texttt{level}, \texttt{variant};
+    \item \texttt{text}, o caso renderizado;
+    \item \texttt{job\_id}, apenas no domínio de contratação;
+    \item \texttt{sha256}.
+\end{itemize}
+
+\subsection{Disponibilização aos agentes em tempo de execução}
+
+Os casos são pequenos (estimativa de 400 a 800 \textit{tokens}) e são entregues \emph{integralmente no \textit{prompt}}, sem recuperação. O orquestrador lê o registro JSONL e preenche um \textit{template} de mensagem com três partes:
+\begin{itemize}
+    \item o núcleo de instruções da tarefa, comum a todos os agentes (Apêndice~A.1);
+    \item a descrição da vaga, no domínio de contratação;
+    \item o texto do caso.
+\end{itemize}
+Os agentes não têm acesso a metadados como \texttt{attribute} ou \texttt{level}, nem aos demais casos. Cada caso é processado em contexto novo, sem memória entre casos.
+
+\subsection{Qualidade, viés e dados sensíveis}
+
+\paragraph{Validade da manipulação.} Uma sonda de percepção verifica se cada variante de fato sinaliza o nível socioeconômico pretendido:
+\begin{itemize}
+    \item \textbf{Procedimento.} Um modelo distinto dos auditados recebe cada caso perturbado e estima a classe social da pessoa numa escala de 1 a 5. A sonda segue a de \citet{morla2026agentfairbench}.
+    \item \textbf{Critério de retenção da variante.} Ao menos 80\% dos casos devem ter a variante A classificada acima da B.
+    \item \textbf{Variável de controle.} A mesma sonda estima a qualificação, no domínio de contratação, ou a força da prova, no domínio penal. Uma variante que altere a qualificação percebida é descartada, pois mediria mérito, e não classe.
+\end{itemize}
+
+\paragraph{Viés do gerador.} O LLM gerador pode inserir estereótipos nos casos-base. Esse risco é mitigado por três medidas:
+\begin{itemize}
+    \item o mesmo texto-base é usado nos dois níveis de cada par, de modo que um estereótipo do gerador é constante dentro do par e não cria diferença;
+    \item a revisão H1 remove pistas socioeconômicas fora dos \textit{slots};
+    \item a análise estratificada por estrato de qualificação ou força de prova permite detectar interações.
+\end{itemize}
+
+\paragraph{Dados sensíveis e licenças.}
+\begin{itemize}
+    \item Todos os casos são fictícios, e os nomes vêm de listas de nomes frequentes. Não há dado pessoal no sentido da LGPD.
+    \item Nomes de bairros reais aparecem apenas como atributos geográficos.
+    \item Os textos gerados, os léxicos, o código e os \textit{traces} serão disponibilizados para replicação, respeitando os termos de uso do modelo gerador.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Arquitetura Multiagente}
+\label{sec:arquitetura}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Princípios de isolamento da topologia}
+
+Para que uma diferença de viés possa ser atribuída à topologia, todas as arquiteturas compartilham seis invariantes:
+\begin{enumerate}
+    \item \textbf{Mesmo modelo.} Todos os agentes de todas as topologias usam o mesmo modelo, com os mesmos pesos, numa mesma execução.
+    \item \textbf{Mesmo núcleo de \textit{prompt}.} Todos compartilham o núcleo de instruções da tarefa: descrição, rubrica e esquema de saída (Apêndice~A.1). Apenas um sufixo de papel, de no máximo 120 \textit{tokens}, varia por agente.
+    \item \textbf{Nenhuma instrução de equidade.} Nenhum agente recebe instrução sobre justiça, equidade ou desconsideração de atributos. A auditoria mede o comportamento padrão; instruções de \textit{debiasing} seriam um tratamento adicional e confundiriam a comparação.
+    \item \textbf{Mesma decodificação.} A temperatura é $T=0{,}7$ e o \textit{top-p} é $0{,}95$ em todos os agentes.
+    \item \textbf{Mesmo modo de raciocínio.} Todas as respostas são diretas com justificativa curta, sem modo \textit{thinking}.
+    \item \textbf{Mesmo formato de saída final.} A saída final de toda topologia segue o esquema \texttt{\{justificativa, pontuacao, decisao\}}.
+\end{enumerate}
+A temperatura positiva é necessária por dois motivos: sem ela o \textit{ensemble} degeneraria em cinco cópias idênticas, e não seria possível estimar a probabilidade de decisão por caso, de que depende a métrica principal (Seção~\ref{sec:metricas}). Uma verificação de sensibilidade com $T=0$ é feita no agente único (Seção~\ref{sec:protocolo}).
+
+\subsection{Modelos de linguagem}
+
+\paragraph{Modelo principal: M1.} \texttt{Llama-3.1-8B-Instruct} \citep{grattafiori2024llama3}, com pesos abertos, servido localmente via vLLM \citep{kwon2023vllm}. É atribuído a \emph{todos} os agentes de todas as topologias. Três razões motivam a escolha:
+\begin{itemize}
+    \item pesos fixos identificáveis por \textit{digest}, o que permite reprodução por terceiros;
+    \item suporte oficial ao português;
+    \item é o modelo aberto usado por \citet{morla2026agentfairbench}, o que permite comparar a linha de base com um benchmark próximo.
+\end{itemize}
+
+\paragraph{Modelo de replicação: M2.} \texttt{Qwen3-8B} em modo não-\textit{thinking} \citep{yang2025qwen3}, de família e procedência distintas. O experimento completo é repetido com M2. Serve para verificar se o efeito da topologia é propriedade da orquestração ou do modelo.
+
+\paragraph{Modelos auxiliares.} O gerador de casos (Seção~\ref{sec:dados}) e a sonda de percepção \emph{não} participam das decisões. Usam família distinta de M1 e M2, para evitar circularidade.
+% TODO: confirmar com os autores a disponibilidade de GPU (estimado: 1 GPU com >= 24 GB de VRAM para modelos 8B em bf16) e a versão exata (digest) de M1 e M2 no momento da execução.
+
+Agentes heterogêneos, com modelos diferentes por papel, ficam fora do escopo. Embora \citet{okawa2026emergence} indiquem que a heterogeneidade suprime o consenso enviesado, ela confundiria topologia com modelo, que é exatamente o fator que o desenho isola.
+
+\subsection{Especificação dos agentes por topologia}
+
+A Figura~\ref{fig:topologias} mostra as cinco topologias, e a Tabela~\ref{tab:agentes} especifica cada agente. Os componentes em laranja na figura (agregação e regras de decisão) são código determinístico, não agentes.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\footnotesize,
+    ag/.style={draw, rounded corners=2pt, fill=blue!10, minimum height=6mm, inner sep=3pt, align=center},
+    io/.style={draw, fill=gray!15, minimum height=6mm, inner sep=3pt},
+    cd/.style={draw, fill=orange!20, minimum height=6mm, inner sep=3pt, align=center},
+    lab/.style={anchor=west, font=\footnotesize\bfseries, align=left, text width=2.7cm}]
+    % (a) agente unico
+    \node[lab] at (0,0) {(a) Agente\\único};
+    \node[io] (ca) at (3.6,0) {Caso};
+    \node[ag] (a1) at (6.2,0) {Avaliador};
+    \node[io] (da) at (13.6,0) {Decisão};
+    \draw[->] (ca) -- (a1); \draw[->] (a1) -- (da);
+    % (b) pipeline
+    \node[lab] at (0,-1.3) {(b) \textit{Pipeline}};
+    \node[io] (cb) at (3.6,-1.3) {Caso};
+    \node[ag] (ex) at (5.8,-1.3) {Extrator};
+    \node[ag] (av) at (8.4,-1.3) {Avaliador};
+    \node[ag] (si) at (11.4,-1.3) {Sintetizador};
+    \node[io] (db) at (13.6,-1.3) {Decisão};
+    \draw[->] (cb) -- (ex); \draw[->] (ex) -- node[above, font=\scriptsize]{perfil} (av);
+    \draw[->] (av) -- node[above, font=\scriptsize]{parecer} (si); \draw[->] (si) -- (db);
+    % (c) debate
+    \node[lab] at (0,-3.0) {(c) Debate};
+    \node[io] (cc) at (3.6,-3.0) {Caso};
+    \node[ag] (pro) at (6.4,-2.4) {Debatedor pró};
+    \node[ag] (con) at (6.4,-3.6) {Debatedor contra};
+    \node[ag] (ju) at (10.4,-3.0) {Juiz};
+    \node[io] (dc) at (13.6,-3.0) {Decisão};
+    \draw[->] (cc) -- (pro.west); \draw[->] (cc) -- (con.west);
+    \draw[<->] (pro) -- node[left, font=\scriptsize]{2 rodadas} (con);
+    \draw[->] (pro) -- (ju); \draw[->] (con) -- (ju); \draw[->] (ju) -- (dc);
+    % (d) hierarquica
+    \node[lab] at (0,-5.0) {(d) Revisão hierárquica};
+    \node[io] (cd) at (3.6,-5.0) {Caso};
+    \node[ag] (ev) at (6.2,-5.0) {Avaliador};
+    \node[ag] (rv) at (10.2,-5.0) {Revisor\\(manter/alterar)};
+    \node[io] (dd) at (13.6,-5.0) {Decisão};
+    \draw[->] (cd) -- (ev); \draw[->] (ev) -- node[above, font=\scriptsize]{parecer} (rv); \draw[->] (rv) -- (dd);
+    \draw[->] (cd.south) to[bend right=12] node[below, font=\scriptsize]{caso original} (rv.south);
+    % (e) ensemble
+    \node[lab] at (0,-7.1) {(e) \textit{Ensemble}};
+    \node[io] (ce) at (3.6,-7.1) {Caso};
+    \node[ag, double copy shadow] (en) at (6.2,-7.1) {$K{=}5$ avaliadores\\independentes};
+    \node[cd] (ag) at (10.2,-7.1) {Maioria (decisão)\\Média (pontuação)};
+    \node[io] (de) at (13.6,-7.1) {Decisão};
+    \draw[->] (ce) -- (en); \draw[->] (en) -- (ag); \draw[->] (ag) -- (de);
+\end{tikzpicture}
+\caption{As cinco topologias sob teste, todas com o mesmo LLM em todos os agentes (azul). Laranja: agregação determinística em código. No debate, a ordem de fala é sorteada e o juiz recebe o caso e a transcrição completa. Na revisão hierárquica, o revisor recebe o caso original e o parecer do avaliador. No \textit{pipeline}, cada agente recebe apenas a saída do agente anterior (o sintetizador também recebe o perfil extraído). O avaliador de (a), (d) e (e) usa o mesmo \textit{prompt}; (e) equivale a \textit{self-consistency} \citep{wang2023selfconsistency} aplicada a (a).}
+\label{fig:topologias}
+\end{figure}
+
+\begin{table}[p]
+\centering
+\scriptsize
+\caption{Especificação dos agentes. Entradas e saídas seguem esquemas JSON validados pelo orquestrador (Seção~\ref{sec:orquestracao}). ``Núcleo'' = instruções da tarefa + rubrica + esquema, idênticos para todos os agentes; descrição da vaga incluída no domínio de contratação.}
+\label{tab:agentes}
+\begin{tabularx}{\textwidth}{@{}p{1.4cm} p{1.6cm} L L L p{2.2cm}@{}}
+\toprule
+Topologia & Agente & Papel e escopo de decisão & Entrada & Saída & Término \\
+\midrule
+AU & Avaliador & Decide o caso inteiro sozinho. & Núcleo + caso & \texttt{\{justificativa, pontuacao, decisao\}} & 1 resposta válida \\
+\midrule
+PS & Extrator & Estrutura o caso: requisitos atendidos e experiência relevante, ou fatos, provas e teses. Não decide nem pontua. & Núcleo + caso & Perfil JSON com campos fixos e campo livre \texttt{outras\_informacoes} & 1 perfil válido \\
+ & Avaliador & Avalia o perfil contra a rubrica; emite parecer preliminar. & Núcleo + perfil (sem o caso original) & \texttt{\{parecer, pontuacao\_prelim\}} & 1 parecer válido \\
+ & Sintetizador & Emite a decisão final a partir do perfil e do parecer. & Núcleo + perfil + parecer & Esquema final & 1 resposta válida \\
+\midrule
+DB & Debatedor pró & Argumenta pelo desfecho favorável (avançar / absolver), sem decidir. & Núcleo + caso + transcrição até o turno & Argumento ($\le$ 250 \textit{tokens}) & 2 turnos \\
+ & Debatedor contra & Argumenta pelo desfecho desfavorável (não avançar / condenar), sem decidir. & Idem & Idem & 2 turnos \\
+ & Juiz & Decide com base no caso e nos argumentos; único agente com poder de decisão. & Núcleo + caso + transcrição completa & Esquema final & 1 resposta válida \\
+\midrule
+RH & Avaliador & Idêntico ao AU. & Núcleo + caso & Esquema final & 1 resposta válida \\ \addlinespace
+ & Revisor & Supervisiona: verifica aderência do parecer à rubrica e pode manter ou alterar decisão e pontuação (veto/ajuste). & Núcleo + caso + saída do avaliador & \texttt{\{acao, justificativa, pontuacao, decisao\}} & 1 revisão (sem laço) \\
+\midrule
+EN & Avaliador$_k$, $k{=}1..5$ & Idêntico ao AU, executado 5 vezes de forma independente, sem visibilidade mútua. & Núcleo + caso & Esquema final & 1 resposta válida cada \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Hipóteses mecanicistas e predições mensuráveis}
+
+A Tabela~\ref{tab:hipoteses} explicita, para cada topologia, o mecanismo pelo qual o viés poderia ser amplificado ou atenuado e a predição que o experimento pode refutar. As variáveis intermediárias citadas, como $\rho$, $\omega$, $\mu$ e $\pi_s$, são definidas na Seção~\ref{sec:metricas}.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Hipóteses por topologia e predições mensuráveis. $\Delta^{\mathrm{TF}}_\tau$ e $\Delta^{\CFR}_\tau$ são as diferenças entre a topologia $\tau$ e o agente único (Eq.~\ref{eq:contraste}). Há amplificação quando $|\Delta\mathrm{TF}_\tau|>|\Delta\mathrm{TF}_{\mathrm{AU}}|$ com o mesmo sinal.}
+\label{tab:hipoteses}
+\begin{tabularx}{\textwidth}{@{}p{1.6cm} L L@{}}
+\toprule
+Topologia & Mecanismo hipotetizado & Predição mensurável \\
+\midrule
+PS & \textbf{Filtragem ou saliência na extração.} O extrator pode descartar o atributo socioeconômico, irrelevante para a rubrica, o que atenuaria o viés. Ou pode registrá-lo em \texttt{outras\_informacoes}, tornando-o saliente para os estágios seguintes. & O sinal de $\Delta^{\mathrm{TF}}_{\mathrm{PS}}$ depende da taxa de retenção $\rho$, com atenuação se $\rho$ for baixa. Entre os pares em que o atributo é retido, $|\Delta\mathrm{TF}|$ e $\Delta\CFR$ são maiores do que entre os pares em que é descartado. \\
+DB & \textbf{Conformidade e uso retórico.} Debatedores podem usar o atributo como argumento (``origem humilde'', ``defensor público''), e a dinâmica de conformidade pode levar a um consenso enviesado \citep{okawa2026emergence}. & Amplificação: $\Delta^{\mathrm{TF}}_{\mathrm{DB}}$ tem o mesmo sinal de $\Delta\mathrm{TF}_{\mathrm{AU}}$, e $|\SD_{\mathrm{DB}}|>|\SD_{\mathrm{AU}}|$. A taxa de menção ao atributo $\mu$ é maior nas transcrições do que nas justificativas do AU. \\
+RH & \textbf{Ancoragem do revisor.} O revisor tende a confirmar o parecer recebido e herda o viés do avaliador em vez de corrigi-lo. & A taxa de alteração $\omega$ é baixa e não difere entre os níveis B e A. $\Delta^{\mathrm{TF}}_{\mathrm{RH}}$ é equivalente a zero (TOST, $\epsilon=0{,}05$). \\
+EN & \textbf{Agregação reduz variância, não viés sistemático.} O voto majoritário de $K$ amostras mapeia a probabilidade individual $\pi$ em $P(\mathrm{Bin}(K,\pi)\ge 3)$, uma curva mais íngreme perto de $0{,}5$. Um deslocamento $\pi_{s,\mathrm{B}}-\pi_{s,\mathrm{A}}$ é, portanto, \emph{ampliado} em casos limítrofes. & $\CFR^{\mathrm{nulo}}_{\mathrm{EN}}<\CFR^{\mathrm{nulo}}_{\mathrm{AU}}$, isto é, menos ruído. $|\Delta\mathrm{TF}_{\mathrm{EN}}|\ge|\Delta\mathrm{TF}_{\mathrm{AU}}|$, com efeito concentrado nos casos com $\bar\pi_s\in[0{,}3;\,0{,}7]$ no AU. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Raciocínio, planejamento e memória}
+
+\paragraph{Raciocínio.} Todos os agentes decisores produzem uma justificativa curta \emph{antes} da pontuação e da decisão, uma vez que o esquema impõe essa ordem de campos. É uma cadeia de raciocínio leve e uniforme entre as topologias, o que evita que diferenças de profundidade de raciocínio se confundam com a topologia. \citet{morla2026agentfairbench} tratam o raciocínio elicitado como uma condição experimental própria, com controle de comprimento, o que indica que ele não deve variar junto com a topologia. Os debatedores raciocinam de forma argumentativa, conforme o papel atribuído, como no debate multiagente de \citet{du2024debate}. Aqui, porém, as posições são fixas (pró e contra) e um juiz separado decide.
+
+\paragraph{Planejamento.} Nenhum agente planeja ou escolhe o próximo passo. O grafo de cada topologia é fixo e executado pelo orquestrador. A topologia é a variável independente do estudo e, por isso, não pode ser decidida dinamicamente pelos próprios agentes.
+
+\paragraph{Memória.} Não há memória entre casos: cada caso, condição e réplica começa em contexto vazio, o que elimina contaminação e efeitos de ordem entre casos. Dentro de um caso, a memória é a \emph{visibilidade de mensagens} definida pela topologia:
+\begin{itemize}
+    \item \textbf{\textit{Pipeline}:} memória estritamente local, em que cada agente vê só a saída do anterior.
+    \item \textbf{Debate:} transcrição compartilhada e acumulada.
+    \item \textbf{Revisão hierárquica:} o revisor vê o caso e o parecer do avaliador.
+    \item \textbf{\textit{Ensemble}:} isolamento total entre avaliadores.
+\end{itemize}
+Essa visibilidade é tratada como parte da topologia e documentada no Apêndice~A.1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Orquestração e Uso de Ferramentas}
+\label{sec:orquestracao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Padrão de orquestração.} Um orquestrador central determinístico, escrito em Python, implementa cada topologia como um grafo fixo de chamadas sobre a API compatível com OpenAI do vLLM. Frameworks como AutoGen \citep{wu2023autogen} ou CrewAI não são usados, pois injetam \textit{prompts} de sistema e lógicas de turno próprias, diferentes por padrão de colaboração. Isso introduziria diferenças de texto não controladas entre as topologias. Com o orquestrador próprio, a única diferença entre as topologias é a definida na Tabela~\ref{tab:agentes}.
+
+\paragraph{Protocolo de comunicação.} Os agentes nunca se comunicam diretamente. Toda mensagem passa pelo orquestrador, que segue quatro regras:
+\begin{itemize}
+    \item valida a saída do agente contra o esquema JSON do papel;
+    \item extrai apenas os campos previstos;
+    \item monta a entrada do próximo agente a partir de um \textit{template} fixo;
+    \item registra cada chamada num \textit{trace} com os campos \texttt{run\_id}, \texttt{case\_id}, condição, réplica, papel, \textit{prompt} completo, resposta bruta, resposta validada, \textit{tokens} de entrada e saída, latência e semente.
+\end{itemize}
+No debate, o orquestrador também faz o seguinte:
+\begin{itemize}
+    \item sorteia, com semente por caso e réplica, qual debatedor fala primeiro, controlando efeitos de ordem;
+    \item alterna os turnos, de modo que cada debatedor vê os argumentos anteriores;
+    \item encerra após 2 rodadas, totalizando 4 turnos, e passa a transcrição ao juiz.
+\end{itemize}
+
+\paragraph{Sementes e independência.} Cada chamada recebe uma semente derivada, por \textit{hash}, da tupla (caso, atributo, nível, réplica, papel).
+\begin{itemize}
+    \item \textbf{Sem números aleatórios comuns entre os níveis B e A.} Usar a mesma semente nos dois níveis reduziria artificialmente as inversões no par contrafactual em relação às réplicas, o que tornaria a CFR e o piso de ruído incomparáveis (Seção~\ref{sec:metricas}).
+    \item \textbf{Não-determinismo residual.} O não-determinismo de \textit{batching} do vLLM não compromete o desenho, porque ele não depende de reprodução bit a bit das chamadas; as réplicas medem essa variabilidade.
+\end{itemize}
+
+\paragraph{Limites de execução.} Cada execução está sujeita aos seguintes limites:
+\begin{itemize}
+    \item \textbf{\textit{Tokens} de saída por chamada:} 400; 250 por turno de debate.
+    \item \textbf{Rodadas:} 2 rodadas de debate e 1 revisão, sem laço de re-revisão.
+    \item \textbf{\textit{Timeout}:} 120\,s por chamada.
+    \item \textbf{Chamadas por decisão:} número fixo por topologia, igual a 1 (AU), 3 (PS), 5 (DB), 2 (RH) e 5 (EN).
+\end{itemize}
+Esses limites tornam o custo de cada topologia previsível e são registrados como covariáveis (Seção~\ref{sec:custo}).
+
+\paragraph{Tratamento de falhas.} Uma saída que não passa no esquema é tratada assim:
+\begin{enumerate}
+    \item \textbf{Novas tentativas.} O orquestrador tenta novamente até 2 vezes. Cada nova tentativa acrescenta uma mensagem fixa (``Responda apenas no formato JSON especificado'') e usa uma nova semente derivada.
+    \item \textbf{Decodificação restrita.} Persistindo a falha, faz uma última tentativa com decodificação restrita ao esquema (\textit{guided decoding} do vLLM).
+    \item \textbf{Registro do estágio.} O estágio em que cada saída foi obtida (direto, após nova tentativa ou restrito) é registrado.
+    \item \textbf{Saídas inválidas e recusas.} Saídas que continuam inválidas e recusas explícitas recebem o rótulo \texttt{invalido}. \emph{Nenhuma é descartada silenciosamente.}
+\end{enumerate}
+Falhas em agentes intermediários e no \textit{ensemble} seguem duas regras adicionais:
+\begin{itemize}
+    \item \textbf{Agentes intermediários.} Se o extrator, o avaliador do PS, um debatedor ou o avaliador do RH continuar inválido ou recusar a tarefa, a decisão inteira da topologia é marcada como \texttt{invalido}, pois a topologia não foi executada como especificada.
+    \item \textbf{\textit{Ensemble}.} Um avaliador inválido é reamostrado com nova semente, até 2 vezes. Se continuar inválido, a decisão é marcada como \texttt{invalido}. Assim, toda decisão válida do \textit{ensemble} tem exatamente $K=5$ votos, e não há empate.
+\end{itemize}
+A taxa de \texttt{invalido} e a de recusa são comparadas entre os níveis B e A como métrica de viés própria. Uma recusa mais frequente para um dos grupos também é tratamento desigual. A análise principal exclui pares com qualquer lado inválido, e uma análise de sensibilidade imputa o desfecho desfavorável.
+
+\paragraph{Tratamento de divergências.} As divergências entre agentes são resolvidas por regras fixas, nunca por um agente adicional:
+\begin{itemize}
+    \item \textbf{\textit{Ensemble}.} A decisão é o voto majoritário ($K=5$ é ímpar, logo não há empate), e a pontuação é a média.
+    \item \textbf{Revisão hierárquica.} Prevalece a saída do revisor, que é sempre a final, mesmo com \texttt{acao=manter}. A incoerência entre \texttt{acao=manter} e uma decisão diferente da do avaliador é contada como erro de protocolo.
+    \item \textbf{Debate.} Decide o juiz.
+    \item \textbf{\textit{Pipeline}.} Decide o sintetizador.
+    \item \textbf{Todas as topologias.} A incoerência entre pontuação e decisão, como pontuação acima de 50 com decisão desfavorável, é registrada como diagnóstico, mas não corrigida.
+\end{itemize}
+
+\paragraph{Ferramentas.} Os agentes sob teste \emph{não} têm ferramentas: não acessam busca, recuperação de documentos nem execução de código. Três razões justificam a escolha:
+\begin{itemize}
+    \item o caso completo cabe no \textit{prompt};
+    \item resultados de ferramentas variam entre chamadas e topologias, adicionando uma fonte de variação confundida com a orquestração;
+    \item a dimensão de uso de ferramentas já é estudada por \citet{morla2026agentfairbench}.
+\end{itemize}
+As ferramentas do sistema pertencem ao \textit{harness} e estão na Tabela~\ref{tab:ferramentas}.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Ferramentas do \textit{harness} (código determinístico; nenhuma é exposta aos agentes sob teste).}
+\label{tab:ferramentas}
+\begin{tabularx}{\textwidth}{@{}p{3.2cm} L L@{}}
+\toprule
+Ferramenta & Condição de uso & Validação da saída \\
+\midrule
+Renderizador / perturbador & Geração única dos pares, antes da execução & \textit{Diff} restrito ao \textit{slot}; \textit{hash} SHA-256 conferido a cada leitura \\
+Validador de esquema JSON & Toda resposta de agente & Esquema por papel; campos obrigatórios; \texttt{decisao} em conjunto fechado; \texttt{pontuacao} inteira em $[0,100]$ \\
+Detector de retenção/menção & Pós-processamento de \textit{traces} (PS, DB, RH) & Casamento exato e normalizado da forma de superfície do \textit{slot}; amostra de 100 casos conferida manualmente \\
+Contador de \textit{tokens} e relógio & Toda chamada & \textit{Tokens} reportados pelo servidor conferidos com o \textit{tokenizer} local \\
+Sonda de percepção & Validação dos léxicos (Seção~\ref{sec:dados}) & Concordância com a direção pretendida $\ge 80\%$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Mecanismos de controle e intervenção humana.} Não há humano no laço de decisão, pois isso contaminaria a medida. Os pontos de intervenção ficam antes e depois da execução:
+\begin{itemize}
+    \item \textbf{H1, revisão dos casos-base e dos léxicos.} Ocorre antes do congelamento (Seção~\ref{sec:dados}).
+    \item \textbf{H2, conferência da fidelidade dos pares.} O \textit{diff} automático cobre 100\% dos pares, e há leitura manual de 5\% deles.
+    \item \textbf{H3, auditoria de \textit{traces}.} Uma amostra estratificada de 50 \textit{traces} por topologia e domínio é lida para verificar a aderência ao papel. O debatedor contra não pode, por exemplo, defender o candidato.
+    \item \textbf{Pré-registro.} Hipóteses, métricas, testes e critérios de exclusão são congelados num documento versionado no repositório antes da execução principal, após o piloto.
+    \item \textbf{Regra de parada.} A execução é interrompida se, nas primeiras 500 decisões de qualquer topologia, a taxa de \texttt{invalido} passar de 5\% ou a de erros de protocolo em H3 passar de 10\%. Nesse caso, os \textit{prompts} de papel são corrigidos, a alteração é documentada e a execução daquela topologia é reiniciada do zero.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Procedimentos de Avaliação}
+\label{sec:avaliacao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Métricas}
+\label{sec:metricas}
+
+\paragraph{Notação.} A notação usada nas métricas é a seguinte:
+\begin{itemize}
+    \item $d\in\{H,C\}$ é o domínio;
+    \item $p$ é o atributo perturbado;
+    \item $s\in S_{d}$ é o caso-base, com $|S_d|=N=200$;
+    \item $\ell\in\{\mathrm{B},\mathrm{A}\}$ é o nível do atributo;
+    \item $r\in\{1,\dots,R\}$, com $R=5$, é a réplica;
+    \item $\tau\in\{\mathrm{AU},\mathrm{PS},\mathrm{DB},\mathrm{RH},\mathrm{EN}\}$ é a topologia;
+    \item $Y^{\tau}_{s,\ell,r}\in\{0,1\}$ é a decisão final, com $1$ indicando o desfecho favorável;
+    \item $X^{\tau}_{s,\ell,r}\in[0,100]$ é a pontuação final, orientada como na Seção~\ref{sec:dados}.
+\end{itemize}
+Para simplificar, omitem-se $d$ e $p$: toda métrica é calculada separadamente por (topologia, domínio, atributo).
+
+\paragraph{CFR contrafactual e piso de ruído.} Adota-se a forma pareada da CFR de \citet{morla2026agentfairbench}, agregada sobre as réplicas:
+\begin{equation}
+\CFR^{\mathrm{pert}}_\tau=\frac{1}{NR}\sum_{s}\sum_{r}\ind\!\left[Y^\tau_{s,\mathrm{B},r}\neq Y^\tau_{s,\mathrm{A},r}\right].
+\end{equation}
+O piso de ruído é a mesma estatística calculada entre duas réplicas de uma entrada \emph{idêntica}, com pareamento cíclico $r\oplus1=(r \bmod R)+1$:
+\begin{equation}
+\CFR^{\mathrm{nulo}}_\tau=\frac{1}{2NR}\sum_{s}\sum_{\ell}\sum_{r}\ind\!\left[Y^\tau_{s,\ell,r}\neq Y^\tau_{s,\ell,r\oplus1}\right].
+\end{equation}
+As duas estatísticas comparam exatamente duas decisões, ou seja, têm a mesma aridade. Isso evita a inflação por aridade que \citet{morla2026agentfairbench} identificam ao comparar dispersões de $k>2$ grupos com um piso de duas execuções.
+
+\paragraph{CFR em excesso.} É definida como
+\begin{equation}
+\Delta\CFR_\tau=\CFR^{\mathrm{pert}}_\tau-\CFR^{\mathrm{nulo}}_\tau.
+\label{eq:dcfr}
+\end{equation}
+
+\paragraph{Diferença assinada de taxa de desfecho favorável.} É definida como
+\begin{equation}
+\Delta\mathrm{TF}_\tau=\frac{1}{NR}\sum_s\sum_r\left(Y^\tau_{s,\mathrm{B},r}-Y^\tau_{s,\mathrm{A},r}\right).
+\label{eq:dtf}
+\end{equation}
+Valores negativos indicam desvantagem do nível socioeconômico baixo.
+
+\paragraph{Relação entre as duas.} Sejam $\pi_{s,\ell}=P(Y^\tau_{s,\ell,r}=1)$ e $\Delta\pi_s=\pi_{s,\mathrm{B}}-\pi_{s,\mathrm{A}}$, e suponha réplicas independentes. Então $\mathbb{E}[\ind(Y_{s,\mathrm{B}}\neq Y_{s,\mathrm{A}})]=\pi_{s,\mathrm{B}}(1-\pi_{s,\mathrm{A}})+\pi_{s,\mathrm{A}}(1-\pi_{s,\mathrm{B}})$, e o piso médio vale $\pi_{s,\mathrm{B}}(1-\pi_{s,\mathrm{B}})+\pi_{s,\mathrm{A}}(1-\pi_{s,\mathrm{A}})$. Subtraindo,
+\begin{equation}
+\mathbb{E}\left[\Delta\CFR_\tau\right]=\frac{1}{N}\sum_s\Delta\pi_s^2=\overline{\Delta\pi}^{\,2}+\mathrm{Var}_s(\Delta\pi_s),
+\qquad
+\mathbb{E}\left[\Delta\mathrm{TF}_\tau\right]=\overline{\Delta\pi}.
+\end{equation}
+Isso tem quatro consequências:
+\begin{itemize}
+    \item \textbf{Robustez ao ruído.} As duas estatísticas medem o deslocamento da probabilidade de decisão causado \emph{apenas} pelo atributo. Nenhuma delas é afetada pelo fato de algumas topologias serem mais ou menos ruidosas. Isso é essencial, porque o voto majoritário do \textit{ensemble} reduz mecanicamente a CFR bruta, mesmo sem nenhuma alteração no viés.
+    \item \textbf{$\Delta\CFR$ não tem sinal.} Ela é nula em expectativa se e somente se o atributo não afeta nenhum caso. Também capta efeitos heterogêneos, em que o atributo favorece o nível B em alguns casos e o A em outros, e que se cancelam em $\Delta\mathrm{TF}$.
+    \item \textbf{$\Delta\CFR$ é de segunda ordem.} Um deslocamento sistemático de 5 pontos percentuais contribui com apenas $0{,}0025$ para $\Delta\CFR$, abaixo do que o desenho consegue distinguir (Seção~\ref{sec:analise}).
+    \item \textbf{$\Delta\mathrm{TF}$ é de primeira ordem e tem sinal.} Recupera a direção do viés, o que é necessário porque a literatura registra inversões de direção entre gerações de modelos \citep{gao2026hiring}.
+\end{itemize}
+
+\paragraph{Hierarquia das métricas.} O desfecho principal continua sendo a decisão, como na Fase 1, e as duas estatísticas têm papéis distintos:
+\begin{itemize}
+    \item $\Delta\mathrm{TF}$ é a estatística do \textbf{teste confirmatório}.
+    \item $\Delta\CFR$ é a \textbf{métrica principal de reporte}, presente em todas as tabelas, e o teste secundário de efeitos heterogêneos.
+\end{itemize}
+
+\paragraph{Contrastes de topologia.} O efeito da topologia é a diferença em relação à linha de base:
+\begin{equation}
+\Delta^{\mathrm{TF}}_\tau=\Delta\mathrm{TF}_\tau-\Delta\mathrm{TF}_{\mathrm{AU}},\qquad
+\Delta^{\CFR}_\tau=\Delta\CFR_\tau-\Delta\CFR_{\mathrm{AU}},\qquad \tau\in\{\mathrm{PS},\mathrm{DB},\mathrm{RH},\mathrm{EN}\}.
+\label{eq:contraste}
+\end{equation}
+A leitura de $\Delta^{\mathrm{TF}}_\tau$ depende de $\Delta\mathrm{TF}_{\mathrm{AU}}$:
+\begin{itemize}
+    \item há \emph{amplificação} se $\Delta^{\mathrm{TF}}_\tau$ tiver o mesmo sinal de $\Delta\mathrm{TF}_{\mathrm{AU}}$;
+    \item há \emph{atenuação} se tiver sinal oposto sem ultrapassá-lo;
+    \item há \emph{viés emergente} se $\Delta\mathrm{TF}_{\mathrm{AU}}$ for nulo e $\Delta\mathrm{TF}_\tau$ não for.
+\end{itemize}
+
+\paragraph{Métricas secundárias de pontuação.} São duas:
+\begin{itemize}
+    \item \textbf{MASD.} Para pares ($k=2$), a amplitude da definição de \citet{morla2026agentfairbench} é a diferença absoluta:
+    \begin{equation}
+    \MASD_\tau=\frac{1}{NR}\sum_s\sum_r\left|X^\tau_{s,\mathrm{B},r}-X^\tau_{s,\mathrm{A},r}\right| .
+    \end{equation}
+    Ela é reportada junto ao seu piso, calculado sobre réplicas como na CFR, e ao excesso $\Delta\MASD_\tau$.
+    \item \textbf{Diferença assinada de pontuação.} É o análogo de $\Delta\mathrm{TF}$ na pontuação, que capta deslocamentos que não chegam a cruzar o limiar de decisão:
+    \begin{equation}
+    \SD_\tau=\frac{1}{NR}\sum_s\sum_r\left(X^\tau_{s,\mathrm{B},r}-X^\tau_{s,\mathrm{A},r}\right).
+    \end{equation}
+\end{itemize}
+
+\paragraph{Variáveis intermediárias (QP3).} Cada variável está associada a uma das hipóteses da Tabela~\ref{tab:hipoteses}:
+\begin{itemize}
+    \item $\rho$ é a taxa de retenção, a fração de saídas do extrator (PS) que contém a forma de superfície do atributo.
+    \item $\omega_\ell$ é a taxa de alteração, a fração de casos em que o revisor (RH) muda a decisão do avaliador, por nível $\ell$.
+    \item $\mu$ é a taxa de menção ao atributo nas transcrições do debate (DB) e nas justificativas das demais topologias.
+    \item $\bar\pi_s$ é a probabilidade média de desfecho favorável do caso $s$ no AU. Ela é usada para estratificar casos limítrofes.
+    \item Concordância entre avaliadores do \textit{ensemble}: kappa de Fleiss.
+\end{itemize}
+
+\paragraph{Métricas de validade e operacionais.} Além das métricas de viés, são registradas:
+\begin{itemize}
+    \item a taxa de \texttt{invalido} e a de recusa por nível, comparadas entre B e A pelo teste de McNemar sobre os pares;
+    \item a taxa de erros de protocolo (H3);
+    \item a taxa de incoerência entre pontuação e decisão;
+    \item chamadas por decisão, \textit{tokens} de entrada e de saída por decisão e latência por decisão (mediana e p95).
+\end{itemize}
+Não há métrica de acurácia, pois os casos não têm rótulo verdadeiro. A sensibilidade a fatores legítimos é verificada pelo controle positivo descrito abaixo. Também não há avaliação com usuários-alvo, como recrutadores ou jurados, porque a Fase 1 excluiu testes com usuários reais do escopo. O benchmark se destina a equipes de engenharia e a auditores, que usam diretamente as métricas acima.
+
+\subsection{Protocolo experimental}
+\label{sec:protocolo}
+
+\paragraph{Desenho.} O experimento é fatorial completo e intra-casos, isto é, todo caso passa por todas as condições:
+\[
+2 \text{ domínios} \times 3 \text{ atributos} \times 2 \text{ níveis} \times 5 \text{ topologias} \times R{=}5 \text{ réplicas} \times N{=}200 \text{ casos}.
+\]
+Isso resulta em $60.000$ decisões finais por modelo, executadas primeiro com M1 e depois repetidas integralmente com M2. Como cada caso passa por todas as topologias, os contrastes da Eq.~\ref{eq:contraste} são pareados por caso, o que remove a variância entre casos.
+
+\paragraph{\textit{Baselines} e controles.}
+\begin{itemize}
+    \item \textbf{Linha de base de topologia:} o agente único (AU), com o mesmo \textit{prompt} do avaliador de RH e EN.
+    \item \textbf{Linha de base de ruído:} as réplicas idênticas, ou seja, $\CFR^{\mathrm{nulo}}$ para cada topologia.
+    \item \textbf{Controle positivo de sensibilidade.} Em 50 casos por domínio, o nível de qualificação ou a força da prova é deslocado em um estrato, mantendo o resto constante. Espera-se $|\Delta\mathrm{TF}|$ e $\Delta\CFR$ muito maiores do que os de qualquer atributo socioeconômico. Se isso não ocorrer, a topologia não está lendo o caso, e os resultados de viés não são interpretáveis.
+    \item \textbf{Controle positivo de detecção.} Em 50 casos por domínio, o AU recebe uma instrução explícita para favorecer o nível A. O \textit{pipeline} de análise precisa detectar $\Delta\mathrm{TF}<0$ e $\SD<0$ com $p<0{,}05$, o que demonstra que o instrumento recupera um viés conhecido \citep{morla2026agentfairbench}.
+    \item \textbf{Sensibilidade à temperatura.} O AU é executado com $T=0$ em todos os pares, para verificar se a direção de $\Delta\mathrm{TF}$ e de $\SD$ se mantém.
+\end{itemize}
+
+\paragraph{Condições controladas e fatores de confusão.} Os principais fatores de confusão são tratados assim:
+\begin{itemize}
+    \item \textbf{Modelo, \textit{prompts} e decodificação.} São fixados pelos invariantes da Seção~\ref{sec:arquitetura}.
+    \item \textbf{Ordem de fala no debate.} É sorteada.
+    \item \textbf{Ordem de execução das chamadas.} É aleatorizada entre condições, para que a deriva do servidor não se correlacione com o nível.
+    \item \textbf{Comprimento do texto.} A diferença entre os níveis B e A é inferior a 5 \textit{tokens}.
+    \item \textbf{Número de chamadas e de \textit{tokens}.} Difere entre topologias por definição e \emph{não} é equalizado, pois faz parte do que distingue cada arquitetura. Por isso, é reportado como covariável (Seção~\ref{sec:custo}), e as conclusões são formuladas como ``a topologia, com seu custo característico, altera o viés''.
+\end{itemize}
+
+\subsection{Análise estatística}
+\label{sec:analise}
+
+\paragraph{Unidade de análise.} A unidade de análise é o caso-base $s$. Réplicas e níveis são medidas repetidas do mesmo caso, e tratá-los como independentes estreitaria artificialmente os intervalos.
+
+\paragraph{Intervalos de confiança.} Para cada métrica, os intervalos de 95\% são obtidos por \textit{bootstrap} por conglomerado: os casos são reamostrados com reposição, $B=10.000$ vezes, com intervalo percentil. Para taxas simples, usa-se o intervalo de Wilson.
+
+\paragraph{Testes confirmatórios.} Para cada topologia $\tau$ e domínio $d$, calcula-se a diferença por caso, agregada sobre os três atributos do domínio, que estão todos orientados de B para A:
+\[
+\delta_s=\frac{1}{3}\sum_{p}\left(\Delta\mathrm{TF}_{\tau,s,p}-\Delta\mathrm{TF}_{\mathrm{AU},s,p}\right).
+\]
+Sobre $\{\delta_s\}$ aplica-se um teste de permutação por troca de sinal, com $10.000$ permutações e hipótese bilateral.
+\begin{itemize}
+    \item A família confirmatória tem $4$ topologias $\times$ $2$ domínios, ou seja, $8$ testes.
+    \item Os testes são corrigidos por Holm \citep{holm1979} para uma taxa de erro familiar de $0{,}05$.
+    \item O teste é executado sobre o modelo M1. O modelo M2 é tratado como replicação, e um efeito é considerado replicado se tiver o mesmo sinal e $p<0{,}05$ não corrigido em M2.
+\end{itemize}
+A agregação sobre os atributos é o que torna a família pequena e o teste poderoso. O detalhamento por atributo é secundário.
+
+\paragraph{Testes secundários.} São controlados por Benjamini--Hochberg com $q=0{,}05$:
+\begin{itemize}
+    \item os $24$ contrastes $\Delta^{\mathrm{TF}}_\tau$ por atributo;
+    \item os contrastes $\Delta^{\CFR}_\tau$;
+    \item os testes de $\Delta\CFR_\tau>0$ e de $\SD_\tau\neq0$ (Wilcoxon pareado) para cada topologia isolada;
+    \item as comparações entre B e A nas taxas de inválido e de recusa (McNemar);
+    \item as predições da Tabela~\ref{tab:hipoteses}.
+\end{itemize}
+Como análise de robustez, ajusta-se um modelo logístico de efeitos mistos para a decisão:
+\[
+\mathrm{logit}\,P(Y=1)\sim \tau\times d\times p\times \ell + (1\mid s).
+\]
+O efeito da topologia sobre o viés corresponde aos termos de interação $\tau\times\ell$.
+
+\paragraph{Ausência de efeito.} A pergunta ``a topologia importa?'' admite resposta negativa, que precisa ser demonstrada, e não apenas presumida a partir de $p>0{,}05$. Para isso, testa-se a equivalência de cada um dos 8 contrastes confirmatórios por dois testes unilaterais (TOST, $\alpha=0{,}05$) com margem $\epsilon=0{,}05$, isto é, 5 pontos percentuais na probabilidade de desfecho favorável.
+
+Essa margem tem uma limitação que precisa ser explícita. Disparidades da ordem de 1 a 3 pontos percentuais, como as reportadas por \citet{an2025resume} para LLM único em contratação, ficam abaixo da resolução deste desenho. Uma conclusão de equivalência significa ``nenhuma diferença maior que 5 pontos percentuais'', e não ``nenhuma diferença''.
+
+\paragraph{Poder e tamanho amostral.} O poder foi estimado por simulação de Monte Carlo, com $1.000$ repetições, sob as seguintes hipóteses:
+\begin{itemize}
+    \item $\pi_s\sim\mathcal{U}[0{,}1;\,0{,}9]$, coerente com a seleção piloto;
+    \item decisões de Bernoulli independentes entre réplicas;
+    \item AU sem viés e deslocamento homogêneo $\Delta\pi$ na topologia testada;
+    \item $N=200$ e $R=5$.
+\end{itemize}
+Os resultados foram:
+\begin{itemize}
+    \item \textbf{Teste confirmatório.} O desvio-padrão das diferenças por caso agregadas é $\sigma_\delta\approx0{,}23$. Com Holm em 8 testes, o efeito mínimo detectável com poder de 80\% é $\mathrm{MDE}\approx(z_{1-0{,}05/16}+z_{0{,}8})\,\sigma_\delta/\sqrt{N}\approx0{,}06$. O poder simulado é $0{,}63$ para $\Delta\pi=0{,}05$ e $\approx1{,}00$ para $\Delta\pi=0{,}10$.
+    \item \textbf{Equivalência.} Sob contraste nulo verdadeiro, o TOST com $\epsilon=0{,}05$ declara equivalência em 85\% das repetições.
+    \item \textbf{Contrastes por atributo.} Com 24 testes, o poder é $0{,}69$ para $\Delta\pi=0{,}10$.
+    \item \textbf{$\Delta^{\CFR}_\tau$ como teste confirmatório.} O poder seria $\le0{,}04$ para $\Delta\pi=0{,}10$ e só chegaria a $0{,}73$ com $\Delta\pi=0{,}30$ (24 testes). Este é o motivo do ajuste de escopo 4.
+\end{itemize}
+A simulação ignora variância adicional entre agentes e casos. Por isso, $\sigma_\delta$ será reestimado no piloto, com 40 casos por domínio e todas as topologias. Se o MDE resultante passar de $0{,}08$, o desenho é ampliado antes do pré-registro, de uma de duas formas:
+\begin{itemize}
+    \item $R$ passa para $10$, o que reduz $\sigma_\delta$ por $\approx\sqrt2$ na simulação e dobra o custo da Tabela~\ref{tab:custo};
+    \item ou $N$ passa para $400$.
+\end{itemize}
+% TODO: atualizar sigma_delta e MDE com os dados do piloto (script de simulação a ser versionado no repositório).
+
+\subsection{Custo e latência}
+\label{sec:custo}
+
+A Tabela~\ref{tab:custo} estima o volume de chamadas e \textit{tokens}. A hipótese é de, em média, $1.500$ \textit{tokens} de entrada e $300$ de saída por chamada; as chamadas de juiz e de revisor são maiores, as de debatedor menores. O custo monetário é nulo por \textit{token}, porque a inferência é local, mas o custo em GPU-hora é registrado. O custo efetivo por decisão e a latência (mediana e p95) de cada topologia são resultados reportados ao lado do viés. Isso permite à equipe que adota uma arquitetura ponderar viés contra custo, na linha da análise de custo por orquestração de \citet{sayedali2026harness}.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Orçamento estimado por modelo (M1 ou M2). Decisões por topologia: $2\times3\times2\times5\times200=12.000$.}
+\label{tab:custo}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Topologia & Chamadas/decisão & Chamadas & \textit{Tokens} (estim., $10^6$) \\
+\midrule
+AU & 1 & 12.000 & 22 \\
+PS & 3 & 36.000 & 65 \\
+DB & 5 & 60.000 & 108 \\
+RH & 2 & 24.000 & 43 \\
+EN & 5 & 60.000 & 108 \\
+\midrule
+Total experimento principal & 16 & 192.000 & $\approx$ 346 \\
+Piloto, controles e sonda & -- & $\approx$ 64.000 & $\approx$ 115 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% TODO: medir throughput real no piloto e converter em GPU-horas; confirmar acesso a GPU (cluster do IC ou alternativa).
+
+\subsection{Critérios de sucesso}
+
+O sucesso é avaliado em dois níveis.
+
+\paragraph{Validade do instrumento.} Estes critérios são pré-requisitos e, se algum falhar, os resultados de viés não são reportados como conclusivos:
+\begin{itemize}
+    \item 100\% dos pares passam no \textit{diff};
+    \item ao menos 80\% das variantes de léxico passam na sonda de percepção;
+    \item os dois controles positivos são detectados;
+    \item a taxa de \texttt{invalido} fica abaixo de 2\% por topologia após as novas tentativas;
+    \item os erros de protocolo em H3 ficam abaixo de 10\%.
+\end{itemize}
+
+\paragraph{Resposta científica.} As questões de pesquisa são respondidas com um entregável bem definido:
+\begin{itemize}
+    \item \textbf{QP1:} cada um dos 8 contrastes confirmatórios recebe uma de três conclusões: diferente de zero (Holm), equivalente a zero com margem de 5 pontos percentuais (TOST) ou inconclusivo.
+    \item \textbf{QP2:} consistência de sinal e de significância entre domínios, atributos e modelos.
+    \item \textbf{QP3:} confirmação ou refutação de cada predição da Tabela~\ref{tab:hipoteses}.
+\end{itemize}
+O projeto é bem-sucedido se entregar essa resposta com o instrumento validado, independentemente da direção do resultado. Um resultado nulo bem estimado é uma resposta válida à pergunta do título.
+
+\subsection{Ameaças à validade e limitações}
+\label{sec:ameacas}
+
+\paragraph{Validade de construto.} Há três ameaças principais:
+\begin{itemize}
+    \item \textbf{Atributos como \textit{proxies}.} Os atributos operacionalizam status socioeconômico por \textit{proxies}, que também podem sinalizar raça, região ou outros fatores. Bairros de periferia em São Paulo, por exemplo, têm composição racial distinta da dos bairros centrais. A sonda de percepção mitiga, mas não elimina, essa sobreposição, e os resultados são formulados como resposta ao \textit{proxy}, não à classe em abstrato.
+    \item \textbf{Ocupação do réu.} Pode ser lida como informação de contexto e não apenas de status.
+    \item \textbf{Decisão binária forçada.} Simplifica decisões reais, que incluem graus e alternativas, como a desclassificação do crime ou o pedido de mais informações.
+\end{itemize}
+
+\paragraph{Validade interna.} Há quatro ameaças principais:
+\begin{itemize}
+    \item \textbf{Número de chamadas e de \textit{tokens}.} Covaria com a topologia por construção. Uma diferença entre EN e AU, por exemplo, não distingue ``agregação'' de ``mais computação''. Isso é registrado, mas não resolvido.
+    \item \textbf{Seleção dos casos pelo AU.} A seleção de casos limítrofes pelo comportamento do AU pode favorecer a detecção de efeitos na linha de base. Para verificar isso, os contrastes da Eq.~\ref{eq:contraste} são reportados também por estrato de $\bar\pi_s$.
+    \item \textbf{Texto dos sufixos de papel.} É inevitavelmente diferente entre topologias, mas é curto e é publicado.
+    \item \textbf{Não-determinismo do servidor.} É absorvido pelas réplicas, mas impede a reprodução exata das chamadas; a reprodução é garantida a partir dos \textit{traces}.
+\end{itemize}
+
+\paragraph{Validade externa.} Há quatro ameaças principais:
+\begin{itemize}
+    \item \textbf{Escala dos modelos.} Dois modelos abertos de 8B parâmetros não representam modelos comerciais de fronteira. A direção do viés de LLMs em contratação muda entre gerações \citep{gao2026hiring}.
+    \item \textbf{Casos sintéticos.} São mais curtos e limpos que currículos e autos reais.
+    \item \textbf{Contexto e idioma.} O contexto é paulistano e em português, o que limita a generalização para outros contextos e idiomas, embora seja justamente o contexto de interesse do projeto.
+    \item \textbf{Implementação das topologias.} Cada topologia tem uma única implementação, com número de rodadas, $K$ e papéis fixos. Outras parametrizações podem se comportar de forma diferente, e o estudo não varia esses parâmetros.
+\end{itemize}
+
+\paragraph{Validade de conclusão.} Há duas ameaças principais:
+\begin{itemize}
+    \item \textbf{Graus de liberdade do pesquisador.} A família de 8 testes confirmatórios, a margem de equivalência e as decisões de exclusão são fixadas no pré-registro, o que reduz esses graus de liberdade.
+    \item \textbf{Poder estatístico.} O poder simulado supõe ruído apenas binomial, e o $\sigma_\delta$ real pode ser maior; o piloto existe para estimá-lo antes da execução principal. Mesmo no cenário simulado, efeitos menores que 5 pontos percentuais não são detectáveis.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Apêndice}
+\label{sec:apendice}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{A.1 Núcleo de \textit{prompt} e esquemas}
+\phantomsection
+
+Núcleo comum a todos os agentes, ilustrado para o domínio de contratação; a versão final de todos os \textit{prompts} será publicada no repositório:
+
+\begin{small}
+\begin{verbatim}
+Você está avaliando uma candidatura para a vaga descrita abaixo.
+Use apenas os critérios da rubrica: requisitos obrigatórios,
+requisitos desejáveis e experiência relevante.
+[VAGA]  {descricao_da_vaga}
+[CASO]  {texto_do_caso | perfil | transcrição, conforme o papel}
+Responda somente em JSON:
+{"justificativa": "<até 80 palavras>",
+ "pontuacao": <inteiro de 0 a 100>,
+ "decisao": "avancar" | "nao_avancar"}
+\end{verbatim}
+\end{small}
+
+Sufixos de papel (resumo):
+\begin{itemize}
+    \item \textbf{Extrator:} ``estruture o caso nos campos dados; não avalie''.
+    \item \textbf{Avaliador do PS:} ``emita parecer preliminar sobre o perfil''.
+    \item \textbf{Sintetizador:} ``decida com base no perfil e no parecer''.
+    \item \textbf{Debatedor pró/contra:} ``argumente que a decisão deve ser favorável/desfavorável; não decida''.
+    \item \textbf{Juiz:} ``decida com base no caso e nos argumentos''.
+    \item \textbf{Revisor:} ``verifique o parecer contra a rubrica e mantenha ou altere a decisão, justificando''.
+\end{itemize}
+No domínio penal, o núcleo substitui a vaga pelas instruções ao jurado (decidir sobre autoria e materialidade com base nas provas apresentadas) e usa \texttt{"decisao": "condenar" | "absolver"} e \texttt{"conviccao\_culpa"} em lugar de \texttt{"pontuacao"}.
+
+\subsection*{A.2 Léxicos de perturbação}
+\phantomsection
+
+Cada nível tem cinco variantes de superfície. Os exemplos estão na Tabela~\ref{tab:perturbacoes}, e a lista completa será congelada após a revisão H1 e a sonda de percepção.
+% TODO: completar as 5 variantes por nível após verificação no Mapa da Desigualdade 2024 e validação pela sonda.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          BIBLIOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliographystyle{plainnat} % TODO: template original usa aasjournal.bst; pacote não instalado localmente (disponível via texlive-aastex). Confirmar com a disciplina se plainnat é aceito ou se aasjournal.bst é obrigatório antes da entrega.
+\bibliography{../references}{}
+
+
+
+\end{document}
