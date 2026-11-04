@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, tmargin=3cm, lmargin=2.5cm, rmargin=2.5cm, bmargin=3cm]{geometry}
+\usepackage{hyperref}
+
+\usepackage[brazilian]{babel} % Remover linha em caso de escrita em inglês
+\usepackage[fixlanguage]{babelbib} % Remover linha em caso de escrita em inglês
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=black,
+}
+
+\usepackage{natbib} % to cite references by surname and year
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy} % Ativar o estilo fancy
+\fancyhf{} % Limpar cabeçalhos e rodapés
+\renewcommand{\headrulewidth}{0pt} % Remover a linha do cabeçalho
+\fancyfoot[C]{IC/UNICAMP \\ 2026 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONFIGURAÇÃO DA PRIMEIRA PÁGINA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\vspace{5mm}
+\hrule
+
+\vspace{3mm}
+
+\begin{center}
+    {\large\textbf{INSTITUTO DE COMPUTAÇÃO - UNICAMP}} \\
+    \vspace{3mm}
+    {\large\textbf{MO810A/MC959A - Sistemas Multiagentes com Modelos de Linguagem}} \\
+    \vspace{3mm}
+    {\large\textbf{Prof. Dr. Julio Cesar dos Reis}}
+\end{center}
+
+\vspace{3mm}
+\hrule
+
+\vspace{2.5cm}
+\begin{flushright}
+    \Large{\textbf{Fase 3 - Resultado Prático}} \\
+    \vspace{1cm}
+    \textit{
+        $<$Título do projeto$>$ \\
+    }
+    \vspace{5cm}
+    $<$Aluno(a)$>$ - $<$RA Aluno(a)$>$ \\
+    $<$Aluno(b)$>$ - $<$RA Aluno(b)$>$
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\pagestyle{fancy} % 2. Ativar o estilo fancy
+\fancyhf{} % 3. Limpar cabeçalhos e rodapés
+\renewcommand{\headrulewidth}{0pt} % Remover a linha do cabeçalho
+
+\fancyfoot[R]{\thepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       INÍCIO DAS SEÇÕES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tecnologias Utilizadas}
+\label{sec:tecnologias}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%isso deve ser removido
+\textit{$<$Explique as tecnologias utilizadas na implementação do sistema multiagente: linguagem e bibliotecas, \textit{frameworks} de construção e orquestração de agentes, modelos de linguagem empregados (com provedor, versão e modo de acesso), bancos de dados e índices vetoriais, APIs e serviços externos expostos aos agentes como ferramentas, e a infraestrutura de execução. Indique as versões relevantes e justifique cada escolha em relação à metodologia definida na Fase 2.$>$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Decisões Chaves de Implementação}
+\label{sec:decisoes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%isso deve ser removido
+\textit{$<$Explique o pipeline de desenvolvimento que foi conduzido, das fontes de dados até a saída entregue ao usuário. Explique as decisões chaves da implementação com as tecnologias da Seção \ref{sec:tecnologias}: como cada agente foi especificado (\textit{prompts}, papéis, escopo de decisão e critério de término), como a orquestração e a troca de mensagens foram realizadas, como as ferramentas foram definidas e como suas saídas são validadas, quais mecanismos de memória e de controle de execução, custo e falhas foram adotados. Explicite os ajustes em relação à metodologia da Fase 2, as alternativas descartadas e o motivo.$>$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{O Resultado Principal Obtido}
+\label{sec:resultado}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%isso deve ser removido
+\textit{$<$Descreva o resultado da implementação. Explique o produto final: o que o sistema multiagente recebe como entrada, o que entrega como saída e qual caso de uso foi demonstrado \textit{fim a fim}. Apresente um diagrama arquitetural da solução, identificando agentes, ferramentas, fontes de dados e o fluxo de controle entre eles. Explique como executar sua solução: requisitos, instalação das dependências, configuração de credenciais e parâmetros, comando de execução e um exemplo de entrada com a saída correspondente. Indique também as limitações observadas na prática.$>$}
+
+\subsection*{Código da Solução}
+\label{sec:codigo}
+
+%isso deve ser removido
+\textit{$<$Informe abaixo os dados da \textit{release} entregue. Somente o código da \textit{release} com a \textit{tag} \texttt{fase3}, criada até o prazo de entrega, será avaliado; \textit{commits} posteriores serão ignorados. Confirme que o repositório é privado e que o professor e o monitor da disciplina foram adicionados como colaboradores. As instruções de execução descritas nesta seção devem corresponder ao \texttt{README} dessa \textit{release}.$>$}
+
+\begin{itemize}
+    \item \textbf{Link da \textit{release}:} $<$\url{https://github.com/usuario/repositorio/releases/tag/fase3}$>$
+    \item \textbf{\textit{Tag}:} \texttt{fase3}
+    \item \textbf{\textit{Hash} do \textit{commit}:} \texttt{$<$hash do commit da tag$>$}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Apêndice}
+\label{sec:anexo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textit{$<$Use se necessário. Documentos e outras informações podem ser anexados para apoiar o entendimento da solução desenvolvida, como \textit{prompts} completos dos agentes, esquemas das ferramentas, exemplos de \textit{logs} de execução e trechos de código. $>$}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          BIBLIOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliographystyle{aasjournal}
+\bibliography{references}{}
+
+
+
+\end{document}
