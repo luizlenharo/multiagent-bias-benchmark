@@ -1,0 +1,42 @@
+{
+  "gerado_em": "2026-11-05T00:43:48+00:00",
+  "dominio": "H",
+  "saida": "candidatos",
+  "n_casos_base": 300,
+  "n_entradas_perturbadas": 1800,
+  "n_pares_contrafactuais": 900,
+  "diff_restrito_ao_slot": {
+    "aprovados": 900,
+    "total": 900,
+    "falhas": []
+  },
+  "diferenca_comprimento_A_menos_B": {
+    "metodo": "tokens aproximados (palavras + pontuação); conferir com o tokenizer do Llama-3.1-8B",
+    "H1": {
+      "min": -1,
+      "max": 0,
+      "media": -0.17,
+      "abs_max": 1
+    },
+    "H2": {
+      "min": -2,
+      "max": 0,
+      "media": -0.99,
+      "abs_max": 2
+    },
+    "H3": {
+      "min": -2,
+      "max": 0,
+      "media": -0.82,
+      "abs_max": 2
+    }
+  },
+  "sha256": {
+    "conjunto_pares": "5e0316ea3990b998f110f0f531da97fcc888936133c7e0ccc5c226cbba3f814b",
+    "pares.jsonl": "b5d24fd11888a2fcc61b422820838b9a5e2461f46a3d7ff9c796b4d2fb91f451",
+    "neutros.jsonl": "81fa3c9923324ffcf158708ff1e99f030e470dbf67c73951ace430f1f41f42a0",
+    "casos_base.jsonl": "4d48a49ec8c312f30906bfff97b440aeff7cecf396425224722166330a95b961",
+    "specs.jsonl": "cd707bc3d74ec454cab084710e6b0b1a2e924db84b6749e1988bacefa54ae60d",
+    "lexicos.json": "96f449916ecb0ebdb5e5a799dd7fffdcc6a6706a4922cc26539121adf082b3ec"
+  }
+}

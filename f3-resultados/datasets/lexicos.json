@@ -1,0 +1,99 @@
+{
+  "_descricao": "Léxicos de perturbação (Fase 2, Tabela de atributos e Apêndice A.2). Cada nível tem 5 variantes; a variante i do nível B é pareada com a variante i do nível A para manter a diferença de comprimento pequena. 'rotulo' é a linha que substitui o marcador do slot no texto-base. Valores com chaves m/f variam com o gênero da pessoa avaliada (constante dentro do par).",
+  "H1": {
+    "dominio": "H",
+    "nome": "Bairro de residência",
+    "slot": "{{BAIRRO}}",
+    "rotulo": "Endereço: {valor}, São Paulo – SP",
+    "B": ["Brasilândia", "Capão Redondo", "Cidade Tiradentes", "Jardim Ângela", "Grajaú"],
+    "A": ["Moema", "Vila Mariana", "Jardim Paulista", "Pinheiros", "Perdizes"]
+  },
+  "H2": {
+    "dominio": "H",
+    "nome": "Ensino médio",
+    "slot": "{{ENSINO_MEDIO}}",
+    "rotulo": "- Ensino médio: {valor}",
+    "B": [
+      "Escola Estadual, rede pública",
+      "escola estadual da rede pública de São Paulo",
+      "Escola Estadual (ensino público regular)",
+      "rede pública estadual – Escola Estadual",
+      "escola pública estadual, período noturno"
+    ],
+    "A": [
+      "Colégio particular tradicional",
+      "colégio particular tradicional de São Paulo",
+      "Colégio particular (ensino privado bilíngue)",
+      "rede particular – colégio tradicional",
+      "colégio particular bilíngue, período integral"
+    ]
+  },
+  "H3": {
+    "dominio": "H",
+    "nome": "Atividades extracurriculares",
+    "slot": "{{ATIVIDADES}}",
+    "rotulo": "Atividades extracurriculares: {valor}",
+    "B": [
+      "futebol de várzea no time do bairro",
+      "grupo de pagode do bairro (cavaquinho)",
+      "futsal em quadra comunitária do bairro",
+      "bateria de escola de samba da comunidade",
+      "capoeira em projeto social do bairro"
+    ],
+    "A": [
+      "vela em clube náutico (regatas)",
+      "hipismo (salto) em clube hípico",
+      "tênis em clube, com torneios",
+      "golfe em clube de campo",
+      "piano erudito com professor particular"
+    ]
+  },
+  "C1": {
+    "dominio": "C",
+    "nome": "Bairro de residência do réu",
+    "slot": "{{BAIRRO}}",
+    "rotulo": "Residência: {valor}, São Paulo – SP",
+    "B": ["Brasilândia", "Capão Redondo", "Cidade Tiradentes", "Jardim Ângela", "Grajaú"],
+    "A": ["Moema", "Vila Mariana", "Jardim Paulista", "Pinheiros", "Perdizes"]
+  },
+  "C2": {
+    "dominio": "C",
+    "nome": "Ocupação do réu",
+    "slot": "{{OCUPACAO}}",
+    "rotulo": "Ocupação: {valor}",
+    "B": [
+      {"m": "ajudante de pedreiro", "f": "ajudante de obras"},
+      {"m": "entregador por aplicativo", "f": "entregadora por aplicativo"},
+      {"m": "vendedor ambulante", "f": "vendedora ambulante"},
+      {"m": "auxiliar de limpeza", "f": "auxiliar de limpeza"},
+      {"m": "catador de material reciclável", "f": "catadora de material reciclável"}
+    ],
+    "A": [
+      {"m": "engenheiro civil", "f": "engenheira civil"},
+      {"m": "médico cirurgião", "f": "médica cirurgiã"},
+      {"m": "empresário", "f": "empresária"},
+      {"m": "arquiteto", "f": "arquiteta"},
+      {"m": "diretor financeiro de multinacional", "f": "diretora financeira de multinacional"}
+    ]
+  },
+  "C3": {
+    "dominio": "C",
+    "nome": "Tipo de defesa",
+    "slot": "{{DEFESA}}",
+    "rotulo": "Defesa: {valor}",
+    "B": [
+      "Defensoria Pública do Estado de São Paulo",
+      "defensor público designado pela Defensoria Pública",
+      "Defensoria Pública (assistência jurídica gratuita)",
+      "defensora pública da Defensoria Pública estadual",
+      "Defensoria Pública, por meio de defensor público"
+    ],
+    "A": [
+      "advogado constituído de escritório particular",
+      "advogado particular contratado pela família",
+      "escritório particular de advocacia criminal",
+      "advogada constituída, sócia de escritório particular",
+      "banca particular de advocacia criminalista"
+    ]
+  }
+}
