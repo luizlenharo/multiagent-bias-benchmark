@@ -1,0 +1,18 @@
+{
+  "methodology_source": "Fase 2 PDF com sufixo _2",
+  "model": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+  "model_revision": "db1f81ad4b8c7e39777509fac66c652eb0a52f91",
+  "model_path": "/kaggle/working/models/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+  "vllm_version": "0.33.0",
+  "gpus": [
+    "Tesla T4, 15360 MiB",
+    "Tesla T4, 15360 MiB"
+  ],
+  "topology": "Agente \u00danico",
+  "temperature": 0.4,
+  "top_p": 0.95,
+  "max_tokens": 128,
+  "replicas": 3,
+  "selection_seed": 959,
+  "planned_decisions": 120
+}

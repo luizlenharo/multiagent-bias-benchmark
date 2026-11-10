@@ -1,6 +1,6 @@
 # Fase 3 – Resultado prático
 
-Esta pasta reúne a implementação da Fase 3. A primeira parte entregue é o **dataset sintético** do benchmark, gerado conforme a Seção 2 da metodologia revisada (`../f2-metodologia/fase2_metodologia_luiz-lenharo_felipe-verol_2.pdf`).
+Esta pasta reúne a implementação da Fase 3: o **dataset sintético** do benchmark e o notebook do piloto, conforme a metodologia revisada (`../f2-metodologia/fase2_metodologia_luiz-lenharo_felipe-verol_2.pdf`).
 
 Resumo do desenho (Fase 2):
 
@@ -15,34 +15,23 @@ Resumo do desenho (Fase 2):
 ## Estrutura
 
 ```
-datasets/
-├── prompt_gerador.md          instrução fixa seguida pelo modelo gerador dos casos-base
-├── nomes.json                 pools de nomes por célula e sobrenomes neutros (gerado)
-├── auditoria_manual.csv       planilha da auditoria manual, a ser preenchida pelos autores
-├── fontes/                    tabelas extraídas das fontes externas (geradas)
-│   ├── gaddis2017_percepcao.csv        percepção racial congruente, 3 condições de sobrenome
-│   ├── hayes_elder2023_nomes.csv       gênero (cadastro eleitoral da Carolina do Norte) e raça percebida
-│   ├── hayes_elder2023_sobrenomes.csv  raça percebida de 21 sobrenomes
-│   └── censo2010_sobrenomes.csv        composição racial desses sobrenomes no Censo de 2010
-├── scripts/                   pipeline em Python, só biblioteca padrão (testado com Python 3.14)
-│   ├── comum.py               constantes, marcadores, render(), hashes
-│   ├── preparar_fontes.py     Etapa 0: extrai as tabelas de fontes/ (requer pdftoppm, do poppler)
-│   ├── selecionar_nomes.py    Etapa 1: escolhe os nomes e os sobrenomes -> nomes.json
-│   ├── montar_casos_base.py   Etapa 3: valida os lotes redigidos -> casos_base.jsonl
-│   ├── renderizar.py          Etapa 4: injeção dos nomes -> variantes.jsonl, sorteio.json, manifest.json
-│   ├── auditar.py             Etapa 5: auditoria automática -> relatorio_auditoria.json
-│   └── planilha_auditoria.py  cria auditoria_manual.csv
-├── curriculo/                 D_H, triagem de candidatos
-│   ├── vagas.json             5 vagas (V01–V05); o campo texto é entregue aos agentes junto ao currículo
-│   ├── textos/lote_01..05.md  saída do gerador, um lote de 10 currículos por vaga (Etapa 2)
-│   ├── casos_base.jsonl       50 templates com {NAME}, {SURNAME}
-│   ├── variantes.jsonl        200 textos renderizados (50 × 4 células)
-│   ├── sorteio.json           nome e sobrenome sorteados por caso
-│   ├── manifest.json          contagens, distribuição dos nomes, hashes
-│   └── relatorio_auditoria.json
-└── analise_penal/             D_C, recomendação de veredicto
-    ├── cenarios.json          5 cenários-base (S01–S05): acusação e elementos do crime, em inglês
-    └── textos/, casos_base.jsonl, variantes.jsonl, sorteio.json, manifest.json, relatorio_auditoria.json
+f3-resultados/
+├── datasets/
+│   ├── prompt_gerador.md          instrução fixa seguida pelo modelo gerador dos casos-base
+│   ├── nomes.json                 pools de nomes por célula e sobrenomes neutros (gerado)
+│   ├── auditoria_manual.csv       planilha de auditoria manual
+│   ├── fontes/                    tabelas extraídas das fontes externas (geradas)
+│   │   ├── gaddis2017_percepcao.csv        percepção racial, 3 condições de sobrenome
+│   │   ├── hayes_elder2023_nomes.csv       gênero e raça percebida dos primeiros nomes
+│   │   ├── hayes_elder2023_sobrenomes.csv  raça percebida dos sobrenomes
+│   │   └── censo2010_sobrenomes.csv        composição racial dos sobrenomes
+│   ├── scripts/                   geração, renderização e auditoria dos dados
+│   ├── curriculo/                 D_H, triagem de candidatos
+│   │   └── vagas, lotes, casos-base, variantes e auditorias
+│   └── analise_penal/             D_C, recomendação de veredicto
+│       └── cenários, lotes, casos-base, variantes e auditorias
+└── experimentos/
+    └── piloto_agente_unico.ipynb  execução do piloto do Agente Único no Kaggle
 ```
 
 ## Como reproduzir
@@ -73,6 +62,7 @@ python3 auditar.py H && python3 auditar.py C                              # cód
 - Todas as etapas são determinísticas. A semente global é `SEMENTE = 959` (`scripts/comum.py`).
 - A redação dos casos-base (Etapa 2) não é refeita pelos scripts. Os textos ficam congelados em `textos/lote_NN.md`, com hash SHA-256 no `manifest.json`.
 - `planilha_auditoria.py` não sobrescreve uma planilha já existente, a menos que receba `--forcar`.
+- Após a auditoria manual, execute `experimentos/piloto_agente_unico.ipynb` em um notebook Kaggle com 2 GPUs NVIDIA T4 e os dados anexados em `/kaggle/input/datasets/felipeverol/datasets-mc959/datasets`. Rode primeiro a célula `%pip install -q vllm huggingface_hub requests`. O notebook baixa automaticamente uma revisão fixada de Meta-Llama-3.1-8B-Instruct-AWQ do Hugging Face para `/kaggle/working/models/`, inicia o vLLM localmente e roda o Agente Único em 10 casos (1 por contexto em cada domínio) com 3 réplicas. A amostragem estratificada e `max_tokens=128` são escolhas operacionais, pois o PDF metodológico não fixa esses detalhes.
 
 ### Formato dos registros (`variantes.jsonl`)
 

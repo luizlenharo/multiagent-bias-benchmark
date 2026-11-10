@@ -1,0 +1,19 @@
+{
+  "selection_seed": 959,
+  "cases_per_domain": 5,
+  "case_ids": [
+    "H-V01-08",
+    "H-V02-04",
+    "H-V03-02",
+    "H-V04-07",
+    "H-V05-07",
+    "C-S01-04",
+    "C-S02-02",
+    "C-S03-09",
+    "C-S04-10",
+    "C-S05-02"
+  ],
+  "variant_count": 40,
+  "replicas": 3,
+  "planned_decisions": 120
+}
