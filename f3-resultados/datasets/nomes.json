@@ -1,0 +1,346 @@
+{
+  "_descricao": "Pools de primeiros nomes por célula e sobrenomes neutros. Gerado por scripts/selecionar_nomes.py; a regra está na docstring do script.",
+  "M": 3,
+  "celulas": {
+    "WM": {
+      "raca": "white",
+      "genero": "M",
+      "pool": [
+        "Jake",
+        "Ryan",
+        "Brett"
+      ],
+      "ranking": [
+        {
+          "nome": "Jake",
+          "pontuacao": 87.9,
+          "gaddis_pct_sem_sobrenome": 95.3,
+          "gaddis_pct_sobrenome_incongruente": 87.9,
+          "gaddis_pct_sobrenome_congruente": 97.8,
+          "hayes_pct_f_nc": 0.0031,
+          "hayes_nota_african_american": 2.5,
+          "hayes_nota_white": 3.95
+        },
+        {
+          "nome": "Ryan",
+          "pontuacao": 85.4,
+          "gaddis_pct_sem_sobrenome": 90.3,
+          "gaddis_pct_sobrenome_incongruente": 85.4,
+          "gaddis_pct_sobrenome_congruente": 96.0,
+          "hayes_pct_f_nc": 0.027,
+          "hayes_nota_african_american": 2.54,
+          "hayes_nota_white": 3.87
+        },
+        {
+          "nome": "Brett",
+          "pontuacao": 83.9,
+          "gaddis_pct_sem_sobrenome": 98.2,
+          "gaddis_pct_sobrenome_incongruente": 83.9,
+          "gaddis_pct_sobrenome_congruente": 95.1,
+          "hayes_pct_f_nc": 0.0321,
+          "hayes_nota_african_american": 2.38,
+          "hayes_nota_white": 3.78
+        },
+        {
+          "nome": "Brad",
+          "pontuacao": 83.3,
+          "gaddis_pct_sem_sobrenome": 96.2,
+          "gaddis_pct_sobrenome_incongruente": 83.3,
+          "gaddis_pct_sobrenome_congruente": 93.1,
+          "hayes_pct_f_nc": 0.0,
+          "hayes_nota_african_american": 2.62,
+          "hayes_nota_white": 3.67
+        },
+        {
+          "nome": "Seth",
+          "pontuacao": 82.0,
+          "gaddis_pct_sem_sobrenome": 92.5,
+          "gaddis_pct_sobrenome_incongruente": 82.0,
+          "gaddis_pct_sobrenome_congruente": 97.3,
+          "hayes_pct_f_nc": 0.0011,
+          "hayes_nota_african_american": 2.42,
+          "hayes_nota_white": 3.65
+        },
+        {
+          "nome": "Dustin",
+          "pontuacao": 79.6,
+          "gaddis_pct_sem_sobrenome": 93.1,
+          "gaddis_pct_sobrenome_incongruente": 79.6,
+          "gaddis_pct_sobrenome_congruente": 95.2,
+          "hayes_pct_f_nc": 0.0044,
+          "hayes_nota_african_american": 2.39,
+          "hayes_nota_white": 3.77
+        },
+        {
+          "nome": "Matthew",
+          "pontuacao": 79.6,
+          "gaddis_pct_sem_sobrenome": 94.0,
+          "gaddis_pct_sobrenome_incongruente": 79.6,
+          "gaddis_pct_sobrenome_congruente": 96.6,
+          "hayes_pct_f_nc": 0.0015,
+          "hayes_nota_african_american": 2.69,
+          "hayes_nota_white": 3.75
+        }
+      ]
+    },
+    "WF": {
+      "raca": "white",
+      "genero": "F",
+      "pool": [
+        "Katelyn",
+        "Laurie",
+        "Sarah"
+      ],
+      "ranking": [
+        {
+          "nome": "Katelyn",
+          "pontuacao": 91.6,
+          "gaddis_pct_sem_sobrenome": 91.6,
+          "gaddis_pct_sobrenome_incongruente": 92.7,
+          "gaddis_pct_sobrenome_congruente": 99.0,
+          "hayes_pct_f_nc": 0.9688,
+          "hayes_nota_african_american": 2.43,
+          "hayes_nota_white": 3.92
+        },
+        {
+          "nome": "Laurie",
+          "pontuacao": 88.8,
+          "gaddis_pct_sem_sobrenome": 94.9,
+          "gaddis_pct_sobrenome_incongruente": 88.8,
+          "gaddis_pct_sobrenome_congruente": 96.6,
+          "hayes_pct_f_nc": 0.974,
+          "hayes_nota_african_american": 2.75,
+          "hayes_nota_white": 3.51
+        },
+        {
+          "nome": "Sarah",
+          "pontuacao": 87.0,
+          "gaddis_pct_sem_sobrenome": 94.4,
+          "gaddis_pct_sobrenome_incongruente": 87.0,
+          "gaddis_pct_sobrenome_congruente": 96.0,
+          "hayes_pct_f_nc": 0.9797,
+          "hayes_nota_african_american": 2.76,
+          "hayes_nota_white": 3.66
+        },
+        {
+          "nome": "Megan",
+          "pontuacao": 86.6,
+          "gaddis_pct_sem_sobrenome": 92.0,
+          "gaddis_pct_sobrenome_incongruente": 86.6,
+          "gaddis_pct_sobrenome_congruente": 96.3,
+          "hayes_pct_f_nc": 0.977,
+          "hayes_nota_african_american": 2.69,
+          "hayes_nota_white": 3.5
+        },
+        {
+          "nome": "Kristen",
+          "pontuacao": 84.4,
+          "gaddis_pct_sem_sobrenome": 95.2,
+          "gaddis_pct_sobrenome_incongruente": 84.4,
+          "gaddis_pct_sobrenome_congruente": 96.2,
+          "hayes_pct_f_nc": 0.9743,
+          "hayes_nota_african_american": 2.67,
+          "hayes_nota_white": 3.65
+        },
+        {
+          "nome": "Emily",
+          "pontuacao": 83.7,
+          "gaddis_pct_sem_sobrenome": 91.8,
+          "gaddis_pct_sobrenome_incongruente": 83.7,
+          "gaddis_pct_sobrenome_congruente": 96.0,
+          "hayes_pct_f_nc": 0.9718,
+          "hayes_nota_african_american": 2.59,
+          "hayes_nota_white": 3.66
+        },
+        {
+          "nome": "Susan",
+          "pontuacao": 83.4,
+          "gaddis_pct_sem_sobrenome": 92.8,
+          "gaddis_pct_sobrenome_incongruente": 83.4,
+          "gaddis_pct_sobrenome_congruente": 94.4,
+          "hayes_pct_f_nc": 0.9897,
+          "hayes_nota_african_american": 2.73,
+          "hayes_nota_white": 3.6
+        }
+      ]
+    },
+    "BM": {
+      "raca": "black",
+      "genero": "M",
+      "pool": [
+        "Jamal",
+        "Tyrone",
+        "Lamar"
+      ],
+      "ranking": [
+        {
+          "nome": "Jamal",
+          "pontuacao": 89.2,
+          "gaddis_pct_sem_sobrenome": 94.8,
+          "gaddis_pct_sobrenome_incongruente": 89.2,
+          "gaddis_pct_sobrenome_congruente": 96.8,
+          "hayes_pct_f_nc": 0.0067,
+          "hayes_nota_african_american": 3.7,
+          "hayes_nota_white": 2.0
+        },
+        {
+          "nome": "Tyrone",
+          "pontuacao": 86.1,
+          "gaddis_pct_sem_sobrenome": 96.2,
+          "gaddis_pct_sobrenome_incongruente": 86.1,
+          "gaddis_pct_sobrenome_congruente": 94.2,
+          "hayes_pct_f_nc": 0.0039,
+          "hayes_nota_african_american": 4.11,
+          "hayes_nota_white": 2.32
+        },
+        {
+          "nome": "Lamar",
+          "pontuacao": 83.2,
+          "gaddis_pct_sem_sobrenome": 93.7,
+          "gaddis_pct_sobrenome_incongruente": 83.2,
+          "gaddis_pct_sobrenome_congruente": 88.2,
+          "hayes_pct_f_nc": 0.0172,
+          "hayes_nota_african_american": 3.6,
+          "hayes_nota_white": 2.01
+        },
+        {
+          "nome": "Darius",
+          "pontuacao": 80.7,
+          "gaddis_pct_sem_sobrenome": 86.9,
+          "gaddis_pct_sobrenome_incongruente": 80.7,
+          "gaddis_pct_sobrenome_congruente": 86.9,
+          "hayes_pct_f_nc": 0.0075,
+          "hayes_nota_african_american": 3.62,
+          "hayes_nota_white": 2.43
+        },
+        {
+          "nome": "Jermaine",
+          "pontuacao": 75.1,
+          "gaddis_pct_sem_sobrenome": 75.1,
+          "gaddis_pct_sobrenome_incongruente": 77.5,
+          "gaddis_pct_sobrenome_congruente": 84.3,
+          "hayes_pct_f_nc": 0.0097,
+          "hayes_nota_african_american": 3.76,
+          "hayes_nota_white": 2.58
+        },
+        {
+          "nome": "Jerome",
+          "pontuacao": 65.9,
+          "gaddis_pct_sem_sobrenome": 85.8,
+          "gaddis_pct_sobrenome_incongruente": 65.9,
+          "gaddis_pct_sobrenome_congruente": 81.5,
+          "hayes_pct_f_nc": 0.0042,
+          "hayes_nota_african_american": 3.63,
+          "hayes_nota_white": 2.75
+        },
+        {
+          "nome": "Dwayne",
+          "pontuacao": 64.3,
+          "gaddis_pct_sem_sobrenome": 68.7,
+          "gaddis_pct_sobrenome_incongruente": 64.3,
+          "gaddis_pct_sobrenome_congruente": 79.7,
+          "hayes_pct_f_nc": 0.0044,
+          "hayes_nota_african_american": 3.43,
+          "hayes_nota_white": 3.13
+        }
+      ]
+    },
+    "BF": {
+      "raca": "black",
+      "genero": "F",
+      "pool": [
+        "Latoya",
+        "Latonya",
+        "Tanisha"
+      ],
+      "ranking": [
+        {
+          "nome": "Latoya",
+          "pontuacao": 91.3,
+          "gaddis_pct_sem_sobrenome": 96.7,
+          "gaddis_pct_sobrenome_incongruente": 91.3,
+          "gaddis_pct_sobrenome_congruente": 93.3,
+          "hayes_pct_f_nc": 0.9771,
+          "hayes_nota_african_american": 3.57,
+          "hayes_nota_white": 2.45
+        },
+        {
+          "nome": "Latonya",
+          "pontuacao": 90.5,
+          "gaddis_pct_sem_sobrenome": 94.0,
+          "gaddis_pct_sobrenome_incongruente": 90.5,
+          "gaddis_pct_sobrenome_congruente": 92.3,
+          "hayes_pct_f_nc": 0.9698,
+          "hayes_nota_african_american": 4.11,
+          "hayes_nota_white": 2.05
+        },
+        {
+          "nome": "Tanisha",
+          "pontuacao": 90.0,
+          "gaddis_pct_sem_sobrenome": 97.5,
+          "gaddis_pct_sobrenome_incongruente": 90.0,
+          "gaddis_pct_sobrenome_congruente": 97.5,
+          "hayes_pct_f_nc": 0.9799,
+          "hayes_nota_african_american": 4.11,
+          "hayes_nota_white": 2.19
+        },
+        {
+          "nome": "Lakisha",
+          "pontuacao": 89.1,
+          "gaddis_pct_sem_sobrenome": 95.2,
+          "gaddis_pct_sobrenome_incongruente": 89.1,
+          "gaddis_pct_sobrenome_congruente": 96.2,
+          "hayes_pct_f_nc": 0.9799,
+          "hayes_nota_african_american": 4.1,
+          "hayes_nota_white": 2.13
+        },
+        {
+          "nome": "Tamika",
+          "pontuacao": 87.4,
+          "gaddis_pct_sem_sobrenome": 92.4,
+          "gaddis_pct_sobrenome_incongruente": 87.4,
+          "gaddis_pct_sobrenome_congruente": 95.3,
+          "hayes_pct_f_nc": 0.9763,
+          "hayes_nota_african_american": 3.53,
+          "hayes_nota_white": 2.09
+        },
+        {
+          "nome": "Ebony",
+          "pontuacao": 86.5,
+          "gaddis_pct_sem_sobrenome": 95.1,
+          "gaddis_pct_sobrenome_incongruente": 86.5,
+          "gaddis_pct_sobrenome_congruente": 90.7,
+          "hayes_pct_f_nc": 0.9642,
+          "hayes_nota_african_american": 3.64,
+          "hayes_nota_white": 1.93
+        },
+        {
+          "nome": "Keisha",
+          "pontuacao": 83.9,
+          "gaddis_pct_sem_sobrenome": 91.2,
+          "gaddis_pct_sobrenome_incongruente": 83.9,
+          "gaddis_pct_sobrenome_congruente": 89.1,
+          "hayes_pct_f_nc": 0.9786,
+          "hayes_nota_african_american": 3.59,
+          "hayes_nota_white": 2.53
+        }
+      ]
+    }
+  },
+  "sobrenomes": [
+    {
+      "sobrenome": "Johnson",
+      "hayes_nota_african_american": 3.12,
+      "hayes_nota_white": 3.13,
+      "censo_pctwhite": 58.97,
+      "censo_pctblack": 34.63
+    },
+    {
+      "sobrenome": "Williams",
+      "hayes_nota_african_american": 3.08,
+      "hayes_nota_white": 3.13,
+      "censo_pctwhite": 45.75,
+      "censo_pctblack": 47.68
+    }
+  ]
+}

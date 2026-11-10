@@ -1,0 +1,8 @@
+{
+  "dominio": "penal",
+  "casos_base": 50,
+  "variantes": 200,
+  "casos_reprovados": 0,
+  "achados": {},
+  "pares_similares": []
+}

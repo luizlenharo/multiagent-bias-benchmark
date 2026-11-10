@@ -1,95 +1,78 @@
-"""Junta os lotes textualizados (textos/lote_NN.md) às specs e grava casos_base.jsonl.
+"""Etapa 3: valida os lotes redigidos (textos/lote_NN.md) e grava casos_base.jsonl.
 
-Validações (falham com erro):
-  - case_id do lote existe nas specs e não aparece duplicado;
-  - cada marcador de slot do domínio aparece exatamente uma vez, numa linha própria;
-  - nenhum outro marcador {{...}} no texto;
-  - o nome da pessoa avaliada (spec) aparece no texto.
+Uso: python3 montar_casos_base.py H|C [--parcial]
 
-Uso: python montar_casos_base.py H|C [--completo]
-  --completo exige que todas as specs tenham texto (sem ele, lista as pendentes).
+Sem --parcial, exige os 5 lotes com 10 casos cada (N = 50). Com --parcial, aceita
+os lotes que já existirem, para conferir o formato durante a redação.
 """
 
+import argparse
 import re
-import sys
 
-from comum import ATRIBUTOS, PASTAS, carregar_lexicos, escrever_jsonl, ler_jsonl
+from comum import (ARQ_CONTEXTOS, CASOS_POR_CONTEXTO, MARCADORES, N_CONTEXTOS, NOMES_DOMINIO,
+                   PASTAS, RE_MARCADOR, contar_palavras, escrever_jsonl, ler_json)
 
-CABECALHO = re.compile(r"^=== ([HC]-\d{4}) ===[ \t]*$", re.M)
-
-
-def ler_lotes(pasta):
-    textos = {}
-    for arq in sorted((pasta / "textos").glob("lote_*.md")):
-        partes = CABECALHO.split(arq.read_text(encoding="utf-8"))
-        for case_id, corpo in zip(partes[1::2], partes[2::2]):
-            if case_id in textos:
-                raise SystemExit(f"ERRO: {case_id} duplicado ({arq.name})")
-            textos[case_id] = (corpo.strip(), arq.name)
-    return textos
+RE_CABECALHO = re.compile(r"^## ([HC]-[VS]\d{2}-\d{2})\s*$", re.M)
+PREFIXO_CONTEXTO = {"H": "V", "C": "S"}
 
 
-def validar(dominio, spec, texto, lexicos):
-    erros = []
-    linhas = [l.strip() for l in texto.split("\n")]
-    marcadores = set()
-    for p in ATRIBUTOS[dominio]:
-        m = lexicos[p]["slot"]
-        marcadores.add(m)
-        if texto.count(m) != 1:
-            erros.append(f"{m} aparece {texto.count(m)} vezes")
-        elif m not in linhas:
-            erros.append(f"{m} não está numa linha própria")
-    extras = set(re.findall(r"\{\{[^}]*\}\}", texto)) - marcadores
-    if extras:
-        erros.append(f"marcadores desconhecidos: {sorted(extras)}")
-    nome = spec["nome"] if dominio == "H" else spec["reu"]["nome"]
-    if nome not in texto:
-        erros.append(f"nome '{nome}' ausente")
-    return erros
+def ler_lote(caminho):
+    texto = caminho.read_text(encoding="utf-8")
+    partes = RE_CABECALHO.split(texto)[1:]
+    casos = []
+    for case_id, corpo in zip(partes[::2], partes[1::2]):
+        linhas = corpo.strip().split("\n", 1)
+        if not linhas[0].startswith("Calibração:") or len(linhas) < 2:
+            raise SystemExit(f"{caminho.name} {case_id}: falta a linha 'Calibração:' ou o texto")
+        casos.append({"case_id": case_id, "calibracao": linhas[0].removeprefix("Calibração:").strip(),
+                      "template": linhas[1].strip()})
+    return casos
 
 
 def main():
-    dominio = sys.argv[1]
-    completo = "--completo" in sys.argv
-    pasta = PASTAS[dominio]
-    lexicos = carregar_lexicos()
-    specs = {s["case_id"]: s for s in ler_jsonl(pasta / "specs.jsonl")}
-    textos = ler_lotes(pasta)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("dominio", choices=["H", "C"])
+    ap.add_argument("--parcial", action="store_true")
+    args = ap.parse_args()
+    d = args.dominio
+    pasta = PASTAS[d]
+    contextos = ler_json(pasta / ARQ_CONTEXTOS[d])
+    chave = "job_id" if d == "H" else "cenario_id"
 
-    desconhecidos = sorted(set(textos) - set(specs))
-    if desconhecidos:
-        raise SystemExit(f"ERRO: case_id sem spec: {desconhecidos}")
-
-    registros, falhas = [], []
-    for case_id, spec in specs.items():
-        if case_id not in textos:
+    registros, erros = [], []
+    for n, ctx in enumerate(contextos, start=1):
+        caminho = pasta / "textos" / f"lote_{n:02d}.md"
+        if not caminho.exists():
+            if not args.parcial:
+                erros.append(f"falta {caminho.name}")
             continue
-        texto, lote = textos[case_id]
-        erros = validar(dominio, spec, texto, lexicos)
-        if erros:
-            falhas.append(f"{case_id} ({lote}): {'; '.join(erros)}")
-            continue
-        reg = {"case_id": case_id, "domain": dominio, "stratum": spec["stratum"]}
-        if dominio == "H":
-            reg["job_id"] = spec["job_id"]
-            reg["genero"] = spec["genero"]
-        else:
-            reg["genero"] = spec["reu"]["genero"]
-        reg["text_base"] = texto
-        reg["palavras"] = len(texto.split())
-        registros.append(reg)
+        casos = ler_lote(caminho)
+        esperados = [f"{d}-{ctx[chave]}-{i:02d}" for i in range(1, CASOS_POR_CONTEXTO + 1)]
+        if [c["case_id"] for c in casos] != esperados:
+            erros.append(f"{caminho.name}: identificadores {[c['case_id'] for c in casos]} != {esperados}")
+        for c in casos:
+            t = c["template"]
+            invalidos = set(RE_MARCADOR.findall(t)) - MARCADORES
+            if invalidos:
+                erros.append(f"{c['case_id']}: marcadores inválidos {sorted(invalidos)}")
+            inicio = "{NAME} {SURNAME}\n" if d == "H" else "The defendant, {NAME} {SURNAME}, "
+            if not t.startswith(inicio):
+                erros.append(f"{c['case_id']}: o texto deve começar com {inicio!r}")
+            registros.append({
+                "case_id": c["case_id"],
+                "domain": d,
+                "context_id": ctx[chave],
+                "calibracao": c["calibracao"],
+                "template": t,
+                "n_palavras": contar_palavras(RE_MARCADOR.sub("X", t)),
+            })
 
-    if falhas:
-        raise SystemExit("ERRO de validação:\n  " + "\n  ".join(falhas))
-    pendentes = [c for c in specs if c not in textos]
-    if completo and pendentes:
-        raise SystemExit(f"ERRO: {len(pendentes)} specs sem texto (primeira: {pendentes[0]})")
-
+    if not args.parcial and len(registros) != N_CONTEXTOS * CASOS_POR_CONTEXTO:
+        erros.append(f"{len(registros)} casos, esperava {N_CONTEXTOS * CASOS_POR_CONTEXTO}")
+    if erros:
+        raise SystemExit("\n".join(erros))
     escrever_jsonl(pasta / "casos_base.jsonl", registros)
-    palavras = sorted(r["palavras"] for r in registros) or [0]
-    print(f"{dominio}: {len(registros)} casos-base gravados; {len(pendentes)} pendentes; "
-          f"palavras min/mediana/max = {palavras[0]}/{palavras[len(palavras) // 2]}/{palavras[-1]}")
+    print(f"{NOMES_DOMINIO[d]}: {len(registros)} casos-base -> {pasta / 'casos_base.jsonl'}")
 
 
 if __name__ == "__main__":

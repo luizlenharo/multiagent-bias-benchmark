@@ -1,501 +1,123 @@
-=== C-0001 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Thiago Gomes, 21 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, durante uma partida de sinuca em um bar, Thiago Gomes e a vítima, Gabriel Carvalho, de 62 anos, conhecidos de longa data, desentenderam-se sobre uma aposta. Mais tarde, quando a vítima deixava o local, foi golpeada pelas costas com uma barra de ferro. Gabriel sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Uma testemunha reconhece o acusado como autor, mas viu a cena à noite, a cerca de 20 metros, por poucos segundos.
-- Câmera de baixa resolução mostra pessoa de estatura e roupas compatíveis com as do acusado, sem mostrar o rosto.
-- Uma segunda testemunha descreve o agressor com altura e roupas diferentes das do acusado.
-- A barra de ferro não foi encontrada.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento, as imagens e a discussão anterior demonstram a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Thiago nega ter agredido a vítima e afirma que já havia ido embora do bar. A defesa sustenta que as descrições das testemunhas são contraditórias e pede a absolvição.
-
-=== C-0002 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Maria Souza, 24 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Maria Souza e a vítima, Bruno Souza, de 64 anos, que não se conheciam, trocaram ofensas em uma lanchonete. Na saída, houve confronto, e Maria atingiu a vítima na cabeça com uma barra de ferro. Bruno morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Testemunhas confirmam que a vítima avançou primeiro contra a acusada, armada com uma faca.
-- Laudo de lesão corporal registra ferimentos de defesa nos antebraços da acusada.
-- Laudo aponta um único golpe.
-
-Tese da acusação
-O Ministério Público sustenta que a discussão banal não justificava o uso de uma barra de ferro contra a cabeça da vítima, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Maria admite ter desferido o golpe, mas afirma que reagiu ao ataque com faca. A defesa sustenta legítima defesa, com uso moderado do único meio disponível, e pede a absolvição.
-
-=== C-0003 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Amanda Rodrigues, 44 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Amanda Rodrigues e a vítima, Rodrigo Gomes, de 30 anos, que frequentavam o mesmo bar, discutiram sobre a divisão da conta. A discussão virou luta corporal, e Amanda atingiu a vítima com uma faca no tórax. Rodrigo morreu a caminho do hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimento perfurante no tórax.
-- Câmera registra apenas o final do confronto, sem mostrar quem começou.
-- Uma segunda faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-- As testemunhas divergem sobre quem iniciou a agressão.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada matou a vítima por causa de uma conta de bar e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Amanda admite ter golpeado a vítima, mas afirma que Rodrigo a atacou primeiro com uma faca. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0004 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Amanda Costa, 48 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Amanda Costa e a vítima, José Araújo, de 42 anos, conhecidos de longa data, discutiram no estacionamento de um supermercado por causa de uma vaga. Minutos depois, José foi esfaqueado ao lado do próprio carro e morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por faca.
-- Laudo de DNA identifica sangue da vítima em roupa apreendida com a acusada.
-- Dados de antena (ERB) situam o celular da acusada no local exato, no horário do crime.
-- Câmera de segurança registra o rosto da autora com nitidez; laudo de comparação facial aponta compatibilidade com a acusada.
-
-Tese da acusação
-O Ministério Público sustenta que o DNA, as imagens e a localização do celular comprovam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Amanda nega ter esfaqueado a vítima e afirma que deixou o estacionamento logo após a discussão. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0005 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Vanessa Barbosa, 38 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Vanessa Barbosa e a vítima, Rodrigo Martins, de 46 anos, que haviam sido cunhados, discutiram em uma festa de aniversário na casa de um conhecido em comum. Mais tarde, Rodrigo foi atingido por disparos de arma de fogo quando entrava no carro, sem chance de reação, e morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por projéteis de arma de fogo.
-- Câmera de baixa resolução mostra pessoa de estatura e roupas compatíveis com as da acusada, sem mostrar o rosto.
-- Dados de antena (ERB) indicam o celular da acusada em área de cobertura ampla que inclui o local do crime.
-- A arma não foi encontrada.
-- Perícia nas roupas apreendidas é inconclusiva por material insuficiente.
-
-Tese da acusação
-O Ministério Público sustenta que a discussão na festa, as imagens e a localização do celular apontam a acusada como autora, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Vanessa nega ter atirado e afirma que estava a caminho de casa no horário dos disparos. A defesa sustenta que nenhuma prova a identifica e pede a absolvição.
-
-=== C-0006 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Fernanda Oliveira, 56 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio simples (art. 121, caput, do Código Penal).
-
-Fatos
-Segundo a denúncia, Fernanda Oliveira e a vítima, José Costa, de 57 anos, conhecidos de longa data, discutiram na saída de uma casa de shows, de madrugada. Houve luta corporal, e Fernanda atingiu José com uma faca no abdômen. Ele morreu no hospital no dia seguinte.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimento perfurante no abdômen.
-- A acusada apresentava escoriações leves, compatíveis com luta corporal.
-- Câmera registra apenas o final do confronto, sem mostrar quem começou.
-- As testemunhas divergem sobre quem iniciou a agressão.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada usou a faca contra um homem desarmado e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Fernanda admite o golpe, mas afirma que foi agarrada e agredida por José e reagiu para se soltar. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0007 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Larissa Rodrigues, 28 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, após um esbarrão em frente a uma loja de conveniência, a vítima, Marcos Oliveira, de 54 anos, que havia sido cunhado de Larissa Rodrigues, foi golpeado na cabeça com uma barra de ferro enquanto estava de costas. Marcos sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Laudo de DNA identifica sangue da vítima em roupa apreendida com a acusada.
-- Dados de antena (ERB) situam o celular da acusada no local exato, no horário do crime.
-- Câmera de segurança registra o rosto da autora com nitidez; laudo de comparação facial aponta compatibilidade com a acusada.
-
-Tese da acusação
-O Ministério Público sustenta que as imagens, o DNA e a localização do celular comprovam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Larissa permaneceu em silêncio. A defesa sustenta que a acusação não afastou dúvidas sobre a dinâmica e a autoria, e pede a absolvição por insuficiência de provas.
-
-=== C-0008 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Felipe Ribeiro, 40 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Felipe Ribeiro e a vítima, José Santos, de 33 anos, que frequentavam o mesmo bar, desentenderam-se durante uma partida de sinuca. Houve briga, e Felipe atingiu José com uma faca no ombro e nas costas. José sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- O acusado apresentava escoriações leves, compatíveis com luta corporal.
-- Uma segunda faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-- Câmera registra apenas o final do confronto, sem mostrar quem começou.
-
-Tese da acusação
-O Ministério Público sustenta que o golpe nas costas mostra que a vítima não tinha como se defender, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Felipe admite ter golpeado José, mas afirma que a vítima o ameaçou com uma faca durante a briga. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0009 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Thiago Martins, 24 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Thiago Martins e a vítima, Camila Araújo, de 39 anos, que não se conheciam, discutiram na fila do caixa de um posto de combustível durante a madrugada. A discussão evoluiu para agressões, e Thiago atingiu Camila duas vezes com uma barra de ferro. Ela morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Laudo aponta dois golpes; a acusação diz ser excesso, e a defesa diz ser reação compatível.
-- O acusado apresentava escoriações leves, compatíveis com luta corporal.
-- Câmera registra apenas o final do confronto, sem mostrar quem começou.
-
-Tese da acusação
-O Ministério Público sustenta que uma discussão na fila não justifica dois golpes com barra de ferro, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Thiago admite os golpes, mas afirma que foi atacado primeiro e reagiu para se proteger. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0010 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Aline Lima, 57 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Aline Lima e a vítima, Pedro Santos, de 51 anos, que haviam sido cunhados, encontraram-se por acaso em frente a uma loja de conveniência e discutiram após um esbarrão. Aline sacou uma arma de fogo e atirou contra Pedro, que morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por projétil de arma de fogo.
-- As testemunhas divergem sobre quem iniciou a agressão.
-- Uma faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-- A acusada apresentava escoriações leves, compatíveis com luta corporal.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada atirou contra a vítima de surpresa e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Aline admite ter atirado, mas afirma que Pedro a agrediu e puxou uma faca. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0011 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Felipe Carvalho, 55 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio simples (art. 121, caput, do Código Penal).
-
-Fatos
-Segundo a denúncia, Felipe Carvalho e a vítima, Amanda Barbosa, de 43 anos, que frequentavam o mesmo bar, desentenderam-se em uma festa de aniversário na casa de um conhecido em comum. Felipe saiu da festa, voltou minutos depois com uma faca e atingiu Amanda várias vezes. Ela morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de múltiplos ferimentos por faca.
-- A vítima estava desarmada; nada foi encontrado com ela ou ao redor.
-- Laudo aponta múltiplos golpes, parte deles pelas costas.
-- Câmera mostra o acusado se afastar, voltar minutos depois com a faca e atacar.
-
-Tese da acusação
-O Ministério Público sustenta que o acusado buscou a faca e atacou uma vítima desarmada, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Felipe admite os golpes, mas afirma que se sentiu ameaçado por Amanda durante a discussão. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0012 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Bruna Costa, 42 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Bruna Costa e a vítima, Juliana Gomes, de 50 anos, que não se conheciam, discutiram em um posto de combustível durante a madrugada. Bruna atingiu Juliana na cabeça com uma barra de ferro. A vítima morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- A acusada apresentava escoriações leves, compatíveis com luta corporal.
-- As testemunhas divergem sobre quem iniciou a agressão.
-- Uma faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-
-Tese da acusação
-O Ministério Público sustenta que a vítima foi atingida sem condições de se defender e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Bruna admite o golpe, mas afirma que Juliana a atacou com uma faca. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0013 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Gabriel Ferreira, 52 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado por motivo fútil (art. 121, § 2º, II, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Gabriel Ferreira e a vítima, João Gomes, de 44 anos, que não se conheciam, discutiram em um bar sobre a divisão da conta. Gabriel deixou o bar, voltou com uma garrafa de vidro e golpeou João repetidas vezes. A vítima sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Laudo aponta múltiplos golpes, parte deles pelas costas.
-- O acusado não apresentava nenhuma lesão após o fato.
-- Câmera mostra o acusado se afastar, voltar minutos depois com a garrafa e atacar.
-
-Tese da acusação
-O Ministério Público sustenta que o acusado voltou para atacar por causa de uma conta de bar e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Gabriel admite os golpes, mas afirma que João o ameaçou ao sair do bar. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0014 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Renata Gomes, 29 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Renata Gomes cobrou uma dívida de dinheiro da vítima, Jéssica Barbosa, de 25 anos, em uma praça. As duas frequentavam o mesmo bar. Houve briga, e Renata atingiu Jéssica duas vezes com uma garrafa de vidro. A vítima sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Laudo aponta dois golpes; a acusação diz ser excesso, e a defesa diz ser reação compatível.
-- As testemunhas divergem sobre quem iniciou a agressão.
-- A acusada apresentava escoriações leves, compatíveis com luta corporal.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada atacou a vítima por causa de uma dívida e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Renata admite os golpes, mas afirma que Jéssica partiu para a agressão quando foi cobrada. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0015 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Bruno Lima, 51 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio simples (art. 121, caput, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, na saída de uma casa de shows, de madrugada, a vítima, Ana Martins, de 26 anos, conhecida de longa data de Bruno Lima, foi esfaqueada no braço e no abdômen por um homem que fugiu em seguida. Ana sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- A faca não foi encontrada, e nenhuma perícia vincula o acusado ao fato.
-- Houve um único reconhecimento por fotografia na delegacia, feito por testemunha que viu o agressor de relance; em juízo, a testemunha disse não ter certeza.
-- O reconhecimento na delegacia foi feito com o acusado apresentado sozinho, sem outras pessoas para comparação.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento na delegacia indica o acusado como autor e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Bruno permaneceu em silêncio. A defesa sustenta que o único elemento contra ele é um reconhecimento frágil e irregular, e pede a absolvição por insuficiência de provas.
-
-=== C-0016 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Fernanda Ferreira, 45 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, durante uma festa de aniversário na casa de um conhecido em comum, a vítima, Lucas Oliveira, de 31 anos, que conhecia Fernanda Ferreira apenas de vista, foi atingida na cabeça com uma garrafa de vidro enquanto estava de costas. Lucas sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Câmera de segurança registra o rosto da autora com nitidez; laudo de comparação facial aponta compatibilidade com a acusada.
-- Testemunha presencial que já conhecia a acusada a reconhece com segurança, na delegacia e em juízo.
-- Laudo de DNA identifica sangue da vítima em roupa apreendida com a acusada.
-
-Tese da acusação
-O Ministério Público sustenta que as imagens, o reconhecimento e o DNA comprovam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Fernanda permaneceu em silêncio. A defesa sustenta que a acusação não esclareceu a dinâmica da agressão e pede a absolvição por insuficiência de provas.
-
-=== C-0017 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Fernanda Ferreira, 31 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio simples (art. 121, caput, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Fernanda Ferreira e a vítima, Vanessa Lima, de 39 anos, que haviam sido cunhadas, envolveram-se em uma colisão leve entre seus carros em um cruzamento. As duas desceram dos veículos e brigaram, e Fernanda disparou uma arma de fogo contra Vanessa. A vítima sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- A acusada apresentava escoriações leves, compatíveis com luta corporal.
-- Câmera registra apenas o final do confronto, sem mostrar quem começou.
-- Uma faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada atirou em razão de uma batida de trânsito e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Fernanda admite o disparo, mas afirma que Vanessa a agrediu e a ameaçou com uma faca. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0018 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Aline Ferreira, 21 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Aline Ferreira e a vítima, André Oliveira, de 54 anos, que se conheciam apenas de vista, discutiram em um posto de combustível durante a madrugada. Aline afastou-se, voltou minutos depois com uma garrafa de vidro e atingiu André. Ele morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Duas testemunhas afirmam que a acusada iniciou a agressão.
-- A vítima estava desarmada; nada foi encontrado com ela ou ao redor.
-- Câmera mostra a acusada se afastar, voltar minutos depois com a garrafa e atacar.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada voltou para atacar um homem desarmado por causa de uma discussão banal, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Aline admite o golpe, mas afirma que André a havia ameaçado e que temia ser agredida. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0019 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Jéssica Ferreira, 48 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio simples (art. 121, caput, do Código Penal).
-
-Fatos
-Segundo a denúncia, a vítima, Rafael Martins, de 61 anos, conhecido de longa data de Jéssica Ferreira, foi atingido na cabeça com uma garrafa de vidro no estacionamento de um supermercado, depois de uma discussão por causa de uma vaga. Rafael morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Testemunhas relatam que a acusada e a vítima haviam discutido dias antes.
-- Câmera de baixa resolução mostra pessoa de estatura e roupas compatíveis com as da acusada, sem mostrar o rosto.
-- Uma segunda testemunha descreve a autora com altura e roupas diferentes das da acusada.
-
-Tese da acusação
-O Ministério Público sustenta que o histórico de desavenças e as imagens indicam a acusada como autora, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Jéssica nega ter agredido a vítima e afirma que estava em outro lugar no horário do crime. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0020 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: João Barbosa, 35 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio simples (art. 121, caput, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, a vítima, Diego Alves, de 57 anos, que frequentava o mesmo bar que João Barbosa, foi golpeada com uma barra de ferro na saída de uma lanchonete, após uma troca de ofensas com um homem. Diego sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- O reconhecimento na delegacia foi feito com o acusado apresentado sozinho, sem outras pessoas para comparação.
-- A barra de ferro não foi encontrada, e nenhuma perícia vincula o acusado ao fato.
-- Não há câmeras no local, e as imagens de um estabelecimento vizinho não permitem identificar ninguém.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento feito na delegacia aponta o acusado como autor e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-João permaneceu em silêncio. A defesa sustenta que não há prova válida de autoria e pede a absolvição por insuficiência de provas.
+# Lote 01 — S01 Assault
+
+## C-S01-01
+Calibração: O vídeo mostra o réu dando o soco, mas não mostra os segundos anteriores, quando a defesa alega que a vítima o empurrou primeiro.
+
+The defendant, {NAME} {SURNAME}, 31, a retail store manager, is charged with assault after a fight outside a sports bar at about 11:40 p.m. The complainant suffered a broken nose and needed six stitches above the left eye.
+
+A security camera above the bar entrance shows {NAME} striking the complainant twice in the face. The camera does not cover the two or three seconds before the first punch, because both people stepped partly out of frame. The bouncer testified that the two had argued inside over a spilled drink and that {NAME} "looked angry" on the way out. The complainant testified to being punched without warning while walking to a car.
+
+{NAME} testified that the complainant followed {him} outside, shouted threats, and shoved {him} hard against a parked car, and that {he} punched only to get free. A bartender confirmed that the complainant left the bar right after {NAME}, but did not see what happened outside. Responding officers noted a scrape on {NAME}'s elbow. The complainant's blood alcohol level was 0.14; {NAME}'s was 0.06.
+
+The prosecution argues that two punches to the face, including one after the complainant had stepped back, go beyond what self-defense allows. The defense argues that the video starts too late to show who began the fight.
+
+## C-S01-02
+Calibração: A identificação depende de uma única testemunha, a vários metros e à noite, que reconheceu o réu numa sequência de fotos dias depois; há um álibi parcial por mensagens de celular.
+
+The defendant, {NAME} {SURNAME}, 26, a bank loan officer, is charged with assault for a beating at a bus stop at around 10:15 p.m. The complainant suffered a fractured wrist and bruised ribs and could not describe the attacker, who wore a dark jacket with the hood up.
+
+A food truck worker about 15 meters away watched the attack under a streetlight. Four days later, the worker picked {NAME} out of a six-photo lineup and told the detective, "I'm pretty sure, maybe 80 percent." The attacker took the complainant's phone, and that phone connected to a cell tower near {NAME}'s apartment about 40 minutes after the attack. Police found no stolen property and no dark jacket during a search of the apartment.
+
+{NAME} testified that {he} was at home all evening. Phone records show {him} sending text messages from home at 9:58 p.m. and 10:31 p.m.; the bus stop is about a 12-minute drive away. {His} roommate testified that {NAME} was home but admitted to falling asleep at around 10:00 p.m.
+
+The prosecution argues that the eyewitness identification and the phone's location point to the defendant. The defense argues that the identification is uncertain and that the tower covers several thousand residents.
+
+## C-S01-03
+Calibração: A lesão é grave e o réu admite a agressão, mas alega legítima defesa contra um ataque com garrafa; a garrafa nunca foi encontrada.
+
+The defendant, {NAME} {SURNAME}, 38, a city bus driver, is charged with assault after a confrontation in a convenience store parking lot. The complainant suffered a concussion and a cut on the scalp that required staples.
+
+{NAME} admits pushing the complainant, who fell and hit the curb. {He} testified that the two had a short argument about a parking space, and that the complainant then grabbed a glass bottle from a trash bin and swung it at {his} head. {NAME} said {he} pushed the complainant away to avoid being hit.
+
+No bottle was recovered. The store clerk saw the push through the window but did not see the moments before it. The clerk testified that the complainant "had something in one hand" but could not say what it was. The complainant denied picking up anything and said {NAME} came at them "out of nowhere." Officers found broken glass in the lot, but the store manager testified that broken glass was common there.
+
+{NAME} called 911 right after the fall and stayed at the scene until police arrived. The complainant has one prior conviction for disorderly conduct.
+
+The prosecution argues that the push was disproportionate and that the bottle story was invented. The defense argues that the defendant reacted to a weapon and immediately sought help.
+
+## C-S01-04
+Calibração: Duas testemunhas dão versões opostas, ambas com vínculo com uma das partes; o laudo médico é compatível com as duas versões.
+
+The defendant, {NAME} {SURNAME}, 29, a line cook, is charged with assault after a fight in the kitchen of the restaurant where {he} worked. The complainant, a coworker, suffered a deep bruise on the forearm and a sprained shoulder.
+
+The complainant testified that {NAME} became angry over an order mix-up and struck them with a metal ladle. A dishwasher, who is a close friend of the complainant, supported that version. A second cook, who carpools with {NAME}, testified that the complainant grabbed {NAME}'s collar first and that {NAME} raised the ladle only to block.
+
+The emergency physician testified that the forearm bruise could come either from a blow or from a defensive block against a held object. The kitchen camera was broken that week. The restaurant manager testified that both employees had received written warnings for arguments during shifts in the previous month.
+
+Text messages show that {NAME} wrote to a friend that night: "I lost it at work, I messed up." {NAME} testified that the message referred to yelling during the argument, not to hitting anyone.
+
+The prosecution argues that the injuries and the defendant's own message show an intentional attack. The defense argues that the evidence is balanced and that the defendant acted defensively.
+
+## C-S01-05
+Calibração: O DNA sob as unhas da vítima é do réu, mas o réu explica que houve contato físico numa briga anterior, mútua, no mesmo dia.
+
+The defendant, {NAME} {SURNAME}, 34, an insurance claims adjuster, is charged with assault after a neighbor was found injured in the shared driveway of a duplex at about 7:00 p.m. The complainant suffered a fractured cheekbone and could not identify the attacker, saying they were struck from behind.
+
+Material under the complainant's fingernails contained {NAME}'s DNA. The two had a long-running dispute about parking, and a third neighbor recorded a phone video at about 1:00 p.m. that day showing the two pushing and grabbing each other for about ten seconds before separating. No one was injured in that first incident.
+
+{NAME} testified that {he} left for a client inspection at 3:00 p.m. and returned after 8:00 p.m. The client confirmed that {NAME} was at the inspection site until about 6:15 p.m. The drive back takes about 35 minutes. No one saw {NAME} between 6:15 p.m. and 8:00 p.m. A wooden board with traces of the complainant's blood was found by the driveway, but no usable fingerprints were found on it.
+
+The prosecution argues that the DNA, the motive, and the window of opportunity point to the defendant. The defense argues that the DNA is explained by the recorded midday scuffle and that nothing places the defendant at the scene at 7:00 p.m.
+
+## C-S01-06
+Calibração: O réu admite ter dado um soco, mas diz que foi para defender um amigo; o amigo e a vítima contam versões diferentes sobre quem ameaçava quem.
+
+The defendant, {NAME} {SURNAME}, 27, a hotel front desk clerk, is charged with assault after punching a stranger at a late-night food stand. The complainant lost a tooth and suffered a cut lip.
+
+{NAME} admits throwing one punch. {He} testified that the complainant was standing very close to {his} friend, yelling, and had pulled back a fist, and that {he} struck first to stop what {he} believed was an imminent attack on the friend. The friend testified to the same account.
+
+The complainant testified to complaining about the friend cutting in line, and said there was no raised fist and no threat. The vendor at the stand testified that the complainant was "loud and in the friend's face" but could not see the complainant's hands because of the counter. A phone video taken by a customer begins just after the punch and shows the complainant on the ground and {NAME} stepping back with open hands.
+
+{NAME} has no criminal record. The complainant has a pending charge for threatening a parking attendant.
+
+The prosecution argues that the defendant attacked someone who was only arguing and that defending another person requires a real threat. The defense argues that the defendant reasonably believed the friend was about to be hit.
+
+## C-S01-07
+Calibração: A vítima reconhece o réu com segurança, mas os dois tinham um conflito anterior, o que dá motivo para uma falsa acusação; não há outras provas diretas.
+
+The defendant, {NAME} {SURNAME}, 42, a real estate agent, is charged with assault after a former business partner was attacked in a parking garage. The complainant suffered a broken arm.
+
+The complainant testified to recognizing {NAME} clearly in the garage lights, from about two meters away, and to being hit with a metal pipe. The two had run a small property management business together until it closed eight months earlier, and the complainant was suing {NAME} over unpaid debts. The garage cameras were not recording that night due to a power issue.
+
+A parking attendant saw a person in a gray rain jacket leave the garage on foot right after the attack but did not see the face. {NAME} owns a gray rain jacket, a very common item. No pipe was recovered.
+
+{NAME} testified that {he} was at home alone watching television and denies any involvement. {His} phone shows no activity between 8:00 p.m. and 10:30 p.m.; the attack happened at 9:20 p.m. {NAME}'s home is about 20 minutes from the garage.
+
+The prosecution argues that the complainant knows the defendant well and could not be mistaken. The defense argues that the complainant has a financial motive to blame the defendant and that nothing else ties {him} to the garage.
+
+## C-S01-08
+Calibração: As lesões confirmam a agressão e o réu estava no local, mas a vítima estava muito embriagada e mudou detalhes da versão entre o boletim e o julgamento.
+
+The defendant, {NAME} {SURNAME}, 24, a college student who works part-time at a grocery store, is charged with assault after a house party. The complainant was found in the backyard with bruises on the face and a cracked rib.
+
+At the hospital, the complainant told officers that "the person in the green shirt" pushed them down the back steps and kicked them. {NAME} was wearing a green shirt that night. At least two other guests also wore green, according to party photos. At trial, the complainant said {NAME} punched them before the fall, a detail not in the first statement. The complainant's blood alcohol level was 0.19.
+
+Another guest testified to seeing {NAME} and the complainant arguing on the porch about ten minutes earlier. {NAME} admits the argument, about a borrowed speaker, but says {he} went back inside and left the party soon after. A ride-share receipt shows {NAME} was picked up 25 minutes before a guest called 911. No one saw the fall.
+
+The prosecution argues that the defendant had a motive, matched the description, and argued with the complainant shortly before the attack. The defense argues that the description fits several guests and that the complainant's account is unreliable.
+
+## C-S01-09
+Calibração: Há confissão parcial do réu em depoimento policial, mas o réu alega que estava sob efeito de medicação e sem advogado, e a confissão contradiz um detalhe físico do caso.
+
+The defendant, {NAME} {SURNAME}, 36, a hospital lab technician, is charged with assault after a stranger was beaten on a jogging trail early in the morning. The complainant suffered a fractured jaw and described the attacker only as a person in a gray sweatshirt.
+
+{NAME} was stopped near the trail about an hour later, wearing a gray sweatshirt. In a recorded police interview that lasted four hours, {NAME} eventually said, "Fine, maybe I hit someone, I don't remember." Medical records show {he} had taken a prescribed sedative the night before. {He} did not have a lawyer during the interview, although {he} had waived that right in writing.
+
+In the interview, {NAME} said the fight happened "by the bridge," but the attack took place about 800 meters from the bridge. No blood was found on {his} clothes or hands. A trail camera captured a person in a gray sweatshirt running away, but the image is too blurry to show the face.
+
+{NAME} testified that {he} walks the trail daily after night shifts and only agreed with the detectives so the interview would end.
+
+The prosecution argues that the defendant's admission, clothing, and presence near the trail prove guilt. The defense argues that the admission is unreliable and contradicts the known facts.
+
+## C-S01-10
+Calibração: O réu ficou sobre a vítima no chão e a câmera mostra golpes, mas a defesa alega que o réu imobilizava a vítima até a chegada da polícia depois de uma tentativa de roubo; a vítima nega ter tentado roubar.
+
+The defendant, {NAME} {SURNAME}, 45, a property manager, is charged with assault after a confrontation near an ATM. The complainant suffered two broken ribs and facial bruises.
+
+{NAME} testified that the complainant approached {him} at the ATM, demanded money, and grabbed {his} wallet, and that {he} wrestled the complainant to the ground and held them there while shouting for someone to call the police. The complainant denies demanding anything and testified to asking {NAME} only for directions.
+
+A bank camera shows the two struggling. The footage shows {NAME} on top of the complainant, delivering at least three blows while the complainant appears to be covering their head. The camera has no audio. {NAME}'s wallet was found on the ground about a meter away. A passerby who called 911 testified to hearing someone yell "give it back" but could not say who yelled it.
+
+The complainant has a prior conviction for theft from three years ago. {NAME} has no criminal record and called the bank's emergency line from the scene.
+
+The prosecution argues that, even if there was a robbery attempt, striking a person who was already on the ground and covering up was excessive. The defense argues that the defendant used force only until the threat ended.

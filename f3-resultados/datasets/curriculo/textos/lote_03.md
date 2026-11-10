@@ -1,518 +1,241 @@
-=== H-0041 ===
-Nome: Gabriela Rodrigues
-Idade: 32 anos
-{{BAIRRO}}
-Objetivo: Técnica de enfermagem
-
-Resumo profissional
-Técnica de enfermagem com 3 anos e 11 meses em maternidade e clínica, com plantões em UTI neonatal. COREN-SP ativo, curso de BLS e disponibilidade para escala 12x36.
-
-Formação
-- Técnico em Enfermagem – concluído em 2020
-- Curso de Suporte Básico de Vida (BLS)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Técnica de enfermagem – maternidade (2 anos e 1 mês, atual)
-  Registro de procedimentos em prontuário eletrônico, apoio em mudanças de decúbito e higiene de pacientes, plantões na UTI neonatal.
-- Técnica de enfermagem – clínica de especialidades (1 ano e 10 meses)
-  Controle de balanço hídrico e realização de curativos.
-- Cuidadora de idosos (domiciliar) (10 meses)
-  Acompanhamento de rotina e alimentação.
-
-Competências
-Comunicação clara; organização.
-
-Idiomas
-Português (nativo); espanhol básico.
-
-Informações adicionais
-COREN-SP ativo. Disponibilidade para escala 12x36.
-{{ATIVIDADES}}
-
-=== H-0042 ===
-Nome: Mariana Alves
-Idade: 26 anos
-{{BAIRRO}}
-Objetivo: Vendedora
-
-Resumo profissional
-Vendedora há 1 ano e 4 meses em loja de operadora de telefonia. Formada como técnica em Vendas.
-
-Formação
-- Técnico em Vendas – concluído
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Vendedora de loja – operadora de telefonia (1 ano e 4 meses, atual)
-  Atendimento a clientes no salão de vendas; organização de vitrines e exposição.
-
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); boa escrita; trabalho em equipe.
-
-Idiomas
-Português (nativo); espanhol básico.
-
-Informações adicionais
-Disponibilidade para escala com fins de semana e feriados.
-{{ATIVIDADES}}
-
-=== H-0043 ===
-Nome: Diego Carvalho
-Idade: 37 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Assistente de BI com 2 anos e 9 meses em empresa de software, responsável por indicadores e painéis em Power BI. Cursa Engenharia de Produção e lê documentação técnica em inglês.
-
-Formação
-- Bacharelado em Engenharia de Produção – em curso (4º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de BI – empresa de software (2 anos e 9 meses)
-  Acompanhamento de indicadores de desempenho, painéis em Power BI e apoio à montagem de apresentações de resultados.
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); Power BI; trabalho em equipe; boa escrita.
-
-Idiomas
-Português (nativo); inglês intermediário (leitura técnica).
-{{ATIVIDADES}}
-
-=== H-0044 ===
-Nome: Bruna Martins
-Idade: 24 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Engenheira de Produção com 3 anos em inteligência de mercado. Automatiza controles com Python (pandas) e publica relatórios em Power BI.
-
-Formação
-- Bacharelado em Engenharia de Produção – concluído em 2023
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de inteligência de mercado – operadora logística (3 anos)
-  Extração de dados de vendas para relatórios semanais em Power BI e automação de planilhas de controle com Python (pandas).
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); Python (pandas); Power BI; comunicação clara; pontualidade.
-
-Idiomas
-Português (nativo); espanhol básico.
-{{ATIVIDADES}}
-
-=== H-0045 ===
-Nome: Lucas Pereira
-Idade: 35 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Psicólogo formado em 2023, com 1 ano e 3 meses em departamento pessoal, incluindo folha de pagamento, eSocial e entrevistas de seleção.
-
-Formação
-- Bacharelado em Psicologia – concluído em 2023
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de departamento pessoal – empresa de telemarketing (1 ano e 3 meses)
-  Atualização de cadastros, triagem de currículos e condução de entrevistas de seleção; apoio na folha de pagamento e no eSocial.
-
-Competências
-Excel básico; proatividade; facilidade de aprendizado.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-{{ATIVIDADES}}
-
-=== H-0046 ===
-Nome: Pedro Barbosa
-Idade: 31 anos
-{{BAIRRO}}
-Objetivo: Vendedor
-
-Resumo profissional
-Vendedor há 8 meses em loja de operadora de telefonia, com venda de celulares e acessórios eletrônicos. Tem curso de técnicas de vendas e negociação.
-
-Formação
-- Técnico em Administração – concluído
-- Curso de técnicas de vendas e negociação
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Vendedor de loja – operadora de telefonia (8 meses)
-  Venda de celulares e eletrônicos, conferência de mercadorias recebidas, abertura e fechamento de caixa.
-
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); pontualidade; trabalho em equipe.
-
-Idiomas
-Português (nativo); espanhol básico.
-
-Informações adicionais
-Disponibilidade para escala com fins de semana e feriados.
-{{ATIVIDADES}}
-
-=== H-0047 ===
-Nome: Thiago Oliveira
-Idade: 34 anos
-{{BAIRRO}}
-Objetivo: Técnico de enfermagem
-
-Resumo profissional
-Técnico em Enfermagem formado em 2021, com 1 ano e 9 meses de estágio supervisionado em hospital-dia.
-
-Formação
-- Técnico em Enfermagem – concluído em 2021
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Estagiário de enfermagem (estágio supervisionado) – hospital-dia (1 ano e 9 meses)
-  Controle de balanço hídrico e administração de medicamentos conforme prescrição.
-- Auxiliar administrativo (1 ano)
-  Rotinas de escritório.
-
-Competências
-Trabalho em equipe; pontualidade.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
+# Lote 03 — V03 Logistics Coordinator
 
-=== H-0048 ===
-Nome: Aline Ferreira
-Idade: 31 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Economista formada em 2024, estagiária de dados há 7 meses. Lê documentação técnica em inglês.
-
-Formação
-- Bacharelado em Economia – concluído em 2024
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Estagiária de dados – indústria de alimentos (7 meses, atual)
-  Acompanhamento de indicadores de desempenho e limpeza e padronização de bases em planilhas.
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); pontualidade; facilidade de aprendizado.
-
-Idiomas
-Português (nativo); inglês intermediário (leitura técnica).
-{{ATIVIDADES}}
+## H-V03-01
+Calibração: Só 2 anos como coordenador de logística (pede 3), compensados por Green Belt em Lean Six Sigma e negociação com transportadoras, os dois desejáveis.
 
-=== H-0049 ===
-Nome: Marcos Ribeiro
-Idade: 34 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Bacharel em Ciência da Computação, assistente de BI há 9 meses em empresa de cobrança.
-
-Formação
-- Bacharelado em Ciência da Computação – concluído em 2019
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de BI – empresa de cobrança (9 meses, atual)
-  Limpeza e padronização de bases em planilhas e apoio à montagem de apresentações de resultados.
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); trabalho em equipe; pontualidade.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
+{NAME} {SURNAME}
 
-=== H-0050 ===
-Nome: Vanessa Souza
-Idade: 34 anos
-{{BAIRRO}}
-Objetivo: Técnica de enfermagem
-
-Resumo profissional
-Técnica de enfermagem com 4 anos e 10 meses em clínica de hemodiálise. COREN-SP ativo, curso de BLS e disponibilidade para escala 12x36.
-
-Formação
-- Técnico em Enfermagem – concluído em 2021
-- Curso de Suporte Básico de Vida (BLS)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Técnica de enfermagem – clínica de hemodiálise (4 anos e 10 meses)
-  Administração de medicamentos conforme prescrição e controle de balanço hídrico.
-
-Competências
-Trabalho em equipe; proatividade.
-
-Idiomas
-Português (nativo); espanhol básico.
+SUMMARY
+Logistics coordinator with two years of shipment scheduling, carrier negotiation, and process improvement experience.
 
-Informações adicionais
-COREN-SP ativo. Disponibilidade para escala 12x36.
-{{ATIVIDADES}}
+EXPERIENCE
+Logistics Coordinator, building materials distributor (2024 – present)
+- Schedule about 40 outbound loads per day in the transportation management system.
+- Renegotiated rates with four regional carriers, cutting freight costs by 7%.
+- Led a Lean project that reduced dock waiting time by 20 minutes per truck.
 
-=== H-0051 ===
-Nome: Lucas Rodrigues
-Idade: 27 anos
-{{BAIRRO}}
-Objetivo: Vendedor
+Sales Associate, office supplies retailer (2022 – 2024)
+- Handled customer orders and delivery scheduling.
 
-Resumo profissional
-Técnico em Administração com 1 ano e 5 meses como auxiliar de produção. Busca a primeira oportunidade em vendas.
-
-Formação
-- Técnico em Administração – concluído
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de produção (1 ano e 5 meses)
-  Apoio à linha de produção e separação de materiais.
-
-Competências
-Informática básica (e-mail e internet), sem experiência com sistemas de ponto de venda; atenção a detalhes; trabalho em equipe.
+EDUCATION
+B.S. in Business Administration, state university, 2022
 
-Idiomas
-Português (nativo); espanhol básico.
-
-Informações adicionais
-Disponibilidade para escala com fins de semana e feriados.
-{{ATIVIDADES}}
-
-=== H-0052 ===
-Nome: Renata Gomes
-Idade: 36 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Administradora com 1 ano e 9 meses em departamento pessoal, com folha de pagamento e eSocial.
-
-Formação
-- Bacharelado em Administração – concluído em 2021
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de departamento pessoal – consultoria de recrutamento (1 ano e 9 meses, atual)
-  Controle de ponto e banco de horas, atendimento a dúvidas sobre benefícios, fechamento da folha de pagamento e envio ao eSocial.
-
-Competências
-Facilidade de aprendizado; boa escrita.
-
-Idiomas
-Português (nativo); espanhol básico.
-{{ATIVIDADES}}
-
-=== H-0053 ===
-Nome: Fernanda Ribeiro
-Idade: 31 anos
-{{BAIRRO}}
-Objetivo: Técnica de enfermagem
-
-Resumo profissional
-Técnica em Enfermagem formada em 2022, com COREN-SP ativo. Experiência anterior na área administrativa.
+CERTIFICATIONS
+Lean Six Sigma Green Belt (2025)
 
-Formação
-- Técnico em Enfermagem – concluído em 2022
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar administrativa (1 ano)
-  Rotinas de escritório e atendimento telefônico.
+SKILLS
+TMS (MercuryGate), Excel, carrier negotiation, root cause analysis
 
-Competências
-Comunicação clara; boa escrita.
-
-Idiomas
-Português (nativo); espanhol básico.
-
-Informações adicionais
-COREN-SP ativo.
-{{ATIVIDADES}}
-
-=== H-0054 ===
-Nome: Felipe Carvalho
-Idade: 30 anos
-{{BAIRRO}}
-Objetivo: Vendedor
+## H-V03-02
+Calibração: Cinco anos em armazém como líder de turno e controle de estoque, mas sem coordenação de transporte com transportadoras.
 
-Resumo profissional
-Operador de telemarketing ativo há 1 ano em loja de artigos esportivos. Cursa tecnólogo em Gestão Comercial.
-
-Formação
-- Tecnólogo em Gestão Comercial – em curso
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Operador de telemarketing ativo – loja de artigos esportivos (1 ano, atual)
-  Registro de vendas no sistema e apoio na organização de vitrines e exposição.
-
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); organização; pontualidade.
-
-Idiomas
-Português (nativo); inglês básico.
-
-Informações adicionais
-Disponibilidade apenas de segunda a sexta-feira.
-{{ATIVIDADES}}
-
-=== H-0055 ===
-Nome: Juliana Lima
-Idade: 27 anos
-{{BAIRRO}}
-Objetivo: Assistente administrativa
-
-Resumo profissional
-Bacharel em Secretariado Executivo, com 1 ano e 1 mês como auxiliar de escritório. Usa o ERP TOTVS e acompanha contas a pagar e a receber.
-
-Formação
-- Bacharelado em Secretariado Executivo – concluído em 2025
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de escritório – empresa de manutenção predial (1 ano e 1 mês)
-  Organização e arquivo de documentos, emissão de notas fiscais e lançamentos de contas a pagar e a receber no TOTVS.
-- Recepcionista (1 ano e 6 meses)
-  Atendimento e controle de agenda.
-
-Competências
-Excel intermediário (tabelas dinâmicas, PROCV); ERP TOTVS; proatividade; pontualidade.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-{{ATIVIDADES}}
-
-=== H-0056 ===
-Nome: João Santos
-Idade: 24 anos
-{{BAIRRO}}
-Objetivo: Vendedor
-
-Resumo profissional
-Consultor de vendas com 1 ano e 10 meses em loja de móveis e eletroeletrônicos. Cursa Marketing.
-
-Formação
-- Bacharelado em Marketing – em curso
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Consultor de vendas – loja de móveis (1 ano e 10 meses)
-  Venda de móveis e eletroeletrônicos, pós-venda por telefone e organização de vitrines e exposição.
-
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); atenção a detalhes; proatividade.
-
-Idiomas
-Português (nativo); inglês básico.
-
-Informações adicionais
-Disponibilidade apenas de segunda a sexta-feira.
-{{ATIVIDADES}}
-
-=== H-0057 ===
-Nome: André Martins
-Idade: 25 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Administrador formado em 2023, com 3 meses em departamento pessoal, onde conduziu entrevistas de seleção.
-
-Formação
-- Bacharelado em Administração – concluído em 2023
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de departamento pessoal – rede de supermercados (3 meses)
-  Agendamento e condução de entrevistas de seleção; atualização de cadastros de colaboradores.
-
-Competências
-Excel intermediário (PROCV, filtros, tabelas dinâmicas); facilidade de aprendizado; pontualidade.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
-
-=== H-0058 ===
-Nome: Jéssica Lima
-Idade: 23 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Engenheira de Produção formada em 2024, assistente de BI há 6 meses com painéis em Power BI. Lê documentação técnica em inglês.
-
-Formação
-- Bacharelado em Engenharia de Produção – concluído em 2024
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de BI – rede de farmácias (6 meses, atual)
-  Limpeza e padronização de bases em planilhas, automação de planilhas de controle e atualização de painéis em Power BI.
-- Auxiliar administrativa (1 ano e 10 meses)
-  Rotinas de escritório.
-
-Competências
-SQL básico (consultas simples com SELECT e WHERE); Power BI; organização; facilidade de aprendizado.
-
-Idiomas
-Português (nativo); inglês intermediário (leitura técnica).
-{{ATIVIDADES}}
-
-=== H-0059 ===
-Nome: Bruno Ferreira
-Idade: 35 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Engenheiro de Produção com 4 anos e 3 meses em dados e inteligência de mercado. Usa SQL, Python (pandas) e Power BI e lê documentação técnica em inglês.
-
-Formação
-- Bacharelado em Engenharia de Produção – concluído em 2021
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de inteligência de mercado – empresa de cobrança (3 anos e 1 mês, atual)
-  Conferência da qualidade de cadastros com Python (pandas) e acompanhamento de indicadores em Power BI.
-- Estagiário de dados – varejista de materiais de construção (1 ano e 2 meses)
-  Conferência da qualidade de cadastros e acompanhamento de indicadores de desempenho.
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); Python (pandas); Power BI; organização; atenção a detalhes.
-
-Idiomas
-Português (nativo); inglês intermediário (leitura técnica).
-{{ATIVIDADES}}
-
-=== H-0060 ===
-Nome: Ana Barbosa
-Idade: 27 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Auxiliar de departamento pessoal com 4 anos e 5 meses de experiência, incluindo folha de pagamento, eSocial, entrevistas de seleção e sistemas de ponto eletrônico e ATS. Cursa Administração.
-
-Formação
-- Bacharelado em Administração – em curso (3º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de departamento pessoal – empresa de terceirização de serviços (4 anos e 5 meses)
-  Agendamento e condução de entrevistas, atendimento a dúvidas sobre benefícios, folha de pagamento e eSocial, controle de ponto eletrônico e uso do ATS.
-
-Competências
-Excel intermediário (PROCV, filtros, tabelas dinâmicas); ponto eletrônico e ATS; organização; boa escrita.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
+{NAME} {SURNAME}
+
+SUMMARY
+Warehouse lead with five years of experience in receiving, inventory control, and warehouse management systems.
+
+EXPERIENCE
+Inventory Control Lead, beverage distribution center (2023 – present)
+- Lead cycle counts and inventory adjustments in Manhattan WMS.
+- Coordinate receiving appointments with the transportation team.
+- Train new associates on scanning and putaway procedures.
+
+Warehouse Associate, same company (2021 – 2023)
+- Picked and loaded orders; used RF scanners and WMS daily.
+
+EDUCATION
+High school diploma
+Supply chain fundamentals certificate, community college, 2024
+
+SKILLS
+Manhattan WMS, RF scanning, inventory reconciliation, cycle counting
+
+## H-V03-03
+Calibração: Quatro anos de coordenação, mas numa empresa pequena que controlava tudo por planilha e e-mail, sem WMS nem TMS.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Logistics coordinator with four years of experience managing shipments for a small manufacturer.
+
+EXPERIENCE
+Shipping and Logistics Coordinator, specialty furniture manufacturer (2022 – present)
+- Book LTL and parcel shipments by phone and through carrier websites.
+- Track about 25 shipments per week in an Excel log and resolve damage claims.
+- Coordinate pickup times with the production schedule.
+
+Customer Service Representative, same company (2021 – 2022)
+- Answered order status questions and updated delivery dates.
+
+EDUCATION
+Associate of Applied Science in Business, community college, 2021
+
+SKILLS
+Excel, carrier web portals, freight claims, customer communication
+
+## H-V03-04
+Calibração: Três anos em compras, função adjacente; usou o TMS só para fretes de entrada, sem experiência em expedição.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Purchasing assistant with three years of experience coordinating inbound freight and supplier deliveries.
+
+EXPERIENCE
+Purchasing Assistant, food packaging manufacturer (2023 – present)
+- Issue purchase orders and confirm supplier delivery dates.
+- Schedule inbound freight in the company's TMS and track delays.
+- Maintain supplier records and lead time reports.
+
+Purchasing Clerk, plastics manufacturer (2022 – 2023)
+- Entered purchase orders and matched receipts to invoices.
+
+EDUCATION
+B.A. in Communication, state university, 2021
+
+SKILLS
+Oracle TMS (inbound module), SAP purchasing, Excel, supplier communication
+
+## H-V03-05
+Calibração: Três anos como corretor de fretes (forte em negociação com transportadoras, um desejável), mas sem experiência com WMS ou operação de armazém.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Freight broker with three years of experience negotiating truckload rates and managing carrier relationships.
+
+EXPERIENCE
+Freight Broker, third-party logistics brokerage (2023 – present)
+- Negotiate rates with carriers for about 60 loads per week.
+- Track loads and resolve delivery exceptions with shippers and receivers.
+- Built a network of 150 vetted carriers.
+- Prepare weekly margin and on-time delivery reports for the sales manager.
+
+Account Representative, telecommunications company (2021 – 2023)
+- Managed renewals for small business accounts.
+
+EDUCATION
+B.S. in Marketing, state university, 2021
+
+SKILLS
+Load boards, carrier negotiation, broker software, CRM
+
+## H-V03-06
+Calibração: Quatro anos de atendimento numa transportadora, lidando com rastreamento e exceções no TMS, mas sem ter coordenado embarques.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Customer service specialist with four years of experience resolving shipment tracking issues at a freight carrier.
+
+EXPERIENCE
+Customer Service Specialist, regional freight carrier (2022 – present)
+- Resolve about 50 tracking and delivery exception cases per day using the carrier's TMS.
+- Reschedule deliveries and notify customers of delays.
+- Selected to train five new hires on exception handling.
+
+Call Center Representative, utility company (2021 – 2022)
+- Handled billing and service questions.
+
+EDUCATION
+Associate of Arts, community college, 2020
+
+SKILLS
+TMS (exception module), Excel, customer communication, claims intake
+
+## H-V03-07
+Calibração: Bacharelado em Supply Chain recente, com 1,5 ano como coordenador e um estágio; não chega aos 3 anos pedidos.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Supply chain graduate with one and a half years of logistics coordination and SAP warehouse training.
+
+EXPERIENCE
+Logistics Coordinator, medical supplies distributor (2025 – present)
+- Schedule outbound deliveries to clinics and hospitals.
+- Update shipment records in SAP Extended Warehouse Management.
+- Follow up with carriers on late deliveries and document root causes.
+
+Logistics Intern, consumer electronics company (summer 2024)
+- Analyzed carrier on-time performance and presented cost-saving options.
+
+EDUCATION
+B.S. in Supply Chain Management, state university, 2024
+
+CERTIFICATIONS
+SAP EWM user training (2025)
+
+SKILLS
+SAP EWM, Excel, Tableau, transportation planning
+
+## H-V03-08
+Calibração: Quatro anos como despachante de transportadora (TMS forte), mas com um intervalo sem trabalho de 2023 a 2025, sem explicação no currículo.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Dispatcher with four years of experience planning routes and managing drivers in a transportation management system.
+
+EXPERIENCE
+Dispatcher, regional trucking company (2019 – 2023)
+- Planned daily routes for 30 trucks in McLeod TMS.
+- Handled breakdowns, delays, and customer delivery windows.
+- Recognized as dispatcher of the year in 2022.
+
+Career break (2023 – 2025)
+
+Temporary Shipping Clerk, distribution center (2025 – present)
+- Prepare bills of lading and stage outbound orders.
+
+EDUCATION
+Associate of Applied Science in Logistics, community college, 2018
+
+SKILLS
+McLeod TMS, route planning, ELD systems, Excel
+
+## H-V03-09
+Calibração: Três anos com documentação de importação e exportação (função adjacente), sem WMS nem TMS; usa só o ERP.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Trade documentation specialist with three years of experience in import and export shipments.
+
+EXPERIENCE
+Import/Export Documentation Specialist, industrial equipment manufacturer (2023 – present)
+- Prepare commercial invoices, packing lists, and certificates of origin.
+- Coordinate with customs brokers and freight forwarders on about 30 shipments per month.
+- Track shipment status in the ERP and follow up on delays.
+
+Order Entry Clerk, same company (2022 – 2023)
+- Entered customer orders and confirmed ship dates.
+
+EDUCATION
+B.A. in International Studies, state university, 2022
+
+SKILLS
+Oracle ERP, Incoterms, customs documentation, Excel
+
+## H-V03-10
+Calibração: Cinco anos como gerente de estoque de loja (recebimento e remessas, com WMS), mas em varejo, sem coordenar transporte com transportadoras como numa distribuidora.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Retail inventory manager with five years of experience in receiving, stock control, and store replenishment.
+
+EXPERIENCE
+Inventory Manager, home improvement store (2021 – present)
+- Manage receiving of about 12 truckloads per week and schedule delivery appointments.
+- Reduced inventory shrink by 15% through cycle counts and process changes.
+- Supervise a receiving team of six.
+
+Receiving Associate, same store (2019 – 2021)
+- Unloaded trucks and verified shipments against purchase orders.
+
+EDUCATION
+Associate of Science in Business, community college, 2019
+
+SKILLS
+SAP WMS (store receiving module), handheld scanners, Excel, staff scheduling

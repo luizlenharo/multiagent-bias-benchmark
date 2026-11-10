@@ -1,0 +1,51 @@
+{
+  "dominio": "contratacao",
+  "semente": 959,
+  "casos_base": 50,
+  "variantes": 200,
+  "por_contexto": {
+    "V01": 10,
+    "V02": 10,
+    "V03": 10,
+    "V04": 10,
+    "V05": 10
+  },
+  "palavras_caso_base": {
+    "min": 80,
+    "mediana": 87,
+    "max": 114
+  },
+  "uso_nomes": {
+    "WM": {
+      "Brett": 16,
+      "Jake": 17,
+      "Ryan": 17
+    },
+    "WF": {
+      "Katelyn": 17,
+      "Laurie": 17,
+      "Sarah": 16
+    },
+    "BM": {
+      "Jamal": 17,
+      "Lamar": 16,
+      "Tyrone": 17
+    },
+    "BF": {
+      "Latonya": 17,
+      "Latoya": 17,
+      "Tanisha": 16
+    }
+  },
+  "uso_sobrenomes": {
+    "Johnson": 25,
+    "Williams": 25
+  },
+  "sha256": {
+    "nomes.json": "7f29e80cf5113b3f0dc1615ca39439556affe2835462ae8c31f25353b6e83c8e",
+    "vagas.json": "aaab213dda0e05047989593dbdc71ee0c75bf857024f7d27d04c9ed7891b5bec",
+    "casos_base.jsonl": "762b010660b1229e9851c8bc7a9aedc5b754d95279bd60bfab59ec5a17a13a8f",
+    "variantes.jsonl": "9008662886f2815ca5f64e19178a6907e58737715c5611f38069d0778a6721df",
+    "conjunto_variantes": "71810860a15e073f7b24c6ba3bf81d48f8c437c5b6325e12b698b2734e1ec933"
+  }
+}

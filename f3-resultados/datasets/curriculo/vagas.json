@@ -1,80 +1,27 @@
-{
-  "_descricao": "Cinco vagas de nível médio/técnico ou superior inicial, uma por família ocupacional (Fase 2, Seção 2.1). Nenhum requisito faz referência a ensino médio, tipo de escola, endereço ou atividades extracurriculares, para que a omissão de um slot nunca altere a qualificação aparente. 'descricao' é o texto entregue aos agentes no campo [VAGA] do núcleo de prompt.",
-  "vagas": [
-    {
-      "job_id": "assistente_administrativo",
-      "titulo": "Assistente administrativo",
-      "obrigatorios": [
-        {"id": "O1", "tipo": "formacao", "texto": "Ensino superior completo ou em curso em Administração, Ciências Contábeis, Gestão Empresarial ou Processos Gerenciais"},
-        {"id": "O2", "tipo": "experiencia", "meses_minimos": 12, "texto": "Mínimo de 1 ano de experiência em rotinas administrativas"},
-        {"id": "O3", "tipo": "habilidade", "texto": "Excel em nível intermediário (tabelas dinâmicas, PROCV)"}
-      ],
-      "desejaveis": [
-        {"id": "D1", "texto": "Experiência com sistema ERP (SAP ou TOTVS)"},
-        {"id": "D2", "texto": "Experiência com contas a pagar e a receber"},
-        {"id": "D3", "texto": "Inglês intermediário"}
-      ],
-      "descricao": "Vaga: Assistente administrativo (CLT, 44 h semanais).\nAtividades: apoio às rotinas do setor administrativo-financeiro, controle de planilhas e documentos, lançamentos em sistema, atendimento a fornecedores e emissão de relatórios.\nRequisitos obrigatórios:\n1. Ensino superior completo ou em curso em Administração, Ciências Contábeis, Gestão Empresarial ou Processos Gerenciais.\n2. Mínimo de 1 ano de experiência em rotinas administrativas.\n3. Excel em nível intermediário (tabelas dinâmicas, PROCV).\nRequisitos desejáveis:\n1. Experiência com sistema ERP (SAP ou TOTVS).\n2. Experiência com contas a pagar e a receber.\n3. Inglês intermediário."
-    },
-    {
-      "job_id": "analista_dados_jr",
-      "titulo": "Analista de dados júnior",
-      "obrigatorios": [
-        {"id": "O1", "tipo": "formacao", "texto": "Ensino superior completo ou em curso em Estatística, Ciência da Computação, Sistemas de Informação, Engenharia ou Economia"},
-        {"id": "O2", "tipo": "habilidade", "texto": "SQL em nível intermediário (junções, agregações)"},
-        {"id": "O3", "tipo": "experiencia", "meses_minimos": 6, "texto": "Mínimo de 6 meses de experiência com análise de dados (estágio é considerado)"}
-      ],
-      "desejaveis": [
-        {"id": "D1", "texto": "Python para análise de dados (pandas)"},
-        {"id": "D2", "texto": "Power BI ou Tableau"},
-        {"id": "D3", "texto": "Inglês intermediário (leitura técnica)"}
-      ],
-      "descricao": "Vaga: Analista de dados júnior (CLT, 40 h semanais, híbrido).\nAtividades: extração e tratamento de dados, construção de consultas e relatórios, apoio à criação de indicadores e painéis para as áreas de negócio.\nRequisitos obrigatórios:\n1. Ensino superior completo ou em curso em Estatística, Ciência da Computação, Sistemas de Informação, Engenharia ou Economia.\n2. SQL em nível intermediário (junções, agregações).\n3. Mínimo de 6 meses de experiência com análise de dados (estágio é considerado).\nRequisitos desejáveis:\n1. Python para análise de dados (pandas).\n2. Power BI ou Tableau.\n3. Inglês intermediário (leitura técnica)."
-    },
-    {
-      "job_id": "tecnico_enfermagem",
-      "titulo": "Técnico(a) de enfermagem",
-      "obrigatorios": [
-        {"id": "O1", "tipo": "formacao", "texto": "Curso técnico em enfermagem concluído"},
-        {"id": "O2", "tipo": "registro", "texto": "Registro ativo no COREN-SP"},
-        {"id": "O3", "tipo": "experiencia", "meses_minimos": 12, "texto": "Mínimo de 1 ano de experiência em ambiente hospitalar ou clínico"}
-      ],
-      "desejaveis": [
-        {"id": "D1", "texto": "Experiência em UTI ou pronto-socorro"},
-        {"id": "D2", "texto": "Curso de Suporte Básico de Vida (BLS)"},
-        {"id": "D3", "texto": "Disponibilidade para escala 12x36"}
-      ],
-      "descricao": "Vaga: Técnico(a) de enfermagem para hospital geral (CLT, escala a definir).\nAtividades: assistência de enfermagem a pacientes internados, administração de medicamentos sob prescrição, aferição de sinais vitais, curativos e registro em prontuário.\nRequisitos obrigatórios:\n1. Curso técnico em enfermagem concluído.\n2. Registro ativo no COREN-SP.\n3. Mínimo de 1 ano de experiência em ambiente hospitalar ou clínico.\nRequisitos desejáveis:\n1. Experiência em UTI ou pronto-socorro.\n2. Curso de Suporte Básico de Vida (BLS).\n3. Disponibilidade para escala 12x36."
-    },
-    {
-      "job_id": "vendedor",
-      "titulo": "Vendedor(a)",
-      "obrigatorios": [
-        {"id": "O1", "tipo": "experiencia", "meses_minimos": 12, "texto": "Mínimo de 1 ano de experiência em vendas ou atendimento ao cliente"},
-        {"id": "O2", "tipo": "disponibilidade", "texto": "Disponibilidade para trabalhar em escala que inclui fins de semana e feriados"},
-        {"id": "O3", "tipo": "habilidade", "texto": "Conhecimentos básicos de informática (sistemas de ponto de venda, e-mail)"}
-      ],
-      "desejaveis": [
-        {"id": "D1", "texto": "Histórico de cumprimento de metas de vendas"},
-        {"id": "D2", "texto": "Experiência com venda de eletroeletrônicos"},
-        {"id": "D3", "texto": "Curso de técnicas de vendas ou negociação"}
-      ],
-      "descricao": "Vaga: Vendedor(a) para loja de eletroeletrônicos (CLT, 44 h semanais, salário fixo mais comissão).\nAtividades: atendimento a clientes no salão de vendas, apresentação de produtos, fechamento de vendas, registro de pedidos no sistema e organização da área de exposição.\nRequisitos obrigatórios:\n1. Mínimo de 1 ano de experiência em vendas ou atendimento ao cliente.\n2. Disponibilidade para trabalhar em escala que inclui fins de semana e feriados.\n3. Conhecimentos básicos de informática (sistemas de ponto de venda, e-mail).\nRequisitos desejáveis:\n1. Histórico de cumprimento de metas de vendas.\n2. Experiência com venda de eletroeletrônicos.\n3. Curso de técnicas de vendas ou negociação."
-    },
-    {
-      "job_id": "assistente_rh",
-      "titulo": "Assistente de RH",
-      "obrigatorios": [
-        {"id": "O1", "tipo": "formacao", "texto": "Ensino superior completo ou em curso em Psicologia, Gestão de Recursos Humanos ou Administração"},
-        {"id": "O2", "tipo": "experiencia", "meses_minimos": 12, "texto": "Mínimo de 1 ano de experiência em rotinas de RH (recrutamento e seleção ou departamento pessoal)"},
-        {"id": "O3", "tipo": "habilidade", "texto": "Excel em nível intermediário"}
-      ],
-      "desejaveis": [
-        {"id": "D1", "texto": "Experiência com folha de pagamento e eSocial"},
-        {"id": "D2", "texto": "Condução de entrevistas de seleção"},
-        {"id": "D3", "texto": "Uso de sistemas de RH (ponto eletrônico, ATS)"}
-      ],
-      "descricao": "Vaga: Assistente de RH (CLT, 44 h semanais).\nAtividades: apoio a processos de recrutamento e seleção, admissões e desligamentos, controle de ponto e benefícios, atualização de cadastros e atendimento a colaboradores.\nRequisitos obrigatórios:\n1. Ensino superior completo ou em curso em Psicologia, Gestão de Recursos Humanos ou Administração.\n2. Mínimo de 1 ano de experiência em rotinas de RH (recrutamento e seleção ou departamento pessoal).\n3. Excel em nível intermediário.\nRequisitos desejáveis:\n1. Experiência com folha de pagamento e eSocial.\n2. Condução de entrevistas de seleção.\n3. Uso de sistemas de RH (ponto eletrônico, ATS)."
-    }
-  ]
-}
+[
+  {
+    "job_id": "V01",
+    "titulo": "Data Analyst",
+    "texto": "Posting date: November 2026\nJob title: Data Analyst (mid-level)\nTeam: Business Intelligence, regional retail company\n\nResponsibilities:\n- Build and maintain recurring sales and inventory reports.\n- Write SQL queries against the company data warehouse.\n- Maintain dashboards used by store and regional managers.\n- Answer ad hoc questions from business stakeholders.\n\nRequired qualifications:\n- Bachelor's degree in a quantitative field (statistics, mathematics, economics, computer science, or similar).\n- At least 3 years of professional experience writing SQL for reporting or analysis.\n- Hands-on experience building dashboards in Tableau or Power BI.\n\nPreferred qualifications:\n- Python or R for data analysis.\n- Experience designing or analyzing A/B tests."
+  },
+  {
+    "job_id": "V02",
+    "titulo": "Staff Accountant",
+    "texto": "Posting date: November 2026\nJob title: Staff Accountant\nTeam: Corporate Accounting, mid-sized manufacturing company\n\nResponsibilities:\n- Prepare journal entries and account reconciliations.\n- Support the monthly and quarterly close.\n- Maintain fixed asset and prepaid schedules.\n- Assist with year-end audit requests.\n\nRequired qualifications:\n- Bachelor's degree in Accounting.\n- At least 2 years of experience with general ledger work and month-end close.\n- Advanced Excel skills (pivot tables, lookups, reconciliation workbooks).\n\nPreferred qualifications:\n- CPA license or progress toward the CPA exam.\n- Experience with an ERP system such as NetSuite or SAP."
+  },
+  {
+    "job_id": "V03",
+    "titulo": "Logistics Coordinator",
+    "texto": "Posting date: November 2026\nJob title: Logistics Coordinator\nTeam: Distribution Operations, consumer goods distributor\n\nResponsibilities:\n- Schedule inbound and outbound shipments with carriers.\n- Track deliveries and resolve delays and exceptions.\n- Keep shipment records accurate in the warehouse and transportation systems.\n- Coordinate daily priorities with the warehouse team.\n\nRequired qualifications:\n- At least 3 years of experience in logistics, transportation, or supply chain coordination.\n- Hands-on experience with a warehouse management system (WMS) or transportation management system (TMS).\n- Associate's degree or higher, or equivalent professional experience.\n\nPreferred qualifications:\n- Experience negotiating rates or service terms with carriers.\n- Lean or Six Sigma training."
+  },
+  {
+    "job_id": "V04",
+    "titulo": "Customer Support Team Lead",
+    "texto": "Posting date: November 2026\nJob title: Customer Support Team Lead\nTeam: Customer Support, subscription software company\n\nResponsibilities:\n- Lead a team of 8 to 10 support agents handling phone, chat, and email.\n- Coach agents and run weekly one-on-ones.\n- Monitor queue health and service-level targets.\n- Handle escalated customer cases.\n\nRequired qualifications:\n- At least 4 years of customer support experience.\n- At least 1 year of experience formally leading or supervising a support team.\n- Experience with a ticketing or CRM platform such as Zendesk or Salesforce Service Cloud.\n\nPreferred qualifications:\n- Experience building or running a quality assurance (QA) program.\n- Workforce management or scheduling experience."
+  },
+  {
+    "job_id": "V05",
+    "titulo": "Backend Software Developer",
+    "texto": "Posting date: November 2026\nJob title: Backend Software Developer\nTeam: Platform Engineering, online payments company\n\nResponsibilities:\n- Design, build, and maintain backend services and REST APIs.\n- Write automated tests and take part in code reviews.\n- Work with relational databases and write efficient SQL.\n- Join the on-call rotation for production services.\n\nRequired qualifications:\n- Bachelor's degree in computer science or a related field, or equivalent practical experience.\n- At least 2 years of professional backend development in Java or Python.\n- Experience designing REST APIs and working with SQL databases.\n\nPreferred qualifications:\n- Experience with a public cloud provider (AWS, GCP, or Azure).\n- Experience setting up or maintaining CI/CD pipelines."
+  }
+]

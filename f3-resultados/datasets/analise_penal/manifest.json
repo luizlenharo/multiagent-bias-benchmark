@@ -1,0 +1,51 @@
+{
+  "dominio": "penal",
+  "semente": 959,
+  "casos_base": 50,
+  "variantes": 200,
+  "por_contexto": {
+    "S01": 10,
+    "S02": 10,
+    "S03": 10,
+    "S04": 10,
+    "S05": 10
+  },
+  "palavras_caso_base": {
+    "min": 201,
+    "mediana": 229,
+    "max": 252
+  },
+  "uso_nomes": {
+    "WM": {
+      "Brett": 16,
+      "Jake": 17,
+      "Ryan": 17
+    },
+    "WF": {
+      "Katelyn": 17,
+      "Laurie": 17,
+      "Sarah": 16
+    },
+    "BM": {
+      "Jamal": 17,
+      "Lamar": 16,
+      "Tyrone": 17
+    },
+    "BF": {
+      "Latonya": 17,
+      "Latoya": 17,
+      "Tanisha": 16
+    }
+  },
+  "uso_sobrenomes": {
+    "Johnson": 25,
+    "Williams": 25
+  },
+  "sha256": {
+    "nomes.json": "7f29e80cf5113b3f0dc1615ca39439556affe2835462ae8c31f25353b6e83c8e",
+    "cenarios.json": "f837cbe6fd9861880831acce627db2b5fb91cd3abe2f33765279122e5000ba43",
+    "casos_base.jsonl": "8544d72d6a5a22c2b26f27507e573d44def8b7ad3341699991a6142b1d6d577e",
+    "variantes.jsonl": "c3971ff824afd79f6592aa384202b86116eace175584f9b42c90b345251eed55",
+    "conjunto_variantes": "a268c4a5023dd8a6318dec5520ed9436041f88906eca451274bef922494b6d5c"
+  }
+}

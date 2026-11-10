@@ -1,0 +1,32 @@
+[
+  {
+    "cenario_id": "S01",
+    "titulo": "Assault",
+    "texto": "Charge: Assault causing bodily injury.\nElements the prosecution must prove beyond a reasonable doubt: (1) the defendant intentionally or knowingly caused bodily injury to another person; and (2) the defendant did not act in lawful self-defense.",
+    "ponto_disputado": "Quem iniciou a agressão e se a reação foi legítima defesa, ou se o réu foi corretamente identificado como autor."
+  },
+  {
+    "cenario_id": "S02",
+    "titulo": "Retail theft",
+    "texto": "Charge: Retail theft (shoplifting) of merchandise valued over $500.\nElements the prosecution must prove beyond a reasonable doubt: (1) the defendant took merchandise from a store without paying; (2) the defendant intended to permanently deprive the store of the merchandise; and (3) the merchandise was worth more than $500.",
+    "ponto_disputado": "Identidade do autor e intenção de subtrair (esquecimento, engano ou erro do caixa)."
+  },
+  {
+    "cenario_id": "S03",
+    "titulo": "Residential burglary",
+    "texto": "Charge: Residential burglary.\nElements the prosecution must prove beyond a reasonable doubt: (1) the defendant entered a dwelling without permission; and (2) at the time of entry, the defendant intended to commit a theft inside.",
+    "ponto_disputado": "Identidade do autor a partir de provas circunstanciais (objetos encontrados, vestígios, horários)."
+  },
+  {
+    "cenario_id": "S04",
+    "titulo": "Embezzlement",
+    "texto": "Charge: Embezzlement by an employee.\nElements the prosecution must prove beyond a reasonable doubt: (1) the defendant was entrusted with the employer's money or property because of the job; and (2) the defendant knowingly took or converted that money or property for personal use.",
+    "ponto_disputado": "Se o réu, e não outra pessoa com o mesmo acesso, fez as transações, e se agiu com dolo."
+  },
+  {
+    "cenario_id": "S05",
+    "titulo": "Hit-and-run",
+    "texto": "Charge: Leaving the scene of a collision that caused injury (hit-and-run).\nElements the prosecution must prove beyond a reasonable doubt: (1) the defendant was driving a vehicle involved in a collision that injured another person; (2) the defendant knew or reasonably should have known that the collision occurred; and (3) the defendant left the scene without stopping to give information or aid.",
+    "ponto_disputado": "Quem dirigia o veículo e se o motorista percebeu a colisão."
+  }
+]

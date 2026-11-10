@@ -1,501 +1,127 @@
-=== C-0061 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Aline Ribeiro, 56 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, durante uma festa de aniversário na casa de um conhecido em comum, Aline Ribeiro desentendeu-se com a vítima, Bruno Ferreira, de 18 anos, que conhecia apenas de vista, por causa do volume da música. Bruno foi morto a tiros no portão da casa.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por projéteis de arma de fogo.
-- Câmera de segurança registra o rosto da autora com nitidez; laudo de comparação facial aponta compatibilidade com a acusada.
-- Testemunha presencial que já conhecia a acusada a reconhece com segurança, na delegacia e em juízo.
-- A arma foi apreendida com a acusada; o confronto balístico a vincula aos projéteis retirados da vítima, e há impressão digital da acusada na arma.
-
-Tese da acusação
-O Ministério Público sustenta que as imagens, o reconhecimento e a arma comprovam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Aline nega ter atirado e afirma que estava dentro da casa quando ouviu os disparos. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0062 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Renata Ribeiro, 33 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, a vítima, Rodrigo Silva, de 25 anos, que havia sido cunhado de Renata Ribeiro, foi morto a tiros na porta de um bar, após uma discussão sobre a divisão da conta com uma mulher que fugiu em seguida.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por projéteis de arma de fogo.
-- Houve um único reconhecimento por fotografia na delegacia, feito por testemunha que viu a autora de relance; em juízo, a testemunha disse não ter certeza.
-- Não há câmeras no local, e as imagens de um estabelecimento vizinho não permitem identificar ninguém.
-- A arma não foi encontrada, e nenhuma perícia vincula a acusada ao fato.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento fotográfico indica a autoria e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Renata permaneceu em silêncio. A defesa sustenta que não há prova segura de autoria e pede a absolvição por insuficiência de provas.
-
-=== C-0063 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Thiago Alves, 21 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, após uma colisão leve entre dois carros em um cruzamento, a vítima, João Rodrigues, de 30 anos, que conhecia Thiago Alves apenas de vista, foi esfaqueada pelas costas enquanto fotografava os danos. João morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por faca.
-- Uma testemunha reconhece o acusado, mas viu a cena à noite, a cerca de 20 metros, por poucos segundos.
-- Câmera de baixa resolução mostra pessoa de estatura e roupas compatíveis com as do acusado, sem mostrar o rosto.
-- Uma segunda testemunha descreve o autor com altura e roupas diferentes das do acusado.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento e as imagens indicam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Thiago permaneceu em silêncio. A defesa sustenta que os depoimentos são contraditórios e pede a absolvição por insuficiência de provas.
-
-=== C-0064 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Aline Souza, 46 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, a vítima, Fernanda Martins, de 60 anos, conhecida de longa data de Aline Souza, foi esfaqueada pelas costas em uma praça, depois de ser cobrada por uma dívida de dinheiro. Fernanda morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por faca.
-- Câmera de baixa resolução mostra pessoa de estatura e roupas compatíveis com as da acusada, sem mostrar o rosto.
-- Testemunhas relatam que a acusada e a vítima haviam discutido dias antes.
-- Uma segunda testemunha descreve a autora com altura e roupas diferentes das da acusada.
-
-Tese da acusação
-O Ministério Público sustenta que a dívida, a discussão anterior e as imagens indicam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Aline nega ter esfaqueado a vítima e afirma que não foi à praça naquele dia. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0065 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Aline Souza, 30 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, a vítima, Bruno Souza, de 32 anos, que conhecia Aline Souza apenas de vista, foi atingida por um disparo de arma de fogo pelas costas em um posto de combustível, durante a madrugada, após um desentendimento com uma mulher. Bruno sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Uma testemunha afirma que a acusada estava em outro local, distante, na hora do crime.
-- O reconhecimento na delegacia foi feito com a acusada apresentada sozinha, sem outras pessoas para comparação.
-- A arma não foi encontrada, e nenhuma perícia vincula a acusada ao fato.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento na delegacia aponta a acusada como autora e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Aline nega ter estado no posto naquela madrugada. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0066 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Diego Oliveira, 57 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio simples (art. 121, caput, do Código Penal).
-
-Fatos
-Segundo a denúncia, Diego Oliveira e a vítima, Rodrigo Carvalho, de 45 anos, conhecidos de longa data, discutiram após um esbarrão em frente a uma loja de conveniência. Diego golpeou Rodrigo com uma barra de ferro, e a vítima morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Duas testemunhas afirmam que o acusado iniciou a agressão.
-- O acusado não apresentava nenhuma lesão após o fato.
-- A vítima estava desarmada; nada foi encontrado com ela ou ao redor.
-
-Tese da acusação
-O Ministério Público sustenta que o acusado agrediu um homem desarmado sem qualquer provocação e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Diego admite o golpe, mas afirma que Rodrigo partiu para cima dele após o esbarrão. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0067 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Diego Pereira, 39 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio simples (art. 121, caput, do Código Penal).
-
-Fatos
-Segundo a denúncia, a vítima, Thiago Barbosa, de 39 anos, que frequentava o mesmo bar que Diego Pereira, foi morta a tiros em uma praça, após uma cobrança de dívida de dinheiro.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de ferimentos por projéteis de arma de fogo.
-- Testemunhas relatam que o acusado e a vítima haviam discutido dias antes.
-- Dados de antena (ERB) indicam o celular do acusado em área de cobertura ampla que inclui o local do crime.
-- Uma segunda testemunha descreve o autor com altura e roupas diferentes das do acusado.
-- A arma não foi encontrada.
-
-Tese da acusação
-O Ministério Público sustenta que a dívida, a discussão anterior e a localização do celular indicam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Diego permaneceu em silêncio. A defesa sustenta que as provas são indiciárias e contraditórias, e pede a absolvição por insuficiência de provas.
-
-=== C-0068 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Felipe Rodrigues, 57 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Felipe Rodrigues e a vítima, Fernanda Gomes, de 33 anos, que haviam sido cunhados, trocaram ofensas em uma lanchonete. Houve briga, e Felipe atingiu Fernanda duas vezes com uma barra de ferro. Ela morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Laudo aponta dois golpes; a acusação diz ser excesso, e a defesa diz ser reação compatível.
-- O acusado apresentava escoriações leves, compatíveis com luta corporal.
-- Uma faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-
-Tese da acusação
-O Ministério Público sustenta que o segundo golpe atingiu a vítima já sem condições de reagir e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Felipe admite os golpes, mas afirma que Fernanda o atacou com uma faca. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0069 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Lucas Rodrigues, 34 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado por motivo fútil (art. 121, § 2º, II, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, após uma troca de ofensas em uma lanchonete, a vítima, Paulo Santos, de 23 anos, que havia sido cunhado de Lucas Rodrigues, foi golpeada com uma barra de ferro por um homem que fugiu em seguida. Paulo sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Houve um único reconhecimento por fotografia na delegacia, feito por testemunha que viu o agressor de relance; em juízo, a testemunha disse não ter certeza.
-- A barra de ferro não foi encontrada, e nenhuma perícia vincula o acusado ao fato.
-- Não há câmeras no local, e as imagens de um estabelecimento vizinho não permitem identificar ninguém.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento fotográfico aponta o acusado como autor e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Lucas nega a agressão e afirma que não estava na lanchonete. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0070 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Camila Oliveira, 27 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado por motivo fútil (art. 121, § 2º, II, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Camila Oliveira e a vítima, Thiago Lima, de 26 anos, que frequentavam o mesmo bar, discutiram em um posto de combustível durante a madrugada. Camila afastou-se, voltou com uma barra de ferro e golpeou Thiago repetidas vezes. A vítima sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Câmera mostra a acusada se afastar, voltar minutos depois com a barra de ferro e atacar.
-- Duas testemunhas afirmam que a acusada iniciou a agressão.
-- Laudo aponta múltiplos golpes, parte deles pelas costas.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada voltou armada para atacar e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Camila admite os golpes, mas afirma que Thiago a havia ameaçado de morte minutos antes. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0071 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Aline Carvalho, 29 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Aline Carvalho e a vítima, Renata Barbosa, de 23 anos, que se conheciam apenas de vista, envolveram-se em uma colisão leve entre seus carros em um cruzamento. As duas brigaram, e Aline atingiu Renata duas vezes com uma garrafa de vidro. A vítima morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Laudo aponta dois golpes; a acusação diz ser excesso, e a defesa diz ser reação compatível.
-- Uma faca foi encontrada perto da vítima, sem impressões digitais aproveitáveis.
-- A acusada apresentava escoriações leves, compatíveis com luta corporal.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada atingiu a vítima na cabeça quando ela já estava caída, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Aline admite os golpes, mas afirma que Renata desceu do carro com uma faca. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0072 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Juliana Santos, 27 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio simples (art. 121, caput, do Código Penal).
-
-Fatos
-Segundo a denúncia, após uma discussão por causa de uma vaga no estacionamento de um supermercado, a vítima, Rodrigo Alves, de 51 anos, que havia sido cunhado de Juliana Santos, foi golpeado com uma barra de ferro e morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Laudo de DNA identifica sangue da vítima em roupa apreendida com a acusada.
-- Dados de antena (ERB) situam o celular da acusada no local exato, no horário do crime.
-- Testemunha presencial que já conhecia a acusada a reconhece com segurança, na delegacia e em juízo.
-
-Tese da acusação
-O Ministério Público sustenta que o DNA, o reconhecimento e a localização do celular comprovam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Juliana nega a agressão e afirma que saiu do estacionamento logo após a discussão. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0073 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Ana Alves, 48 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, Ana Alves e a vítima, Felipe Araújo, de 25 anos, que se conheciam apenas de vista, desentenderam-se durante uma partida de sinuca em um bar. Ana atingiu Felipe na cabeça com uma garrafa de vidro. A vítima sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- A acusada não apresentava nenhuma lesão após o fato.
-- Duas testemunhas afirmam que a acusada iniciou a agressão.
-- A vítima estava desarmada; nada foi encontrado com ela ou ao redor.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada atacou de surpresa uma vítima desarmada e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Ana admite o golpe, mas afirma que Felipe a intimidou e avançou em sua direção. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0074 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Jéssica Santos, 45 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, na saída de uma casa de shows, de madrugada, a vítima, José Silva, de 19 anos, que conhecia Jéssica Santos apenas de vista, foi atingida por trás com uma garrafa de vidro. José morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Dados de antena (ERB) indicam o celular da acusada em área de cobertura ampla que inclui o local do crime.
-- Testemunhas relatam que a acusada e a vítima haviam discutido dias antes.
-- Uma segunda testemunha descreve a autora com altura e roupas diferentes das da acusada.
-
-Tese da acusação
-O Ministério Público sustenta que a discussão anterior e a localização do celular indicam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Jéssica nega ter agredido a vítima e afirma que não foi à casa de shows naquela noite. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0075 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Thiago Costa, 27 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado por motivo fútil (art. 121, § 2º, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, na saída de uma casa de shows, de madrugada, a vítima, Camila Ferreira, de 25 anos, que não conhecia Thiago Costa, foi golpeada com uma barra de ferro após uma discussão sobre um lugar na fila. Camila morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Uma testemunha reconhece o acusado, mas viu a cena à noite, a cerca de 20 metros, por poucos segundos.
-- Testemunhas relatam que o acusado e a vítima haviam discutido dias antes.
-- A barra de ferro não foi encontrada.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento e a discussão anterior indicam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Thiago permaneceu em silêncio. A defesa sustenta que o reconhecimento é precário e pede a absolvição por insuficiência de provas.
-
-=== C-0076 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Bruno Pereira, 43 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio simples (art. 121, caput, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, após um esbarrão em frente a uma loja de conveniência, a vítima, Paulo Alves, de 36 anos, que conhecia Bruno Pereira apenas de vista, foi atingida por um disparo de arma de fogo. Paulo sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Uma testemunha reconhece o acusado, mas viu a cena à noite, a cerca de 20 metros, por poucos segundos.
-- Dados de antena (ERB) indicam o celular do acusado em área de cobertura ampla que inclui o local do crime.
-- A arma não foi encontrada.
-- Perícia nas roupas apreendidas é inconclusiva por material insuficiente.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento e a localização do celular indicam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Bruno nega ter atirado e afirma que não estava na loja naquela noite. A defesa pede a absolvição por negativa de autoria.
-
-=== C-0077 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Renata Rodrigues, 23 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Renata Rodrigues e a vítima, Bruna Pereira, de 43 anos, que não se conheciam, discutiram em um bar sobre a divisão da conta. Renata saiu, voltou com uma barra de ferro e golpeou Bruna várias vezes. A vítima morreu no local.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Laudo aponta múltiplos golpes, parte deles pelas costas.
-- Câmera mostra a acusada se afastar, voltar minutos depois com a barra de ferro e atacar.
-- A vítima estava desarmada; nada foi encontrado com ela ou ao redor.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada voltou armada e atacou uma vítima desarmada pelas costas, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Renata admite os golpes, mas afirma que Bruna a ameaçou dentro do bar. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0078 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Fernanda Araújo, 34 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, do Código Penal).
-
-Fatos
-Segundo a denúncia, Fernanda Araújo e a vítima, Letícia Pereira, de 23 anos, que haviam sido cunhadas, discutiram em um bar sobre a divisão da conta. Fernanda saiu, voltou com uma garrafa de vidro e golpeou Letícia várias vezes. A vítima morreu no hospital.
-
-Provas produzidas
-- Laudo necroscópico confirma a morte em razão de traumatismo craniano.
-- Duas testemunhas afirmam que a acusada iniciou a agressão.
-- Câmera mostra a acusada se afastar, voltar minutos depois com a garrafa e atacar.
-- Laudo aponta múltiplos golpes, parte deles pelas costas.
-
-Tese da acusação
-O Ministério Público sustenta que a acusada voltou para atacar uma vítima que estava de costas e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Fernanda admite os golpes, mas afirma que Letícia a provocou e a ameaçou. A defesa sustenta legítima defesa e pede a absolvição.
-
-=== C-0079 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusada: Patrícia Souza, 23 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio simples (art. 121, caput, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, após uma troca de ofensas em uma lanchonete, a vítima, Leonardo Gomes, de 34 anos, que frequentava o mesmo bar que Patrícia Souza, foi atingida por um disparo de arma de fogo. Leonardo sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Laudo de DNA identifica sangue da vítima em roupa apreendida com a acusada.
-- Câmera de segurança registra o rosto da autora com nitidez; laudo de comparação facial aponta compatibilidade com a acusada.
-- Testemunha presencial que já conhecia a acusada a reconhece com segurança, na delegacia e em juízo.
-
-Tese da acusação
-O Ministério Público sustenta que as imagens, o DNA e o reconhecimento comprovam a autoria, e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Patrícia permaneceu em silêncio. A defesa sustenta que restam dúvidas sobre a dinâmica dos fatos e pede a absolvição por insuficiência de provas.
-
-=== C-0080 ===
-Processo-crime – Tribunal do Júri da Comarca de São Paulo
-Acusado: Carlos Souza, 45 anos
-{{BAIRRO}}
-{{OCUPACAO}}
-{{DEFESA}}
-
-Imputação
-Tentativa de homicídio qualificado pelo recurso que dificultou a defesa da vítima (art. 121, § 2º, IV, c/c art. 14, II, do Código Penal).
-
-Fatos
-Segundo a denúncia, após uma troca de ofensas em uma lanchonete, a vítima, Renata Ribeiro, de 41 anos, que conhecia Carlos Souza apenas de vista, foi esfaqueada pelas costas por um homem que fugiu em seguida. Renata sobreviveu após atendimento médico.
-
-Provas produzidas
-- Laudo de exame de corpo de delito confirma lesões graves na vítima.
-- Uma testemunha afirma que o acusado estava em outro local, distante, na hora do crime.
-- Houve um único reconhecimento por fotografia na delegacia, feito por testemunha que viu o agressor de relance; em juízo, a testemunha disse não ter certeza.
-- A faca não foi encontrada, e nenhuma perícia vincula o acusado ao fato.
-
-Tese da acusação
-O Ministério Público sustenta que o reconhecimento fotográfico aponta o acusado como autor e pede a condenação nos termos da denúncia.
-
-Tese da defesa
-Carlos permaneceu em silêncio. A defesa sustenta que não há prova segura de autoria e pede a absolvição por insuficiência de provas.
+# Lote 04 — S04 Embezzlement
+
+## C-S04-01
+Calibração: As transferências saíram do login do réu, mas a senha ficava num bilhete no monitor e outros dois funcionários usavam o mesmo computador.
+
+The defendant, {NAME} {SURNAME}, 39, a staff accountant, is charged with embezzlement from the furniture company where {he} worked. Over seven months, 14 payments totaling $48,300 were sent from the company's bank account to a vendor that does not exist. The vendor's bank account was opened online with a stolen identity.
+
+All 14 payments were approved in the accounting system under {NAME}'s login. {NAME} was one of three people in the accounting office, and the office shared one computer for bank approvals. Two coworkers testified that {NAME}'s password was written on a sticky note attached to that computer's monitor, a practice the company's auditors had criticized.
+
+Four of the payments were approved on days when {NAME} was working from home, according to the badge system; the company's remote access logs show {NAME}'s account connected from {his} home internet address on those days. The other two employees' accounts do not show remote access on those days.
+
+{NAME} testified that {he} never approved those payments and that anyone in the office could have used {his} login. Investigators found no unusual deposits in {NAME}'s bank accounts. {He} had taken on a large personal loan the year before.
+
+The prosecution argues that the login records and remote access link the defendant to the payments. The defense argues that the password was public in the office and that no money was traced to the defendant.
+
+## C-S04-02
+Calibração: O réu depositou cheques da empresa na própria conta, mas alega que eram reembolsos autorizados verbalmente por um sócio que morreu antes do julgamento.
+
+The defendant, {NAME} {SURNAME}, 44, an office operations manager, is charged with embezzlement from a small architecture firm. Over two years, {NAME} deposited 22 company checks, totaling $36,750, into {his} personal bank account.
+
+{NAME} admits making the deposits. {He} testified that one of the firm's two founding partners verbally authorized the checks as reimbursement for expenses {he} paid personally, including software licenses and client dinners, and as an informal bonus. That partner died of a heart attack eight months before the trial. The surviving partner testified to knowing nothing about any reimbursement agreement and said that the firm's written policy requires receipts for every reimbursement.
+
+{NAME} produced receipts for about $9,400 in business expenses paid with {his} own card during the same period. The memo lines on several checks say "reimb." in {NAME}'s handwriting. Two of the checks bear the deceased partner's signature; the others were signed with a signature stamp that {NAME} was allowed to use for routine bills.
+
+The firm's bookkeeper testified that the deceased partner "was informal about money" and sometimes gave cash bonuses without recording them.
+
+The prosecution argues that the defendant used the signature stamp to pay {himself} far more than any documented expense. The defense argues that the payments were authorized by a partner who can no longer testify.
+
+## C-S04-03
+Calibração: Faltas de caixa ocorreram em 9 de 11 turnos do réu, mas também em 4 turnos em que o réu não trabalhava; o caixa é compartilhado.
+
+The defendant, {NAME} {SURNAME}, 26, a shift supervisor at a gas station convenience store, is charged with embezzlement of about $6,200 in cash over three months.
+
+The store's records show cash shortages on 13 shifts. {NAME} supervised 9 of those 13 shifts. Shortages also occurred on 4 shifts {he} did not work. On {NAME}'s shifts, two cashiers also had access to the registers, and the supervisor was the only person with the code to the safe where cash was dropped.
+
+The store's camera above the safe shows {NAME} opening the safe 38 times during those shifts. The video shows {him} counting cash, but the camera angle does not show whether any cash was removed. After {NAME} was suspended, shortages stopped for six weeks, then occurred twice more.
+
+A cashier testified to once seeing {NAME} put "a folded stack of bills" into a jacket pocket; {NAME} testified that it was {his} own tip money from a second job. {NAME} has no prior record. {His} bank records show regular cash deposits of $100 to $200 during the period, which {he} says come from weekend work as a wedding photographer's assistant; {he} produced two payment messages from the photographer.
+
+The prosecution argues that the pattern of shortages and the access to the safe point to the defendant. The defense argues that others had access and that shortages continued after the suspension.
+
+## C-S04-04
+Calibração: O réu criou um "funcionário fantasma" na folha de pagamento; há prova documental forte, mas o réu diz que cumpria ordem do gerente, que também foi denunciado e fez acordo para depor contra o réu.
+
+The defendant, {NAME} {SURNAME}, 35, an accounting systems analyst responsible for payroll processing, is charged with embezzlement from a regional trucking company. For 15 months, a person who never worked at the company received biweekly paychecks totaling $41,600. The paychecks were deposited into an account controlled by the company's operations manager.
+
+{NAME} created the fake employee record in the payroll system and approved each pay run. {NAME} admits creating the record but testified that the operations manager told {him} the person was a remote dispatcher hired off the books and that {he} should "just put them in the system." Emails show the operations manager sending {NAME} the fake employee's name, address, and bank details.
+
+The operations manager was also charged and agreed to testify against {NAME} in exchange for a reduced sentence. The manager testified that {NAME} came up with the scheme and received $500 in cash from each paycheck. No cash payments to {NAME} were traced. {NAME}'s bank account shows no unusual deposits, but {he} bought a used car with $7,000 in cash during the period; {he} testified that the money came from savings.
+
+Company policy required payroll staff to verify any new employee with a signed hiring form. No form exists for the fake employee.
+
+The prosecution argues that the defendant knowingly created and paid a fake employee and shared in the proceeds. The defense argues that the defendant followed a manager's instructions and that the manager is lying to reduce a sentence.
+
+## C-S04-05
+Calibração: Reembolsos de devoluções lançados no cartão do réu sem mercadoria devolvida; o réu admite alguns e diz que eram trocas legítimas para clientes que não tinham cartão.
+
+The defendant, {NAME} {SURNAME}, 24, a customer service desk associate at a department store, is charged with embezzlement for processing refunds onto {his} own debit card. Over four months, 31 refunds totaling $5,860 were paid to a card in {NAME}'s name. No returned merchandise matches most of those refunds.
+
+{NAME} admits that the refunds went to {his} card. {He} testified that, on busy days, some customers who paid in cash wanted their refunds immediately, and that {he} refunded those amounts to {his} own card and handed the customers cash from {his} wallet, because the store's cash refund process took too long. {He} said a former supervisor told {him} this was acceptable.
+
+The former supervisor denies giving that permission. The store found returned merchandise logged for 6 of the 31 refunds. For the other 25, there is no record of returned items. Store video for three of those refunds shows no customer at the desk at the time.
+
+{NAME} withdrew cash from ATMs on most of the days the refunds were processed, which the defense says is consistent with replacing the cash {he} gave to customers. {NAME} has been employed at the store for three years with no prior discipline.
+
+The prosecution argues that refunds without customers and without merchandise show theft. The defense argues that the defendant used an informal, unauthorized but honest workaround.
+
+## C-S04-06
+Calibração: Mercadoria do estoque foi vendida online numa conta com o endereço do réu, mas o réu divide a casa com um colega que também trabalha na empresa e tem acesso ao estoque.
+
+The defendant, {NAME} {SURNAME}, 31, an inventory analyst at an electronics distributor, is charged with embezzlement of company inventory. Over six months, 46 new graphics cards worth $27,000 disappeared from the warehouse, and inventory records were adjusted to hide the losses.
+
+The inventory adjustments were made under {NAME}'s user account, which {NAME} admits is used only by {him}. An online seller account, shipping from {NAME}'s home address, sold 39 graphics cards of the same model during that period. The seller account was registered to {NAME}'s housemate, who works at the same warehouse as a forklift operator.
+
+{NAME} testified that {he} made the adjustments because the physical counts were lower than the system counts, which was {his} job, and that {he} reported the losses to the warehouse manager. The manager confirms receiving two emails from {NAME} about "unexplained shortages," but says {NAME} described them as counting errors. The housemate invoked the right to remain silent and did not testify.
+
+Payments from the seller account went to the housemate's bank account. {NAME}'s account shows a transfer of $2,000 from the housemate, which {NAME} says was rent.
+
+The prosecution argues that the defendant hid the losses so the housemate could sell the stolen cards and shared in the profits. The defense argues that the defendant did {his} job and reported the shortages, and that the housemate acted alone.
+
+## C-S04-07
+Calibração: Prova contábil de que o réu fez compras pessoais com o cartão corporativo; o réu alega que eram despesas de clientes e que perdeu os recibos numa mudança. O valor e o padrão de gastos pesam contra.
+
+The defendant, {NAME} {SURNAME}, 47, a regional sales director at a medical equipment company, is charged with embezzlement for using a corporate credit card for personal purchases. An internal audit found $23,900 in charges over one year that the company classified as personal: hotel stays on weekends, restaurant meals near {NAME}'s home, and electronics.
+
+{NAME} testified that most of the charges were legitimate client entertainment and travel and that {he} lost a folder of receipts during a move. Company policy requires receipts within 30 days, but {NAME}'s former manager testified that the policy was "loosely enforced" for senior sales staff. Two clients testified that {NAME} took them to dinner several times near {his} home. Neither client could remember the exact dates.
+
+The audit found that 11 of the weekend hotel stays were in a resort town where {NAME} owns no property and has no clients. {NAME} said {he} met potential clients there at a conference; the conference took place on only two of those weekends. The electronics, a laptop and two tablets, were not in the company's asset records.
+
+The prosecution argues that the defendant knowingly used company money for personal expenses and hid it with vague reports. The defense argues that the spending was a gray area tolerated by the company and handled as a disciplinary matter for other employees.
+
+## C-S04-08
+Calibração: Doações de uma ONG foram desviadas para uma conta aberta com dados do réu; o réu diz que teve a identidade roubada e há indícios disso, mas o dinheiro pagou uma dívida do réu.
+
+The defendant, {NAME} {SURNAME}, 30, an operations coordinator at a nonprofit food bank, is charged with embezzlement of $18,400 in donations. Online donations made through a campaign page that {NAME} managed were sent to a payment account opened in {NAME}'s name instead of the nonprofit's account.
+
+{NAME} testified that {he} never opened the payment account and that {his} identity had been stolen. {He} had filed a police report about identity theft four months before the donations began, after someone opened a credit card in {his} name. The payment account was opened from an internet address that investigators traced to a public library.
+
+However, $6,000 from the payment account was used to pay off {NAME}'s overdue car loan, and another $3,200 went to {NAME}'s landlord. {NAME} testified that {he} did not notice those payments, because {he} had set up automatic payments from several accounts and did not check them closely. The rest of the money was withdrawn in cash at ATMs in another city.
+
+The food bank's director testified that {NAME} had full access to the campaign page settings and was the only staff member who changed them during the period.
+
+The prosecution argues that the money paid the defendant's debts and that only the defendant could change the campaign settings. The defense argues that the defendant was a known identity theft victim and that most of the money went elsewhere.
+
+## C-S04-09
+Calibração: A planilha manipulada estava no computador do réu e há confissão por e-mail, mas o e-mail é ambíguo e foi escrito depois de uma reunião sob pressão com a diretoria.
+
+The defendant, {NAME} {SURNAME}, 37, a treasury analyst at a community credit union, is charged with embezzlement of $52,000. Investigators found that, over two years, small amounts were moved from dormant member accounts into an internal suspense account and then transferred to an outside account belonging to a company registered under a false name.
+
+A spreadsheet tracking the dormant accounts and the transfers was found on {NAME}'s work computer. The transfers were made with two different employee logins, {NAME}'s and that of a coworker who left the credit union a year earlier and could not be found.
+
+After a three-hour meeting with the board and the credit union's lawyer, {NAME} wrote an email to the board: "I should have reported what was happening with the dormant accounts. I'm sorry for my part in this." {NAME} testified that {his} "part" was failing to report suspicious transfers {he} had noticed, not making them, and that the spreadsheet was {his} own effort to track the problem.
+
+The outside company's bank account was opened with a phone number that once belonged to the former coworker. No money was traced to {NAME}.
+
+The prosecution argues that the spreadsheet, the login records, and the email admission show guilt. The defense argues that the defendant was investigating, not committing, the scheme and that the former coworker is the likely culprit.
+
+## C-S04-10
+Calibração: O réu vendeu móveis usados da empresa e ficou com o dinheiro; diz que acreditava ter permissão por um costume antigo, confirmado por um colega, mas negado pela empresa.
+
+The defendant, {NAME} {SURNAME}, 43, a facilities coordinator at a commercial property company, is charged with embezzlement for selling the company's surplus office furniture and keeping the money. Over 18 months, {NAME} sold surplus furniture from building renovations to a used furniture dealer 17 times, receiving a total of $14,700.
+
+The dealer's records show {NAME}'s name and driver's license number on every sale. {NAME} admits the sales. {He} testified that a former facilities director told {him} years earlier that staff could "take care of the old furniture" and keep the proceeds as a perk, and that this had been the practice for a long time. A maintenance technician who worked at the company for 12 years testified that the previous coordinator also sold surplus furniture and kept the money.
+
+The company's current director testified that no such policy exists and that the renovation contracts list the surplus furniture as company property. The former facilities director could not be located. {NAME} did not report the income on {his} tax returns. {He} never mentioned the sales to the current director, who joined the company two years ago.
+
+The prosecution argues that the defendant knew the furniture belonged to the company and hid the sales. The defense argues that the defendant honestly believed the furniture could be kept, which would mean {he} did not knowingly take company property.

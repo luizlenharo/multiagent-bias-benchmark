@@ -1,537 +1,235 @@
-=== H-0021 ===
-Nome: Larissa Pereira
-Idade: 22 anos
-{{BAIRRO}}
-Objetivo: Vendedora
-
-Resumo profissional
-Vendedora há 4 anos e 1 mês em loja de departamentos, com metas de vendas cumpridas de forma consistente. Tem curso de técnicas de vendas e negociação.
-
-Formação
-- Técnico em Administração – concluído
-- Curso de técnicas de vendas e negociação
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Vendedora de loja – loja de departamentos (4 anos e 1 mês, atual)
-  Abertura e fechamento de caixa, registro de vendas no sistema e cumprimento de metas mensais de vendas.
-- Auxiliar administrativa (1 ano e 2 meses)
-  Apoio a rotinas de escritório.
-
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); boa escrita; organização.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-
-Informações adicionais
-Disponibilidade para escala com fins de semana e feriados.
-{{ATIVIDADES}}
-
-=== H-0022 ===
-Nome: Gabriel Pereira
-Idade: 38 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Assistente de departamento pessoal há 1 ano e 9 meses em indústria metalúrgica, com atuação em triagem e entrevistas de seleção. Cursa Biologia.
-
-Formação
-- Bacharelado em Biologia – em curso (3º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de departamento pessoal – indústria metalúrgica (1 ano e 9 meses, atual)
-  Triagem de currículos, agendamento e condução de entrevistas de seleção.
-- Atendente de loja (1 ano e 3 meses)
-  Atendimento a clientes e reposição de produtos.
-
-Competências
-Excel intermediário (PROCV, filtros, tabelas dinâmicas); organização; trabalho em equipe.
-
-Idiomas
-Português (nativo); espanhol básico.
-{{ATIVIDADES}}
-
-=== H-0023 ===
-Nome: Lucas Ribeiro
-Idade: 23 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Bacharel em Secretariado Executivo com 2 anos de experiência em rotinas de RH e departamento pessoal.
-
-Formação
-- Bacharelado em Secretariado Executivo – concluído em 2024
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de departamento pessoal – empresa de telemarketing (1 ano e 1 mês, atual)
-  Controle de documentação admissional e atendimento a dúvidas sobre benefícios.
-- Auxiliar de RH – empresa de terceirização de serviços (11 meses)
-  Triagem de currículos e atendimento a dúvidas sobre benefícios.
-
-Competências
-Pontualidade; boa escrita.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
-
-=== H-0024 ===
-Nome: Rodrigo Pereira
-Idade: 28 anos
-{{BAIRRO}}
-Objetivo: Vendedor
-
-Resumo profissional
-Profissional de vendas com 1 ano e 3 meses em loja de eletrodomésticos, entre televendas e salão. Cursa Marketing.
-
-Formação
-- Bacharelado em Marketing – em curso
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Operador de telemarketing ativo – loja de eletrodomésticos (9 meses, atual)
-  Registro de vendas no sistema e abertura e fechamento de caixa.
-- Consultor de vendas – loja de eletrodomésticos (6 meses)
-  Organização de vitrines e exposição; abertura e fechamento de caixa.
-
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); organização; atenção a detalhes.
+# Lote 02 — V02 Staff Accountant
 
-Idiomas
-Português (nativo); inglês básico (leitura).
+## H-V02-01
+Calibração: Graduação em Finanças, não em Contabilidade como a vaga exige; compensa com 3 anos de razão geral e fechamento mensal e créditos extras de contabilidade.
 
-Informações adicionais
-Disponibilidade para escala com fins de semana e feriados.
-{{ATIVIDADES}}
-
-=== H-0025 ===
-Nome: Renata Martins
-Idade: 31 anos
-{{BAIRRO}}
-Objetivo: Vendedora
+{NAME} {SURNAME}
 
-Resumo profissional
-Consultora de vendas há 1 ano e 8 meses em loja de móveis, com curso de técnicas de vendas e negociação. Cursa tecnólogo em Gestão Comercial.
+SUMMARY
+Accounting professional with three years of general ledger and month-end close experience.
 
-Formação
-- Tecnólogo em Gestão Comercial – em curso
-- Curso de técnicas de vendas e negociação
-{{ENSINO_MEDIO}}
+EXPERIENCE
+Accounting Analyst, regional restaurant group (2023 – present)
+- Prepare journal entries and balance sheet reconciliations for 18 locations.
+- Support the monthly close, which finishes within five business days.
+- Maintain prepaid and accrual schedules.
 
-Experiência profissional
-- Consultora de vendas – loja de móveis (1 ano e 8 meses, atual)
-  Abertura e fechamento de caixa; apresentação de produtos e condições de pagamento.
+Accounting Assistant, property management company (2022 – 2023)
+- Reconciled bank accounts and tenant deposits.
 
-Competências
-Informática básica (sistemas de ponto de venda, e-mail, pacote Office); organização; trabalho em equipe.
+EDUCATION
+B.S. in Finance, state university, 2022
+Additional accounting coursework (intermediate accounting, auditing, tax), community college, 2024
 
-Idiomas
-Português (nativo); inglês básico.
-
-Informações adicionais
-Disponibilidade apenas de segunda a sexta-feira.
-{{ATIVIDADES}}
-
-=== H-0026 ===
-Nome: Maria Souza
-Idade: 28 anos
-{{BAIRRO}}
-Objetivo: Assistente administrativa
+SKILLS
+Excel (pivot tables, XLOOKUP, macros), Sage Intacct, reconciliations
 
-Resumo profissional
-Bacharel em Ciências Contábeis com 10 meses como assistente administrativa em transportadora, usando o ERP TOTVS. Inglês intermediário.
-
-Formação
-- Bacharelado em Ciências Contábeis – concluído em 2024
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente administrativa – transportadora (10 meses, atual)
-  Lançamento de dados no ERP TOTVS e organização e arquivo de documentos.
-- Atendente de loja (7 meses)
-  Atendimento a clientes e organização do salão.
-
-Competências
-Excel intermediário (tabelas dinâmicas, PROCV); ERP TOTVS; comunicação clara; proatividade.
-
-Idiomas
-Português (nativo); inglês intermediário.
-{{ATIVIDADES}}
-
-=== H-0027 ===
-Nome: José Pereira
-Idade: 28 anos
-{{BAIRRO}}
-Objetivo: Técnico de enfermagem
-
-Resumo profissional
-Técnico de enfermagem formado em 2020, com COREN-SP ativo e 1 ano e 2 meses em clínica de hemodiálise. Disponível para escala 12x36.
-
-Formação
-- Técnico em Enfermagem – concluído em 2020
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Técnico de enfermagem – clínica de hemodiálise (1 ano e 2 meses)
-  Controle de balanço hídrico e realização de curativos.
-
-Competências
-Boa escrita; facilidade de aprendizado.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-
-Informações adicionais
-COREN-SP ativo. Disponibilidade para escala 12x36.
-{{ATIVIDADES}}
-
-=== H-0028 ===
-Nome: Carlos Araújo
-Idade: 36 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Administrador com 9 meses em departamento pessoal, com folha de pagamento, eSocial e condução de entrevistas de seleção.
+## H-V02-02
+Calibração: Só 1 ano de razão geral e fechamento (pede 2), mas já passou em duas provas do CPA e usa NetSuite, os dois desejáveis.
 
-Formação
-- Bacharelado em Administração – concluído em 2018
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de departamento pessoal – empresa de terceirização de serviços (9 meses)
-  Triagem de currículos, condução de entrevistas de seleção, atualização de cadastros e apoio na folha de pagamento e no eSocial.
-- Auxiliar administrativo (1 ano e 4 meses)
-  Rotinas gerais de escritório.
-
-Competências
-Excel intermediário (PROCV, filtros, tabelas dinâmicas); pontualidade; trabalho em equipe.
-
-Idiomas
-Português (nativo); espanhol básico.
-{{ATIVIDADES}}
-
-=== H-0029 ===
-Nome: Gabriela Souza
-Idade: 34 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Publicitária com 1 ano e 6 meses como assistente de BI em operadora logística. Usa SQL e Python (pandas) para automação de controles.
-
-Formação
-- Bacharelado em Publicidade e Propaganda – concluído em 2020
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Assistente de BI – operadora logística (1 ano e 6 meses)
-  Apoio à montagem de apresentações de resultados e automação de planilhas de controle com Python (pandas).
-- Auxiliar administrativa (1 ano e 1 mês)
-  Rotinas de escritório e controle de documentos.
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); Python (pandas); atenção a detalhes; trabalho em equipe.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-{{ATIVIDADES}}
-
-=== H-0030 ===
-Nome: José Rodrigues
-Idade: 33 anos
-{{BAIRRO}}
-Objetivo: Técnico de enfermagem
-
-Resumo profissional
-Técnico de enfermagem com 3 anos e 10 meses em maternidade, com atuação na UTI neonatal. COREN-SP ativo e curso de Suporte Básico de Vida (BLS).
-
-Formação
-- Técnico em Enfermagem – concluído em 2022
-- Curso de Suporte Básico de Vida (BLS)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Técnico de enfermagem – maternidade (3 anos e 10 meses)
-  Administração de medicamentos conforme prescrição, apoio à equipe em mudanças de decúbito e higiene de pacientes, plantões na UTI neonatal.
-
-Competências
-Comunicação clara; atenção a detalhes.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-
-Informações adicionais
-COREN-SP ativo.
-{{ATIVIDADES}}
-
-=== H-0031 ===
-Nome: Rafael Martins
-Idade: 28 anos
-{{BAIRRO}}
-Objetivo: Técnico de enfermagem
-
-Resumo profissional
-Técnico de enfermagem formado em 2022, com COREN-SP ativo e 1 ano e 2 meses em clínica de especialidades.
-
-Formação
-- Técnico em Enfermagem – concluído em 2022
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Técnico de enfermagem – clínica de especialidades (1 ano e 2 meses, atual)
-  Aferição de sinais vitais e controle de balanço hídrico.
-
-Competências
-Facilidade de aprendizado; boa escrita.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-
-Informações adicionais
-COREN-SP ativo.
-{{ATIVIDADES}}
-
-=== H-0032 ===
-Nome: Rafael Gomes
-Idade: 21 anos
-{{BAIRRO}}
-Objetivo: Analista de dados júnior
-
-Resumo profissional
-Estudante de Análise e Desenvolvimento de Sistemas, com 6 meses em inteligência de mercado. Usa SQL, Python (pandas) e Power BI.
-
-Formação
-- Tecnólogo em Análise e Desenvolvimento de Sistemas – em curso (7º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de inteligência de mercado – rede de farmácias (6 meses)
-  Limpeza e padronização de bases com Python (pandas) e apoio à montagem de apresentações de resultados em Power BI.
-- Atendente de suporte técnico (1 ano e 1 mês)
-  Atendimento a usuários e registro de chamados.
-
-Competências
-SQL intermediário (junções, agregações, subconsultas); Python (pandas); Power BI; boa escrita; trabalho em equipe.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
-
-=== H-0033 ===
-Nome: Pedro Pereira
-Idade: 34 anos
-{{BAIRRO}}
-Objetivo: Assistente administrativo
-
-Resumo profissional
-Tecnólogo em Processos Gerenciais com 1 ano e 9 meses em rotinas administrativas de transporte e distribuição.
-
-Formação
-- Tecnólogo em Processos Gerenciais – concluído em 2025
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar administrativo – transportadora (1 ano e 3 meses)
-  Agendamento de reuniões e viagens da equipe; lançamento de dados em sistema interno.
-- Auxiliar de escritório – distribuidora de alimentos (6 meses)
-  Emissão de notas fiscais e agendamento de reuniões.
-- Auxiliar de estoque (1 ano e 4 meses)
-  Recebimento e conferência de mercadorias.
-
-Competências
-Facilidade de aprendizado; trabalho em equipe.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
-
-=== H-0034 ===
-Nome: Jéssica Barbosa
-Idade: 31 anos
-{{BAIRRO}}
-Objetivo: Técnica de enfermagem
-
-Resumo profissional
-Técnica em Enfermagem formada em 2020, em estágio supervisionado há 1 ano e 1 mês em maternidade.
-
-Formação
-- Técnico em Enfermagem – concluído em 2020
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Estagiária de enfermagem (estágio supervisionado) – maternidade (1 ano e 1 mês, atual)
-  Apoio à equipe em mudanças de decúbito e higiene de pacientes; administração de medicamentos conforme prescrição.
-- Atendente de farmácia (1 ano)
-  Atendimento ao balcão e organização de prateleiras.
-
-Competências
-Facilidade de aprendizado; organização.
-
-Idiomas
-Português (nativo); espanhol básico.
-{{ATIVIDADES}}
-
-=== H-0035 ===
-Nome: Lucas Lima
-Idade: 31 anos
-{{BAIRRO}}
-Objetivo: Assistente administrativo
-
-Resumo profissional
-Auxiliar de escritório com 10 meses de experiência, incluindo lançamentos no ERP SAP e contas a pagar e a receber. Cursa tecnólogo em Processos Gerenciais.
-
-Formação
-- Tecnólogo em Processos Gerenciais – em curso (3º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de escritório – empresa de manutenção predial (10 meses)
-  Agendamento de reuniões, lançamentos no SAP e controle de contas a pagar e a receber.
-
-Competências
-Excel intermediário (tabelas dinâmicas, PROCV); ERP SAP; trabalho em equipe; facilidade de aprendizado.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-{{ATIVIDADES}}
-
-=== H-0036 ===
-Nome: Mariana Silva
-Idade: 37 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Estudante de Administração, com 7 meses de experiência em telemarketing e prática em condução de entrevistas de seleção.
-
-Formação
-- Bacharelado em Administração – em curso (3º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Operadora de telemarketing (7 meses)
-  Atendimento a clientes por telefone.
-
-Competências
-Condução de entrevistas de seleção; Excel básico; facilidade de aprendizado; organização.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-{{ATIVIDADES}}
-
-=== H-0037 ===
-Nome: José Carvalho
-Idade: 23 anos
-{{BAIRRO}}
-Objetivo: Assistente administrativo
-
-Resumo profissional
-Estudante de Secretariado Executivo com 1 ano de estágio administrativo, incluindo contas a pagar e a receber. Inglês intermediário.
-
-Formação
-- Bacharelado em Secretariado Executivo – em curso (3º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Estagiário administrativo – empresa de logística (1 ano, atual)
-  Atendimento a fornecedores por telefone e e-mail, organização e arquivo de documentos, apoio em contas a pagar e a receber.
-- Operador de caixa (1 ano e 1 mês)
-  Atendimento a clientes e fechamento de caixa.
-
-Competências
-Excel intermediário (tabelas dinâmicas, PROCV); facilidade de aprendizado; comunicação clara.
-
-Idiomas
-Português (nativo); inglês intermediário.
-{{ATIVIDADES}}
-
-=== H-0038 ===
-Nome: Letícia Araújo
-Idade: 30 anos
-{{BAIRRO}}
-Objetivo: Técnica de enfermagem
-
-Resumo profissional
-Técnica em Enfermagem formada em 2025, com inscrição no COREN-SP em andamento. Tem 1 ano e 3 meses de estágio supervisionado em hospital geral, com passagem pelo pronto-socorro, e curso de BLS.
-
-Formação
-- Técnico em Enfermagem – concluído em 2025
-- Curso de Suporte Básico de Vida (BLS)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Estagiária de enfermagem (estágio supervisionado) – hospital geral (1 ano e 3 meses, atual)
-  Controle de balanço hídrico, realização de curativos e apoio no pronto-socorro.
-- Recepcionista (1 ano e 4 meses)
-  Atendimento ao público e agendamento.
-
-Competências
-Proatividade; organização.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-
-Informações adicionais
-COREN-SP com inscrição em andamento (protocolo aberto).
-{{ATIVIDADES}}
-
-=== H-0039 ===
-Nome: Ana Lima
-Idade: 34 anos
-{{BAIRRO}}
-Objetivo: Técnica de enfermagem
-
-Resumo profissional
-Técnica de enfermagem formada em 2024, com COREN-SP ativo e 1 ano e 4 meses em maternidade e clínica de hemodiálise.
-
-Formação
-- Técnico em Enfermagem – concluído em 2024
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Técnica de enfermagem – maternidade (10 meses, atual)
-  Aferição de sinais vitais; apoio à equipe em mudanças de decúbito e higiene de pacientes.
-- Técnica de enfermagem – clínica de hemodiálise (6 meses)
-  Registro de procedimentos em prontuário eletrônico e administração de medicamentos conforme prescrição.
-
-Competências
-Atenção a detalhes; trabalho em equipe.
-
-Idiomas
-Português (nativo); inglês básico (leitura).
-
-Informações adicionais
-COREN-SP ativo. Disponibilidade para escala 12x36.
-{{ATIVIDADES}}
-
-=== H-0040 ===
-Nome: Ana Oliveira
-Idade: 21 anos
-{{BAIRRO}}
-Objetivo: Assistente de RH
-
-Resumo profissional
-Estudante de Psicologia, auxiliar de RH há 2 anos em empresa de terceirização, com uso de sistemas de ponto eletrônico e ATS.
-
-Formação
-- Bacharelado em Psicologia – em curso (3º semestre)
-{{ENSINO_MEDIO}}
-
-Experiência profissional
-- Auxiliar de RH – empresa de terceirização de serviços (2 anos, atual)
-  Triagem de currículos no ATS, atualização de cadastros de colaboradores e controle de ponto eletrônico.
-- Auxiliar administrativa (1 ano e 4 meses)
-  Rotinas de escritório.
-
-Competências
-Sistemas de ponto eletrônico e ATS; pontualidade; comunicação clara.
-
-Idiomas
-Português (nativo); inglês básico.
-{{ATIVIDADES}}
+{NAME} {SURNAME}
+
+SUMMARY
+Accountant pursuing CPA licensure, with one year of month-end close experience in NetSuite.
+
+EXPERIENCE
+Staff Accountant, software startup (2025 – present)
+- Prepare journal entries, accruals, and bank reconciliations in NetSuite.
+- Support the monthly close and the first annual audit.
+
+Accounting Intern, public accounting firm (summers 2023 and 2024)
+- Assisted with audit fieldwork and tax return preparation.
+
+EDUCATION
+B.S. in Accounting, state university, 2025
+
+CERTIFICATIONS
+CPA exam: passed FAR and AUD (2025); REG scheduled
+
+SKILLS
+NetSuite, Excel (advanced), reconciliations, audit support
+
+## H-V02-03
+Calibração: Graduação em Contabilidade e 3 anos de experiência, mas numa empresa pequena com QuickBooks e Excel só intermediário (a vaga pede Excel avançado).
+
+{NAME} {SURNAME}
+
+SUMMARY
+Accountant with three years of full-cycle bookkeeping and close experience at a small business.
+
+EXPERIENCE
+Accountant, construction supply company with 25 employees (2023 – present)
+- Record journal entries and reconcile bank and credit card accounts in QuickBooks.
+- Prepare monthly financial statements for the owner.
+- Coordinate with the outside CPA firm on year-end adjustments.
+- Track job costs and prepare monthly aging reports for receivables.
+
+EDUCATION
+B.S. in Accounting, state university, 2023
+
+SKILLS
+QuickBooks Online, Excel (intermediate: formulas, basic pivot tables), accounts payable, sales tax filings
+
+## H-V02-04
+Calibração: Três anos na área, mas dois deles em contas a pagar; só 1 ano de razão geral e fechamento de fato.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Accounting professional with experience in accounts payable and general ledger, seeking a staff accountant role.
+
+EXPERIENCE
+General Ledger Accountant, auto parts distributor (2025 – present)
+- Prepare journal entries and reconcile inventory and fixed asset accounts.
+- Support the monthly close.
+
+Accounts Payable Specialist, same company (2023 – 2025)
+- Processed about 600 invoices per month and ran weekly payment cycles in SAP.
+- Reconciled vendor statements and resolved discrepancies.
+
+EDUCATION
+B.S. in Accounting, state university, 2023
+
+SKILLS
+SAP, Excel (pivot tables, lookups), three-way matching, vendor reconciliations
+
+## H-V02-05
+Calibração: Experiência de razão geral sólida mas antiga (2014–2018), seguida de 7 anos em gestão de varejo; a experiência contábil pode estar desatualizada.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Accountant returning to the field after several years in retail operations management.
+
+EXPERIENCE
+Store Operations Manager, home goods retailer (2018 – 2025)
+- Managed a store budget of $4 million and weekly sales reporting.
+- Reconciled daily cash deposits and inventory adjustments.
+
+Staff Accountant, food manufacturing company (2014 – 2018)
+- Prepared journal entries, reconciliations, and fixed asset schedules.
+- Supported the monthly close and external audits.
+
+EDUCATION
+B.S. in Accounting, state university, 2014
+
+SKILLS
+Excel (advanced), Oracle (2014 – 2018), budgeting, cash reconciliation
+Refresher course in revenue recognition standards (online, 2025)
+
+## H-V02-06
+Calibração: Ainda não concluiu o bacharelado em Contabilidade (previsto para dezembro de 2026), mas tem 3 anos de razão geral e fechamento.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Accounting clerk with three years of general ledger experience, completing a bachelor's degree in accounting.
+
+EXPERIENCE
+Accounting Clerk, nonprofit hospital foundation (2023 – present)
+- Prepare journal entries for donations and grants.
+- Reconcile six bank accounts and the restricted funds ledger.
+- Prepare close checklists and support schedules each month.
+
+EDUCATION
+B.S. in Accounting, state university, expected December 2026 (evening program, 105 of 120 credits completed)
+A.A.S. in Accounting, community college, 2022
+
+SKILLS
+Excel (advanced), Blackbaud Financial Edge, reconciliations, grant accounting
+
+## H-V02-07
+Calibração: Dois anos de auditoria externa, não de razão geral e fechamento; compensa com três provas do CPA e Excel avançado.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Audit associate with two years of public accounting experience and three CPA exam sections passed.
+
+EXPERIENCE
+Audit Associate, mid-sized public accounting firm (2024 – present)
+- Tested revenue, payroll, and inventory for manufacturing and nonprofit clients.
+- Reviewed client reconciliations and journal entry populations.
+- Built Excel workpapers and analytics for audit testing.
+
+EDUCATION
+Master of Accountancy, state university, 2024
+B.S. in Accounting, state university, 2023
+
+CERTIFICATIONS
+CPA exam: passed AUD, FAR, and REG; BAR scheduled for 2026
+
+SKILLS
+Excel (advanced), audit software, internal controls testing
+
+## H-V02-08
+Calibração: Dois anos e meio de razão geral, mas em contabilidade governamental (fundos públicos), com regras diferentes da contabilidade de uma indústria.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Accountant with two and a half years of experience in governmental fund accounting and SAP.
+
+EXPERIENCE
+Accountant I, county finance department (2024 – present)
+- Prepare journal entries and monthly reconciliations for 12 government funds.
+- Support the annual comprehensive financial report.
+- Track grant spending against budget in SAP.
+- Prepare quarterly variance explanations for the county budget office.
+
+Accounting Intern, water utility district (2023)
+- Assisted with capital asset records.
+
+EDUCATION
+B.S. in Accounting, state university, 2023
+
+SKILLS
+SAP, Excel (advanced), fund accounting, grant compliance
+
+## H-V02-09
+Calibração: Só tem associate degree (sem bacharelado), mas acumula 6 anos de razão geral e fechamento e experiência com ERP.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Full-charge accountant with six years of general ledger, close, and ERP experience.
+
+EXPERIENCE
+Full-Charge Accountant, packaging company (2022 – present)
+- Own the monthly close for two entities, including intercompany entries.
+- Prepare fixed asset, prepaid, and accrual schedules in NetSuite.
+- Prepared most audit request items for the last three annual audits.
+
+Accounting Specialist, equipment rental company (2020 – 2022)
+- Prepared journal entries and bank reconciliations.
+
+EDUCATION
+A.A.S. in Accounting, community college, 2019
+
+SKILLS
+NetSuite, Excel (advanced), consolidations, fixed asset accounting
+
+## H-V02-10
+Calibração: Formado em 2025, com só 1 ano de emprego efetivo mais dois estágios; tem SAP e Excel avançado, mas não atinge os 2 anos.
+
+{NAME} {SURNAME}
+
+SUMMARY
+Recent accounting graduate with one year of staff experience and two accounting internships.
+
+EXPERIENCE
+Junior Accountant, beverage distributor (2025 – present)
+- Prepare journal entries and reconciliations for cash and accrued liabilities in SAP.
+- Built an Excel workbook that cut the bank reconciliation time in half.
+
+Accounting Intern, manufacturing company (summer 2024)
+- Helped prepare fixed asset and depreciation schedules.
+
+Accounting Intern, regional bank (summer 2023)
+- Supported the monthly close for two branches.
+
+EDUCATION
+B.S. in Accounting, state university, 2025
+
+SKILLS
+SAP, Excel (advanced: Power Query, macros), reconciliations
