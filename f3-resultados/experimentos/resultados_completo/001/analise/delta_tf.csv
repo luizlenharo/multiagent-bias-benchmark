@@ -1,0 +1,41 @@
+topologia,dominio,abstain,metrica,estimativa,ic_inf,ic_sup,exclui_zero
+Agente Único,Contratação,desfavoravel,delta_tf_raca,-0.016666666666666666,-0.08333333333333333,0.04666666666666667,False
+Agente Único,Contratação,desfavoravel,delta_tf_genero,-0.0033333333333333335,-0.06666666666666667,0.056666666666666664,False
+Agente Único,Contratação,excluida,delta_tf_raca,-0.016666666666666666,-0.08333333333333333,0.04666666666666667,False
+Agente Único,Contratação,excluida,delta_tf_genero,-0.0033333333333333335,-0.06666666666666667,0.056666666666666664,False
+Agente Único,Penal,desfavoravel,delta_tf_raca,-0.013333333333333334,-0.07,0.05,False
+Agente Único,Penal,desfavoravel,delta_tf_genero,-0.03333333333333333,-0.09666666666666666,0.03,False
+Agente Único,Penal,excluida,delta_tf_raca,-0.013333333333333334,-0.07,0.05,False
+Agente Único,Penal,excluida,delta_tf_genero,-0.03333333333333333,-0.09666666666666666,0.03,False
+Pipeline,Contratação,desfavoravel,delta_tf_raca,-0.03,-0.09,0.03333333333333333,False
+Pipeline,Contratação,desfavoravel,delta_tf_genero,0.023333333333333334,-0.043333333333333335,0.09,False
+Pipeline,Contratação,excluida,delta_tf_raca,-0.03333333333333333,-0.09333333333333334,0.03,False
+Pipeline,Contratação,excluida,delta_tf_genero,0.023333333333333334,-0.043333333333333335,0.09,False
+Pipeline,Penal,desfavoravel,delta_tf_raca,0.03,-0.04666666666666667,0.10666666666666667,False
+Pipeline,Penal,desfavoravel,delta_tf_genero,0.06333333333333334,-0.0033333333333333335,0.13333333333333333,False
+Pipeline,Penal,excluida,delta_tf_raca,0.03,-0.04666666666666667,0.10666666666666667,False
+Pipeline,Penal,excluida,delta_tf_genero,0.06333333333333334,-0.0033333333333333335,0.13333333333333333,False
+Debate,Contratação,desfavoravel,delta_tf_raca,0.04666666666666667,-0.02,0.11666666666666667,False
+Debate,Contratação,desfavoravel,delta_tf_genero,0.03333333333333333,-0.03333333333333333,0.10333333333333333,False
+Debate,Contratação,excluida,delta_tf_raca,0.04666666666666667,-0.02,0.11666666666666667,False
+Debate,Contratação,excluida,delta_tf_genero,0.03333333333333333,-0.03333333333333333,0.10333333333333333,False
+Debate,Penal,desfavoravel,delta_tf_raca,0.01,-0.06,0.07666666666666666,False
+Debate,Penal,desfavoravel,delta_tf_genero,-0.03666666666666667,-0.10666666666666667,0.03333333333333333,False
+Debate,Penal,excluida,delta_tf_raca,0.01,-0.06,0.07666666666666666,False
+Debate,Penal,excluida,delta_tf_genero,-0.03666666666666667,-0.10666666666666667,0.03333333333333333,False
+Revisão,Contratação,desfavoravel,delta_tf_raca,-0.02666666666666667,-0.10666666666666667,0.05333333333333334,False
+Revisão,Contratação,desfavoravel,delta_tf_genero,-0.006666666666666667,-0.06666666666666667,0.056666666666666664,False
+Revisão,Contratação,excluida,delta_tf_raca,-0.02666666666666667,-0.10666666666666667,0.05333333333333334,False
+Revisão,Contratação,excluida,delta_tf_genero,-0.006666666666666667,-0.06666666666666667,0.056666666666666664,False
+Revisão,Penal,desfavoravel,delta_tf_raca,0.05333333333333334,-0.0033333333333333335,0.11333333333333333,False
+Revisão,Penal,desfavoravel,delta_tf_genero,0.02,-0.04666666666666667,0.08666666666666667,False
+Revisão,Penal,excluida,delta_tf_raca,0.05,-0.01,0.11,False
+Revisão,Penal,excluida,delta_tf_genero,0.02,-0.04666666666666667,0.08666666666666667,False
+Ensemble,Contratação,desfavoravel,delta_tf_raca,0.016666666666666666,-0.05,0.08333333333333333,False
+Ensemble,Contratação,desfavoravel,delta_tf_genero,0.043333333333333335,-0.013333333333333334,0.10333333333333333,False
+Ensemble,Contratação,excluida,delta_tf_raca,0.016666666666666666,-0.05,0.08333333333333333,False
+Ensemble,Contratação,excluida,delta_tf_genero,0.043333333333333335,-0.013333333333333334,0.10333333333333333,False
+Ensemble,Penal,desfavoravel,delta_tf_raca,-0.013333333333333334,-0.06333333333333334,0.03333333333333333,False
+Ensemble,Penal,desfavoravel,delta_tf_genero,-0.02666666666666667,-0.08666666666666667,0.03,False
+Ensemble,Penal,excluida,delta_tf_raca,-0.013333333333333334,-0.06333333333333334,0.03333333333333333,False
+Ensemble,Penal,excluida,delta_tf_genero,-0.02666666666666667,-0.08666666666666667,0.03,False

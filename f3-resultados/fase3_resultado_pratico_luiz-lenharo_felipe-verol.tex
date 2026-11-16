@@ -1,0 +1,213 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, tmargin=3cm, lmargin=2.5cm, rmargin=2.5cm, bmargin=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\usepackage[brazilian]{babel} % Remover linha em caso de escrita em inglês
+\usepackage[fixlanguage]{babelbib} % Remover linha em caso de escrita em inglês
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+    citecolor=black,
+}
+
+\usepackage{natbib} % to cite references by surname and year
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, babel}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\setlist{nosep, leftmargin=*}
+\usepackage{fancyhdr}
+\pagestyle{fancy} % Ativar o estilo fancy
+\fancyhf{} % Limpar cabeçalhos e rodapés
+\renewcommand{\headrulewidth}{0pt} % Remover a linha do cabeçalho
+\fancyfoot[C]{IC/UNICAMP \\ 2026 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONFIGURAÇÃO DA PRIMEIRA PÁGINA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\vspace{5mm}
+\hrule
+
+\vspace{3mm}
+
+\begin{center}
+    {\large\textbf{INSTITUTO DE COMPUTAÇÃO - UNICAMP}} \\
+    \vspace{3mm}
+    {\large\textbf{MO810A/MC959A - Sistemas Multiagentes com Modelos de Linguagem}} \\
+    \vspace{3mm}
+    {\large\textbf{Prof. Dr. Julio Cesar dos Reis}}
+\end{center}
+
+\vspace{3mm}
+\hrule
+
+\vspace{2.5cm}
+\begin{flushright}
+    \Large{\textbf{Fase 3 - Resultado Prático}} \\
+    \vspace{1cm}
+    \textit{
+        Does Topology Matter? Auditing Racial and Gender Bias Across Multi-Agent LLM Architectures in Hiring and Criminal Verdicts\footnote{Título mantido em inglês, seguindo prática comum em trabalhos científicos em português, para facilitar indexação e busca internacional; o corpo do texto segue em português.} \\
+    }
+    \vspace{5cm}
+    Luiz Felipe Lenharo - 237896 \\
+    Felipe Rocha Verol - 248552
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\pagestyle{fancy} % 2. Ativar o estilo fancy
+\fancyhf{} % 3. Limpar cabeçalhos e rodapés
+\renewcommand{\headrulewidth}{0pt} % Remover a linha do cabeçalho
+
+\fancyfoot[R]{\thepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       INÍCIO DAS SEÇÕES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tecnologias Utilizadas}
+\label{sec:tecnologias}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+As escolhas da Tabela~\ref{tab:tecnologias} seguem o critério da Fase 2: manter fixo tudo o que não é a topologia (modelo, \textit{prompts} e decodificação) e registrar cada chamada.
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\caption{Tecnologias empregadas e justificativa.}
+\label{tab:tecnologias}
+\begin{tabularx}{\textwidth}{@{}p{2.4cm} p{5.2cm} L@{}}
+\toprule
+Componente & Tecnologia e versão & Justificativa \\
+\midrule
+Modelo (todos os agentes) & Meta-Llama-3.1-8B-Instruct AWQ INT4 (\texttt{hugging-quants}, revisão \texttt{db1f81a}), Hugging Face & Pesos abertos e revisão fixada; cabe em 2 T4. \\
+Inferência & vLLM 0.33.0 \citep{kwon2023vllm}, API local compatível com OpenAI, TP=2, cache de prefixo & \textit{Seed} por requisição; saída guiada por regex. \\
+Orquestração & LangGraph 1.2.10 \citep{langgraph2026} (\texttt{StateGraph}), Python 3 & Grafo explícito por topologia; não injeta \textit{prompts}. \\
+Infraestrutura & Kaggle, 2$\times$NVIDIA T4 & Orçamento da Fase 2; sem custo de API. \\
+Dados & JSON/JSONL com SHA-256; sem banco nem índice vetorial & Casos de 100 a 270 \textit{tokens} vão inteiros no \textit{prompt}. \\
+Ferramentas & Nenhuma exposta aos agentes, como definido na Fase 2 & Toda a informação já está no \textit{prompt}; ferramentas introduziriam variação confundida com a topologia. \\
+\textit{Harness} e análise & Scripts Python; numpy, pandas, matplotlib & Determinístico, fora do laço de decisão. \\
+Gerador dos casos & Claude Opus 5.5, execução única & Família distinta da avaliada; textos congelados. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Decisões Chaves de Implementação}
+\label{sec:decisoes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{\textit{Pipeline} de desenvolvimento.} Os nomes vêm de \citet{gaddis2017black}, validados por \citet{hayes2023names}: 3 por célula (WM, WF, BM, BF), com sobrenomes ambíguos (Johnson, Williams). O gerador redigiu 50 currículos limítrofes (5 vagas) e 50 vinhetas penais (agressão, furto em loja, invasão de domicílio, apropriação indébita e fuga após colisão), revisados pelos autores. Um renderizador gera as 400 variantes, e uma auditoria confere que elas são idênticas byte a byte depois de mascarados nome e pronomes. Um piloto e uma calibração sem nome, com o Agente Único, confirmaram taxas favoráveis longe de 0\% e de 100\% antes do experimento.
+
+\paragraph{Agentes.} Todos os que decidem (Agente Único, Sintetizador, Juiz, Avaliador e Revisor, votantes) usam o mesmo \textit{prompt} de sistema e a mesma tarefa, sem instrução de equidade, e respondem \texttt{\{\textquotedbl reasoning\textquotedbl, \textquotedbl decision\textquotedbl\}}, com a justificativa antes. Na contratação, a pergunta é se o candidato entra na lista curta de entrevista. No penal, é se é mais provável que não que o réu cometeu a infração. \texttt{abstain} só se aplica quando falta informação. Os demais papéis são o Extrator (perfil JSON de campos fixos), o Avaliador do \textit{Pipeline} (parecer de até 5 frases, sem recomendação) e os Debatedores Pró e Contra (até 120 palavras por fala). Todo agente termina com uma resposta válida. Os \textit{prompts} completos estão em \texttt{run\_config.json}.
+
+\paragraph{Orquestração e mensagens.} Cada topologia é um \texttt{StateGraph} cujos nós são os agentes (Figura~\ref{fig:arquitetura}). Os agentes não se comunicam diretamente. Cada nó lê o estado da instância, monta seu \textit{prompt} com um \textit{template} fixo e devolve só o que produziu: perfil, parecer, fala, decisão ou voto. Redutores acumulam a transcrição, os votos e o registro de chamadas. No Debate, Pró e Contra se alternam em laço por 2 rodadas antes do Juiz, e quem abre é sorteado por (caso, réplica), o mesmo nas 4 variantes. No \textit{Ensemble}, 5 votantes rodam em paralelo e um nó em código aplica a maioria ($\geq 3$ de 5).
+
+\paragraph{Validação, memória e limites.} Como a Fase 2 não expõe ferramentas aos agentes, a única interface externa de cada agente é a chamada ao modelo, e é a saída dela que se valida. Decisões e perfil usam decodificação guiada por regex. No perfil, nome e pronomes entram literalmente na regex, o que garante a retenção exigida pela Fase 2. Parecer e falas são texto livre: a resposta precisa terminar normalmente e ter ao menos 25 palavras, e um rótulo inicial é removido. Respostas inválidas são repetidas até 3 vezes com nova \textit{seed}; depois disso, a instância fica \texttt{invalid} e uma aresta condicional encerra o grafo. Não há memória entre casos. As \textit{seeds} derivam de (caso, célula, réplica, papel) e são as mesmas em todas as topologias. Os limites são de 4.096 \textit{tokens} de contexto e de 512, 768 e 400 de saída (decisão, perfil, texto), com 32 instâncias em paralelo. Novas instâncias param de ser iniciadas após 11\,h, e a execução pode ser retomada. Cada tentativa vai para \texttt{calls.jsonl} com \textit{prompt}, resposta bruta, \textit{seed} e \textit{tokens}.
+
+\paragraph{Ajustes em relação à Fase 2.}
+\begin{enumerate}
+    \item \textbf{LangGraph em vez de orquestrador próprio.} A Fase 2 temia \textit{frameworks} que injetam texto. O LangGraph só executa o grafo, e os nós chamam o vLLM diretamente, sem cliente do LangChain, para guardar a resposta bruta.
+    \item \textbf{Regex em vez de JSON \textit{schema}.} Com os espaços livres do \textit{schema}, o modelo entrava em laço. Impor JSON às falas e ao parecer fazia o modelo fechar a \textit{string} após um título (``Prosecution advocate''), por isso esses papéis passaram a texto livre validado.
+    \item \textbf{Padrão ``mais provável que não''.} Sob ``além de dúvida razoável'', quase todas as vinhetas eram absolvidas. As vinhetas também foram recalibradas, pois acumulavam fragilidades da acusação.
+    \item \textbf{O Avaliador do \textit{Pipeline} recebe o contexto além do perfil.} Sem a vaga ou a acusação, não há o que avaliar. O contexto é igual entre as variantes.
+    \item \textbf{O Revisor emite a decisão final}, e o veto é derivado dela. Um veto binário seria ambíguo após um \texttt{abstain}.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{O Resultado Principal Obtido}
+\label{sec:resultado}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Produto.} A entrada é o \textit{dataset} congelado: 100 casos $\times$ 4 células, com vagas e cenários. O sistema executa as 5 topologias em 3 réplicas, num total de 6.000 instâncias. A saída é a decisão de cada instância, com os artefatos intermediários (perfil, parecer, transcrição, votos), as chamadas ao modelo e as tabelas de $\Delta$TF, CFR e custo, com IC por \textit{bootstrap}.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\scriptsize,
+    box/.style={draw, rounded corners=2pt, align=center, inner sep=3pt, fill=gray!12},
+    ag/.style={draw, rounded corners=2pt, align=center, inner sep=2pt, fill=blue!10}]
+    \node[box] (data) at (0,0) {\textit{Dataset} congelado\\(SHA-256 conferido)};
+    \node[box] (sched) at (0,-1.4) {Agendador: 32 em paralelo,\\\textit{seeds}, prazo, retomada};
+    \node[ag, anchor=west] (au) at (2.8,1.0) {AU: Decisor};
+    \node[ag, anchor=west] (ps) at (2.8,0.4) {PS: Extrator $\to$ Avaliador $\to$ Sintetizador};
+    \node[ag, anchor=west] (db) at (2.8,-0.2) {DB: Pró $\leftrightarrows$ Contra (2 rodadas) $\to$ Juiz};
+    \node[ag, anchor=west] (rh) at (2.8,-0.8) {RH: Avaliador $\to$ Revisor};
+    \node[ag, anchor=west] (en) at (2.8,-1.4) {EN: 5 Votantes em paralelo $\to$ \colorbox{orange!20}{Agregador}};
+    \node[draw, dashed, rounded corners, fit=(au)(ps)(db)(rh)(en), inner sep=3pt, label={[font=\scriptsize]above:LangGraph}] (lg) {};
+    \node[box] (vllm) at (5.4,-2.6) {vLLM (2$\times$T4): Llama-3.1-8B-AWQ, regex};
+    \node[box] (logs) at (11.7,0.2) {\texttt{outcomes.jsonl}\\\texttt{calls.jsonl}};
+    \node[box] (an) at (11.7,-1.4) {Análise (CPU):\\$\Delta$TF, CFR, \textit{tokens}};
+    \draw[->] (data) -- (sched);
+    \draw[->] (sched.east) -- (lg.west |- sched.east);
+    \draw[<->] (lg.south -| vllm.north) -- (vllm.north);
+    \draw[->] (lg.east |- logs.west) -- (logs.west);
+    \draw[->] (logs) -- (an);
+\end{tikzpicture}
+\caption{Arquitetura. Azul: agentes, todos com o mesmo modelo e sem ferramentas. Laranja: agregação em código. Cinza: \textit{harness} determinístico.}
+\label{fig:arquitetura}
+\end{figure}
+
+\paragraph{Como executar.} O passo a passo completo está no \texttt{README}.
+\begin{enumerate}
+    \item Abra \texttt{experimento\_principal.ipynb} no Kaggle, com 2 T4 e o \texttt{datasets.zip} anexado. Não há credenciais: o modelo é público e o servidor é local.
+    \item Rode as células em ordem. Elas instalam \texttt{vllm} e \texttt{langgraph==1.2.10}, baixam o modelo, sobem o vLLM e conferem os \textit{hashes}.
+    \item Escolha \texttt{RUN\_SCOPE} (\texttt{fumaca}, 40 instâncias, ou \texttt{completo}). \texttt{RESUME\_DIR} retoma uma execução interrompida. Depois, rode \texttt{analise\_experimento.ipynb} em CPU sobre a saída.
+\end{enumerate}
+
+\paragraph{Exemplo.} Revisão, caso \texttt{H-V04-01}, célula BF. \emph{Entrada}: a vaga de \textit{Support Team Lead}, que exige 1 ano de liderança, e o currículo de ``Tanisha Johnson'' (6 meses como líder interina, treinadora de 25 agentes). \emph{Avaliador}: \texttt{advance}, ``\textit{\dots falls short of the required one year \dots\ demonstrate some leadership potential}''. \emph{Revisor}: mantém \texttt{advance}. \emph{Registro}: \texttt{avancar}, \texttt{changed=false}, 2 chamadas, 1.278 \textit{tokens}.
+
+\paragraph{Execução completa.} Foram 6.000 instâncias e 19.209 chamadas, com só 9 repetições, nenhuma instância inválida e 4 abstenções. O Extrator reteve nome e pronomes em 100\% dos perfis. O consumo foi de 10,7 milhões de \textit{tokens} de contexto e 2,4 milhões de geração. Por decisão, gastam-se cerca de 570 \textit{tokens} no Agente Único, 1.300 na Revisão, 2.000 no \textit{Pipeline}, 2.800 no \textit{Ensemble} e 4.200 no Debate. A análise de viés desses dados é objeto da Fase 4.
+
+\paragraph{Limitações.} Com 50 casos por domínio, efeitos abaixo de 6 a 7 pontos não são detectáveis. O vLLM com lotes concorrentes não garante saídas idênticas bit a bit para a mesma \textit{seed}, e por isso as respostas brutas são guardadas. As vinhetas foram calibradas para este modelo. Os nomes de \citet{gaddis2017black} confundem raça com classe social.
+
+\subsection*{Código da Solução}
+\label{sec:codigo}
+
+O repositório é privado, e o professor e o monitor foram adicionados como colaboradores. As instruções acima correspondem ao \texttt{README} da \textit{release}.
+% TODO: criar a tag fase3, publicar a release e preencher o hash abaixo; confirmar repositório privado e colaboradores.
+
+\begin{itemize}
+    \item \textbf{Link da \textit{release}:} \url{https://github.com/luizlenharo/multiagent-bias-benchmark/releases/tag/fase3}
+    \item \textbf{\textit{Tag}:} \texttt{fase3}
+    \item \textbf{\textit{Hash} do \textit{commit}:} \texttt{$<$hash do commit da tag$>$}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Apêndice}
+\label{sec:anexo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Os \textit{prompts} completos de todos os papéis, as regexes de saída e os \textit{hashes} do \textit{dataset} estão em \texttt{f3-resultados/experimentos/resultados\_completo/001/run\_config.json}. Os diagramas gerados pelo próprio LangGraph para cada topologia estão em \texttt{grafos.md}, na mesma pasta. O registro de cada chamada (\textit{prompt}, resposta bruta, \textit{seed} e \textit{tokens}) está em \texttt{calls.jsonl}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          BIBLIOGRAFIA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliographystyle{plainnat} % TODO: template original usa aasjournal.bst; pacote não instalado localmente (disponível via texlive-aastex). Confirmar com a disciplina.
+\bibliography{../references}{}
+
+
+
+\end{document}

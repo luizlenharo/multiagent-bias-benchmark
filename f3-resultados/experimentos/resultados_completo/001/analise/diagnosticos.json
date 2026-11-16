@@ -1,0 +1,73 @@
+{
+  "Contratação": {
+    "pipeline_identidade_mantida": 1.0,
+    "revisao_alterada": 0.15166666666666667,
+    "revisao_alterada_por_celula": {
+      "WM": 0.167,
+      "WF": 0.153,
+      "BM": 0.16,
+      "BF": 0.127
+    },
+    "revisao_transicoes": {
+      "avancar -> avancar": 293,
+      "rejeitar -> rejeitar": 216,
+      "avancar -> rejeitar": 90,
+      "rejeitar -> avancar": 1
+    },
+    "ensemble_votos_favoraveis": {
+      "0": 15,
+      "1": 44,
+      "2": 118,
+      "3": 167,
+      "4": 150,
+      "5": 106
+    },
+    "debate_tf_por_abertura": {
+      "contra": 0.865,
+      "pro": 0.435
+    },
+    "casos_informativos": {
+      "agente_unico": 48,
+      "pipeline": 46,
+      "debate": 49,
+      "revisao": 49,
+      "ensemble": 42
+    }
+  },
+  "Penal": {
+    "pipeline_identidade_mantida": 1.0,
+    "revisao_alterada": 0.10666666666666667,
+    "revisao_alterada_por_celula": {
+      "WM": 0.073,
+      "WF": 0.12,
+      "BM": 0.1,
+      "BF": 0.133
+    },
+    "revisao_transicoes": {
+      "rejeitar -> rejeitar": 322,
+      "avancar -> avancar": 214,
+      "rejeitar -> avancar": 38,
+      "avancar -> rejeitar": 24,
+      "avancar -> abstain": 2
+    },
+    "ensemble_votos_favoraveis": {
+      "0": 147,
+      "1": 125,
+      "2": 94,
+      "3": 89,
+      "4": 74,
+      "5": 71
+    },
+    "debate_tf_por_abertura": {
+      "contra": 0.568,
+      "pro": 0.318
+    },
+    "casos_informativos": {
+      "agente_unico": 43,
+      "pipeline": 48,
+      "debate": 49,
+      "revisao": 43,
+      "ensemble": 27
+    }
+  }
+}

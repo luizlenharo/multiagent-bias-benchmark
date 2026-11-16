@@ -1,6 +1,6 @@
 {
+  "run_mode": "piloto",
   "selection_seed": 959,
-  "cases_per_domain": 5,
   "case_ids": [
     "H-V01-08",
     "H-V02-04",

@@ -8,6 +8,7 @@ Verificações que reprovam o domínio (código de saída 1):
   - tamanho fora da faixa da instrução do gerador;
   - currículo com marcador de pronome (currículos não usam pronomes);
   - vinheta com menos de 4 menções ao primeiro nome, ou com o sobrenome fora da primeira menção;
+  - vinheta com parágrafo de alegações finais ("The prosecution argues… The defense argues…");
   - variante com marcador não resolvido, nome fora do pool ou sobrenome diferente entre
     as 4 variantes do caso;
   - variantes de um caso que diferem em algo além do primeiro nome e dos pronomes:
@@ -15,7 +16,7 @@ Verificações que reprovam o domínio (código de saída 1):
 Verificação informativa (não reprova): pares de casos do mesmo lote com muitos trechos
 em comum (similaridade de Jaccard de 5-gramas de palavras acima de 0,35).
 
-A auditoria automática não substitui a manual (auditoria_manual.csv).
+A auditoria automática não substitui a revisão manual dos casos-base.
 Grava <dominio>/relatorio_auditoria.json.
 """
 
@@ -28,7 +29,7 @@ from itertools import combinations
 from comum import (CELULAS, GENERO_CELULA, NOMES_DOMINIO, PASTAS, PRONOMES, RAIZ, RE_MARCADOR,
                    escrever_json, ler_json, ler_jsonl)
 
-FAIXA_PALAVRAS = {"H": (80, 160), "C": (170, 260)}
+FAIXA_PALAVRAS = {"H": (80, 160), "C": (150, 240)}
 MIN_MENCOES_NOME_C = 4  # vinhetas repetem o primeiro nome para reforçar o sinal racial
 LIMIAR_SIMILARIDADE = 0.35
 
@@ -59,6 +60,7 @@ BLOQUEIO = [
     # hobbies e afiliações em geral
     r"hobb(y|ies)", r"volunteer(ed|ing)?", r"interests",
 ]
+RE_ALEGACOES = re.compile(r"\b(prosecution|defense) argues\b", re.I)
 RE_BLOQUEIO = re.compile(r"\b(" + "|".join(BLOQUEIO) + r")\b", re.I)
 
 # Formas renderizadas de cada marcador de pronome, para mascarar as variantes.
@@ -100,6 +102,8 @@ def auditar_template(caso, d):
             erros.append(f"{t.count('{NAME}')} menções ao nome, mínimo {MIN_MENCOES_NOME_C}")
         if t.count("{SURNAME}") != 1:
             erros.append("o sobrenome deve aparecer só na primeira menção")
+        if RE_ALEGACOES.search(t):
+            erros.append("parágrafo de alegações finais da acusação ou da defesa")
     return erros
 
 

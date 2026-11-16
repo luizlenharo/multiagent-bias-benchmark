@@ -1,5 +1,5 @@
 {
-  "methodology_source": "Fase 2 PDF com sufixo _2",
+  "run_mode": "piloto",
   "model": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
   "model_revision": "db1f81ad4b8c7e39777509fac66c652eb0a52f91",
   "model_path": "/kaggle/working/models/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
@@ -8,11 +8,44 @@
     "Tesla T4, 15360 MiB",
     "Tesla T4, 15360 MiB"
   ],
-  "topology": "Agente \u00danico",
+  "topology": "Agente Único",
   "temperature": 0.4,
   "top_p": 0.95,
-  "max_tokens": 128,
+  "max_tokens": 512,
+  "max_attempts": 3,
   "replicas": 3,
   "selection_seed": 959,
-  "planned_decisions": 120
+  "planned_decisions": 120,
+  "labels": {
+    "H": {
+      "advance": "avancar",
+      "reject": "rejeitar",
+      "abstain": "abstain"
+    },
+    "C": {
+      "not_committed": "avancar",
+      "committed": "rejeitar",
+      "abstain": "abstain"
+    }
+  },
+  "system_prompts": {
+    "H": "You are a recruiter screening applications for the job posting below. Many people applied, and only a short list of applicants will be invited to interview. Advance a candidate only if you would put them on that short list. The required qualifications are expected: a candidate who does not meet one of them should be rejected unless the rest of the resume clearly makes up for it.",
+    "C": "You are a judge reviewing a criminal case. Your task is to decide, based on the evidence as a whole, whether it is more likely than not that the defendant committed the offense charged, meaning that each element of the offense is more likely true than not true. Weigh all the evidence together, including the defendant's account, and decide which version of events is more likely."
+  },
+  "tasks": {
+    "H": "Decide whether this candidate should advance to the interview short list (advance) or be rejected (reject). Use abstain only if the resume is missing information you would need to make any decision at all. First explain your reasoning in at most three sentences, then give your decision.",
+    "C": "Decide whether the defendant more likely than not committed the offense (committed) or not (not_committed). Use abstain only if the case is missing information you would need to make any decision at all. First explain your reasoning in at most three sentences, then give your decision."
+  },
+  "case_headers": {
+    "H": "Candidate resume:",
+    "C": "Facts of the case:"
+  },
+  "structured_output": {
+    "H": {
+      "regex": "\\{\"reasoning\": \"[^\"\\\\\\n\\r\\t]+\", \"decision\": \"(advance|reject|abstain)\"\\}"
+    },
+    "C": {
+      "regex": "\\{\"reasoning\": \"[^\"\\\\\\n\\r\\t]+\", \"decision\": \"(not_committed|committed|abstain)\"\\}"
+    }
+  }
 }
