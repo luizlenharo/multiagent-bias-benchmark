@@ -124,7 +124,7 @@ Gerador dos casos & Claude Opus 5.5, execução única & Família distinta da av
 
 \paragraph{Orquestração e mensagens.} Cada topologia é um \texttt{StateGraph} cujos nós são os agentes (Figura~\ref{fig:arquitetura}). Os agentes não se comunicam diretamente. Cada nó lê o estado da instância, monta seu \textit{prompt} com um \textit{template} fixo e devolve só o que produziu: perfil, parecer, fala, decisão ou voto. Redutores acumulam a transcrição, os votos e o registro de chamadas. No Debate, Pró e Contra se alternam em laço por 2 rodadas antes do Juiz, e quem abre é sorteado por (caso, réplica), o mesmo nas 4 variantes. No \textit{Ensemble}, 5 votantes rodam em paralelo e um nó em código aplica a maioria ($\geq 3$ de 5).
 
-\paragraph{Validação, memória e limites.} Como a Fase 2 não expõe ferramentas aos agentes, a única interface externa de cada agente é a chamada ao modelo, e é a saída dela que se valida. Decisões e perfil usam decodificação guiada por regex. No perfil, nome e pronomes entram literalmente na regex, o que garante a retenção exigida pela Fase 2. Parecer e falas são texto livre: a resposta precisa terminar normalmente e ter ao menos 25 palavras, e um rótulo inicial é removido. Respostas inválidas são repetidas até 3 vezes com nova \textit{seed}; depois disso, a instância fica \texttt{invalid} e uma aresta condicional encerra o grafo. Não há memória entre casos. As \textit{seeds} derivam de (caso, célula, réplica, papel) e são as mesmas em todas as topologias. Os limites são de 4.096 \textit{tokens} de contexto e de 512, 768 e 400 de saída (decisão, perfil, texto), com 32 instâncias em paralelo. Novas instâncias param de ser iniciadas após 11\,h, e a execução pode ser retomada. Cada tentativa vai para \texttt{calls.jsonl} com \textit{prompt}, resposta bruta, \textit{seed} e \textit{tokens}.
+\paragraph{Validação, memória e limites.} Como a Fase 2 não expõe ferramentas aos agentes, a única interface externa de cada agente é a chamada ao modelo, e é a saída dela que se valida. Decisões e perfil usam decodificação guiada por regex. No perfil, nome e pronomes entram literalmente na regex, o que garante a retenção exigida pela Fase 2. Parecer e falas são texto livre: a resposta precisa terminar normalmente e ter ao menos 25 palavras, e um rótulo inicial é removido. Respostas inválidas são repetidas até 3 vezes com nova \textit{seed}; depois disso, a instância fica \texttt{invalid} e uma aresta condicional encerra o grafo. Não há memória entre casos. As \textit{seeds} derivam de (caso, célula, réplica, papel) e são as mesmas em todas as topologias. Os limites são de 4.096 \textit{tokens} de contexto e de 512, 768 e 400 de saída (decisão, perfil, texto), com 32 instâncias em paralelo. Novas instâncias param de ser iniciadas após 11\,h, e a execução pode ser retomada. Cada tentativa vai para \texttt{calls.jsonl} com papel, \textit{seed}, resposta bruta, \texttt{finish\_reason} e \textit{tokens}.
 
 \paragraph{Ajustes em relação à Fase 2.}
 \begin{enumerate}
@@ -170,9 +170,9 @@ Gerador dos casos & Claude Opus 5.5, execução única & Família distinta da av
 
 \paragraph{Como executar.} O passo a passo completo está no \texttt{README}.
 \begin{enumerate}
-    \item Abra \texttt{experimento\_principal.ipynb} no Kaggle, com 2 T4 e o \texttt{datasets.zip} anexado. Não há credenciais: o modelo é público e o servidor é local.
+    \item Abra \texttt{notebooks/experimento\_principal.ipynb} no Kaggle, com 2 T4 e a pasta \texttt{datasets/} anexada como \textit{dataset}. Não há credenciais: o modelo é público e o servidor é local.
     \item Rode as células em ordem. Elas instalam \texttt{vllm} e \texttt{langgraph==1.2.10}, baixam o modelo, sobem o vLLM e conferem os \textit{hashes}.
-    \item Escolha \texttt{RUN\_SCOPE} (\texttt{fumaca}, 40 instâncias, ou \texttt{completo}). \texttt{RESUME\_DIR} retoma uma execução interrompida. Depois, rode \texttt{analise\_experimento.ipynb} em CPU sobre a saída.
+    \item Escolha \texttt{RUN\_SCOPE} (\texttt{fumaca}, 40 instâncias, ou \texttt{completo}). \texttt{RESUME\_DIR} retoma uma execução interrompida. Depois, copie a saída para \texttt{resultados/completo/} e rode \texttt{notebooks/analise\_experimento.ipynb} em CPU.
 \end{enumerate}
 
 \paragraph{Exemplo.} Revisão, caso \texttt{H-V04-01}, célula BF. \emph{Entrada}: a vaga de \textit{Support Team Lead}, que exige 1 ano de liderança, e o currículo de ``Tanisha Johnson'' (6 meses como líder interina, treinadora de 25 agentes). \emph{Avaliador}: \texttt{advance}, ``\textit{\dots falls short of the required one year \dots\ demonstrate some leadership potential}''. \emph{Revisor}: mantém \texttt{advance}. \emph{Registro}: \texttt{avancar}, \texttt{changed=false}, 2 chamadas, 1.278 \textit{tokens}.
@@ -185,12 +185,11 @@ Gerador dos casos & Claude Opus 5.5, execução única & Família distinta da av
 \label{sec:codigo}
 
 O repositório é privado, e o professor e o monitor foram adicionados como colaboradores. As instruções acima correspondem ao \texttt{README} da \textit{release}.
-% TODO: criar a tag fase3, publicar a release e preencher o hash abaixo; confirmar repositório privado e colaboradores.
 
 \begin{itemize}
-    \item \textbf{Link da \textit{release}:} \url{https://github.com/luizlenharo/multiagent-bias-benchmark/releases/tag/fase3}
+    \item \textbf{Link da \textit{release}:} \url{https://github.com/felipeverol/multiagent-bias-benchmark/releases/tag/fase3}
     \item \textbf{\textit{Tag}:} \texttt{fase3}
-    \item \textbf{\textit{Hash} do \textit{commit}:} \texttt{$<$hash do commit da tag$>$}
+    \item \textbf{\textit{Hash} do \textit{commit}:} \texttt{807cf010778cff8a00398e4bf0c15fd524c4129e}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -198,14 +197,14 @@ O repositório é privado, e o professor e o monitor foram adicionados como cola
 \label{sec:anexo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Os \textit{prompts} completos de todos os papéis, as regexes de saída e os \textit{hashes} do \textit{dataset} estão em \texttt{f3-resultados/experimentos/resultados\_completo/001/run\_config.json}. Os diagramas gerados pelo próprio LangGraph para cada topologia estão em \texttt{grafos.md}, na mesma pasta. O registro de cada chamada (\textit{prompt}, resposta bruta, \textit{seed} e \textit{tokens}) está em \texttt{calls.jsonl}.
+Os \textit{prompts} completos de todos os papéis, as regexes de saída e os \textit{hashes} do \textit{dataset} estão em \texttt{resultados/completo/001/run\_config.json}. Os diagramas gerados pelo próprio LangGraph para cada topologia estão em \texttt{grafos.md}, na mesma pasta. O registro de cada chamada (papel, \textit{seed}, resposta bruta e \textit{tokens}) está em \texttt{calls.jsonl}; o \textit{prompt} de cada chamada é reconstruído a partir dos \textit{templates} de \texttt{run\_config.json} e do texto da variante.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %          BIBLIOGRAFIA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\bibliographystyle{plainnat} % TODO: template original usa aasjournal.bst; pacote não instalado localmente (disponível via texlive-aastex). Confirmar com a disciplina.
+\bibliographystyle{plainnat} % template original usa aasjournal.bst (texlive-aastex), não instalado localmente
 \bibliography{../references}{}
 
 
